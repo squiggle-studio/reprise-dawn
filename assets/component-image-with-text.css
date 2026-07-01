@@ -417,50 +417,15 @@
 }
 
 /*
-  Top heading, stacked buttons, and accordion drawers added for
-  the Reprise theme customization (image-with-text extensions).
+  Stacked buttons block added for the Reprise theme customization
+  (image-with-text extension, used by the homepage hero).
 */
-.image-with-text__top-heading {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
 .image-with-text__buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto;
   gap: 1rem;
 }
 
-.image-with-text__accordion-item {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.35);
-}
-
-.image-with-text__accordion-item summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.2rem 0;
-  cursor: pointer;
-  list-style: none;
-}
-
-.image-with-text__accordion-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.image-with-text__accordion-item .icon-caret {
-  flex-shrink: 0;
-  width: 1rem;
-  height: 1rem;
-  transition: transform 100ms ease;
-}
-
-.image-with-text__accordion-item details[open] > summary .icon-caret {
-  transform: rotate(180deg);
-}
-
-.image-with-text__accordion-content {
-  padding-bottom: 1.2rem;
+.image-with-text__buttons .button {
+  text-align: center;
 }

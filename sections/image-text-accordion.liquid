@@ -1,0 +1,396 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .split-accordion__heading {
+    margin: 0 0 2.4rem;
+    text-align: center;
+  }
+
+  .split-accordion {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+
+  /* Mobile: full bleed image */
+  .split-accordion__image-wrapper {
+    width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+    height: 70vw;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .split-accordion__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .split-accordion__image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .split-accordion__body-text {
+    margin: 0 0 3rem;
+  }
+
+  .split-accordion__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .split-accordion__item {
+    border-top: 0.1rem solid rgba(var(--color-foreground), 0.3);
+  }
+
+  .split-accordion__item:last-child {
+    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.3);
+  }
+
+  .split-accordion__trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.8rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(var(--color-foreground));
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-align: left;
+    gap: 1.5rem;
+  }
+
+  .split-accordion__icon {
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    position: relative;
+  }
+
+  .split-accordion__icon::before,
+  .split-accordion__icon::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(var(--color-foreground));
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .split-accordion__icon::before {
+    width: 100%;
+    height: 0.15rem;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .split-accordion__icon::after {
+    width: 0.15rem;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .split-accordion__item--open .split-accordion__icon::after {
+    opacity: 0;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .split-accordion__answer {
+    display: none;
+    padding-bottom: 1.8rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  .split-accordion__item--open .split-accordion__answer {
+    display: block;
+  }
+
+  @media screen and (min-width: 750px) {
+    .split-accordion {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      /* start = image column does not stretch when right column grows */
+      align-items: start;
+    }
+
+    .split-accordion--image-right .split-accordion__image-wrapper {
+      order: 1;
+    }
+
+    .split-accordion--image-right .split-accordion__inner {
+      order: 0;
+    }
+
+    /* Image is a fixed height — never changes regardless of accordion state */
+    .split-accordion__image-wrapper {
+      width: 100%;
+      height: 480px;
+      min-height: unset;
+      margin-left: 0;
+      overflow: hidden;
+      position: relative;
+      border-radius: {{ section.settings.image_border_radius }}px;
+    }
+
+    /* Right column matches the same 480px min-height, content centered.
+       When accordions open the column grows taller and padding above/below
+       the content absorbs the extra space — image stays untouched. */
+    .split-accordion__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 480px;
+    }
+  }
+{%- endstyle -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.split-accordion__trigger').forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        var item = this.closest('.split-accordion__item');
+        var isOpen = item.classList.toggle('split-accordion__item--open');
+        this.setAttribute('aria-expanded', isOpen);
+      });
+    });
+  });
+</script>
+
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+
+    {%- if section.settings.heading != blank -%}
+      <h2 class="split-accordion__heading {{ section.settings.heading_size }}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+
+    <div class="split-accordion{% if section.settings.layout == 'image_right' %} split-accordion--image-right{% endif %}">
+
+      <div class="split-accordion__image-wrapper">
+        {%- if section.settings.image != blank -%}
+          {{
+            section.settings.image
+            | image_url: width: 1200
+            | image_tag:
+              widths: '375, 600, 900, 1200',
+              sizes: '(min-width: 750px) 40vw, 100vw',
+              fetchpriority: fetch_priority,
+              class: 'split-accordion__image'
+          }}
+        {%- else -%}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg split-accordion__image-placeholder' }}
+        {%- endif -%}
+      </div>
+
+      <div class="split-accordion__inner">
+        {%- if section.settings.body_text != blank -%}
+          <div class="split-accordion__body-text rte">
+            {{ section.settings.body_text }}
+          </div>
+        {%- endif -%}
+
+        <div class="split-accordion__items">
+          {%- for block in section.blocks -%}
+            {%- if block.settings.question != blank -%}
+              <div class="split-accordion__item" {{ block.shopify_attributes }}>
+                <button
+                  class="split-accordion__trigger"
+                  type="button"
+                  aria-expanded="false"
+                  {% if block.settings.answer != blank %}
+                    aria-controls="SplitAccordionAnswer-{{ block.id }}"
+                  {% endif %}
+                >
+                  <span>{{ block.settings.question | escape }}</span>
+                  <span class="split-accordion__icon" aria-hidden="true"></span>
+                </button>
+                {%- if block.settings.answer != blank -%}
+                  <div class="split-accordion__answer rte" id="SplitAccordionAnswer-{{ block.id }}">
+                    {{ block.settings.answer }}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image, text & accordion",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Ancient wisdom in a daily gummy"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "richtext",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "<p>Reprise is rooted in the belief that herbal, holistic approaches to health are a universal tradition—found across cultures, grounded in nature, and passed down through generations.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image corner radius (desktop)",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Image position (desktop)",
+      "options": [
+        { "value": "image_left", "label": "Image left" },
+        { "value": "image_right", "label": "Image right" }
+      ],
+      "default": "image_left"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion_item",
+      "name": "Accordion item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "100% Whole Herbs"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>We use only whole herb extracts, never isolated compounds, to preserve the full spectrum of natural benefits.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Split accordion",
+      "blocks": [
+        {
+          "type": "accordion_item",
+          "settings": {
+            "question": "100% Whole Herbs",
+            "answer": "<p>We use only whole herb extracts, never isolated compounds, to preserve the full spectrum of natural benefits.</p>"
+          }
+        },
+        {
+          "type": "accordion_item",
+          "settings": {
+            "question": "Doctor Formulated",
+            "answer": "<p>Every formula is developed with licensed practitioners to ensure safety, efficacy, and the right dosage for daily use.</p>"
+          }
+        },
+        {
+          "type": "accordion_item",
+          "settings": {
+            "question": "Deliciously Crafted Fruit Flavors",
+            "answer": "<p>Great taste shouldn't be an afterthought. Our gummies are crafted to be something you actually look forward to taking every day.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

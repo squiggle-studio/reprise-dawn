@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "heading": "EASTERN HERBAL WELLNESS",
-            "heading_size": "hxl"
+            "heading_size": "h0"
           }
         },
         "caption_hero": {
@@ -48,7 +48,7 @@
       "settings": {
         "image": "shopify://shop_images/herb-shelf-temp.png",
         "height": "adapt",
-        "desktop_image_width": "large",
+        "desktop_image_width": "medium",
         "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
@@ -112,67 +112,47 @@
         "padding_bottom": 16
       }
     },
-    "image_with_text_9WCzKi": {
-      "type": "image-with-text",
+    "image_text_accordion": {
+      "type": "image-text-accordion",
       "blocks": {
-        "top_heading_ancient": {
-          "type": "top_heading",
-          "settings": {
-            "heading": "Ancient wisdom in a daily gummy",
-            "heading_size": "h1"
-          }
-        },
-        "text_ancient": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Reprise is rooted in the belief that herbal, holistic approaches to health are a universal tradition—found across cultures, grounded in nature, and passed down through generations. We honor our heritage at every step of our process.</p>",
-            "text_style": "body"
-          }
-        },
         "accordion_1": {
           "type": "accordion_item",
           "settings": {
-            "title": "100% Whole Herbs",
-            "content": "<p>We craft our daily gummies with the same full-spectrum herbal extracts found in Asia’s best herb shops.</p>"
+            "question": "100% Whole Herbs",
+            "answer": "<p>We craft our daily gummies with the same full-spectrum herbal extracts found in Asia’s best herb shops.</p>"
           }
         },
         "accordion_2": {
           "type": "accordion_item",
           "settings": {
-            "title": "Doctor Formulated",
-            "content": "<p>Formulated by doctors and herbalists, our herbs work <em>with</em> your body’s natural systems for simple holistic health.</p>"
+            "question": "Doctor Formulated",
+            "answer": "<p>Formulated by doctors and herbalists, our herbs work <em>with</em> your body’s natural systems for simple holistic health.</p>"
           }
         },
         "accordion_3": {
           "type": "accordion_item",
           "settings": {
-            "title": "Deliciously Crafted",
-            "content": "<p>A daily ritual without compromise on taste - only all natural ingredients with no added colors or dyes.</p>"
+            "question": "Deliciously Crafted",
+            "answer": "<p>A daily ritual without compromise on taste - only all natural ingredients with no added colors or dyes.</p>"
           }
         }
       },
       "block_order": [
-        "top_heading_ancient",
-        "text_ancient",
         "accordion_1",
         "accordion_2",
         "accordion_3"
       ],
       "name": "Ancient wisdom",
       "settings": {
+        "heading": "Ancient wisdom in a daily gummy",
+        "heading_size": "h1",
+        "body_text": "<p>Reprise is rooted in the belief that herbal, holistic approaches to health are a universal tradition—found across cultures, grounded in nature, and passed down through generations. We honor our heritage at every step of our process.</p>",
         "image": "shopify://shop_images/herb-drawer.png",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-3",
+        "image_border_radius": 16,
+        "layout": "image_left",
         "color_scheme": "scheme-3",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "multicolumn_zXFPcL": {
@@ -278,7 +258,7 @@
   "order": [
     "image_with_text_ardYBV",
     "trust_badge_ticker",
-    "image_with_text_9WCzKi",
+    "image_text_accordion",
     "multicolumn_zXFPcL",
     "featured_collection"
   ]
