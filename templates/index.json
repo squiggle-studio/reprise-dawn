@@ -132,21 +132,21 @@
           "type": "accordion_item",
           "settings": {
             "title": "100% Whole Herbs",
-            "content": ""
+            "content": "<p>We craft our daily gummies with the same full-spectrum herbal extracts found in Asia’s best herb shops.</p>"
           }
         },
         "accordion_2": {
           "type": "accordion_item",
           "settings": {
             "title": "Doctor Formulated",
-            "content": ""
+            "content": "<p>Formulated by doctors and herbalists, our herbs work <em>with</em> your body’s natural systems for simple holistic health.</p>"
           }
         },
         "accordion_3": {
           "type": "accordion_item",
           "settings": {
             "title": "Deliciously Crafted",
-            "content": ""
+            "content": "<p>A daily ritual without compromise on taste - only all natural ingredients with no added colors or dyes.</p>"
           }
         }
       },
