@@ -15,7 +15,7 @@
         "heading_TP8AHC": {
           "type": "heading",
           "settings": {
-            "heading": "Eastern Herbal Wellness",
+            "heading": "EASTERN HERBAL WELLNESS",
             "heading_size": "hxl"
           }
         },
@@ -46,14 +46,15 @@
       ],
       "name": "Hero",
       "settings": {
-        "height": "large",
+        "image": "shopify://shop_images/herb-shelf-temp.png",
+        "height": "adapt",
         "desktop_image_width": "large",
         "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "section_color_scheme": "scheme-4",
         "color_scheme": "scheme-4",
         "padding_top": 0,
@@ -159,6 +160,7 @@
       ],
       "name": "Ancient wisdom",
       "settings": {
+        "image": "shopify://shop_images/herb-drawer.png",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
