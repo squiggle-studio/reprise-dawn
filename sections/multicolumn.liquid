@@ -193,6 +193,15 @@
       {%- endif -%}
     </div>
   </div>
+  {%- if section.settings.banner_image != blank -%}
+    <div class="multicolumn__banner-image" style="--multicolumn-banner-height: {{ section.settings.banner_image_height }}px;">
+      {{
+        section.settings.banner_image
+        | image_url: width: 3000
+        | image_tag: sizes: '100vw', widths: '750, 1100, 1500, 2000, 3000', class: 'multicolumn__banner-image-img'
+      }}
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
@@ -406,6 +415,26 @@
       "id": "show_dividers_mobile",
       "default": false,
       "label": "Show dividers between items on mobile"
+    },
+    {
+      "type": "header",
+      "content": "Banner / transition image"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner image",
+      "info": "Full-bleed image shown below the columns, e.g. a decorative texture strip."
+    },
+    {
+      "type": "range",
+      "id": "banner_image_height",
+      "min": 40,
+      "max": 320,
+      "step": 8,
+      "unit": "px",
+      "label": "Banner image height",
+      "default": 96
     },
     {
       "type": "header",

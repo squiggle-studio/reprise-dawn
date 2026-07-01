@@ -287,3 +287,35 @@
     margin-top: 0;
   }
 }
+
+/*
+  Row layout items shrink to their own content width instead of the
+  equal-fraction column width the base grid forces, so icon+label
+  pairs cluster together instead of spreading across the full row.
+*/
+.multicolumn--row .multicolumn-list.grid {
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+
+@media screen and (min-width: 990px) {
+  .multicolumn--row .grid__item {
+    width: auto;
+    max-width: none;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* Full-bleed banner/transition image below the column content */
+.multicolumn__banner-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.multicolumn__banner-image-img {
+  display: block;
+  width: 100%;
+  height: var(--multicolumn-banner-height, 96px);
+  object-fit: cover;
+}
