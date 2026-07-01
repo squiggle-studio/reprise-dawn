@@ -231,3 +231,59 @@
     display: list-item;
   }
 }
+
+/*
+  Row layout (image beside text) added for the Reprise theme
+  customization, as an alternative to the default stacked layout.
+*/
+.multicolumn--row .multicolumn-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.multicolumn--row .multicolumn-card__image-wrapper {
+  width: 4.4rem;
+  flex-shrink: 0;
+  margin: 0;
+  padding-top: 0;
+}
+
+.multicolumn--row .multicolumn-card__image-wrapper .media {
+  padding-bottom: 100% !important;
+}
+
+.multicolumn--row .multicolumn-card__image-wrapper .multicolumn-card__image {
+  object-fit: contain;
+}
+
+.multicolumn--row .multicolumn-card__info {
+  padding: 0;
+}
+
+.multicolumn--row .multicolumn-card__info .link {
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.multicolumn-list__item--divided-mobile {
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  padding-bottom: 1.5rem;
+}
+
+.multicolumn-list__item--divided-mobile + .multicolumn-list__item--divided-mobile {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .multicolumn-list__item--divided-mobile {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .multicolumn-list__item--divided-mobile + .multicolumn-list__item--divided-mobile {
+    margin-top: 0;
+  }
+}

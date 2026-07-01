@@ -1,7 +1,7 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "hero": {
+      "type": "image-with-text",
       "blocks": {
         "heading": {
           "type": "heading",
@@ -10,20 +10,21 @@
             "heading_size": "hxl"
           }
         },
-        "text": {
-          "type": "text",
+        "caption": {
+          "type": "caption",
           "settings": {
-            "text": "Made for the modern world",
-            "text_style": "subtitle"
+            "caption": "Made for the modern world",
+            "text_style": "subtitle",
+            "text_size": "medium"
           }
         },
-        "button": {
+        "buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Daily Gummies",
+            "button_label_1": "Shop Daily Gummies →",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
-            "button_label_2": "Find Reprise Near You",
+            "button_label_2": "Find Reprise Near You →",
             "button_link_2": "",
             "button_style_secondary_2": true
           }
@@ -31,20 +32,83 @@
       },
       "block_order": [
         "heading",
-        "text",
-        "button"
+        "caption",
+        "buttons"
       ],
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "desktop_content_position": "middle-left",
-        "show_text_box": true,
+        "height": "large",
+        "desktop_image_width": "large",
+        "layout": "text_first",
         "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "color_scheme": "scheme-3",
         "mobile_content_alignment": "left",
-        "stack_images_on_mobile": false,
-        "show_text_below": true
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ancient_wisdom": {
+      "type": "image-with-text",
+      "blocks": {
+        "top_heading": {
+          "type": "top_heading",
+          "settings": {
+            "heading": "Ancient wisdom in a daily gummy",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Reprise is rooted in the belief that herbal, holistic approaches to health are a universal tradition—found across cultures, grounded in nature, and passed down through generations. We honor our heritage at every step of our process.</p>",
+            "text_style": "body"
+          }
+        },
+        "accordion_1": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "100% Whole Herbs",
+            "content": ""
+          }
+        },
+        "accordion_2": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Doctor Formulated",
+            "content": ""
+          }
+        },
+        "accordion_3": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "Deliciously Crafted",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "top_heading",
+        "text",
+        "accordion_1",
+        "accordion_2",
+        "accordion_3"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "scheme-3",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "trust_badge_ticker": {
@@ -98,6 +162,76 @@
         "padding_bottom": 16
       }
     },
+    "how_can_we_help": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "",
+            "text": "",
+            "link_label": "Better Sleep* →",
+            "link": ""
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "",
+            "text": "",
+            "link_label": "Mood & Calm* →",
+            "link": ""
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "",
+            "text": "",
+            "link_label": "Focus & Energy* →",
+            "link": ""
+          }
+        },
+        "column_4": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "",
+            "text": "",
+            "link_label": "Hot Flashes* →",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_1",
+        "column_2",
+        "column_3",
+        "column_4"
+      ],
+      "settings": {
+        "caption": "How can we help?",
+        "title": "Discover the untapped power of herbal remedies for",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "square",
+        "column_layout": "row",
+        "button_label": "Shop All →",
+        "button_link": "shopify://collections/all",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_dividers_mobile": true,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -128,8 +262,10 @@
     }
   },
   "order": [
-    "image_banner",
+    "hero",
     "trust_badge_ticker",
+    "ancient_wisdom",
+    "how_can_we_help",
     "featured_collection"
   ]
 }
