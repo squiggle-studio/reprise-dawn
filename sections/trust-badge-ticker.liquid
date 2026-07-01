@@ -1,0 +1,151 @@
+{{ 'section-trust-badge-ticker.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #TrustBadgeTicker-{{ section.id }} {
+    --ticker-duration: {{ section.settings.speed }}s;
+    {% if section.settings.direction == 'right' %}
+      --ticker-direction: reverse;
+    {% endif %}
+  }
+{%- endstyle -%}
+
+<div
+  id="TrustBadgeTicker-{{ section.id }}"
+  class="trust-badge-ticker color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding"
+>
+  {%- if section.blocks.size > 0 -%}
+    <div
+      class="trust-badge-ticker__track{% if section.settings.pause_on_hover %} trust-badge-ticker__track--pause-on-hover{% endif %}"
+      role="marquee"
+      aria-label="{{ 'sections.trust_badge_ticker.label' | t: default: 'Trust badges' }}"
+    >
+      {%- for i in (1..2) -%}
+        <div class="trust-badge-ticker__set" {% if i == 2 %}aria-hidden="true"{% endif %}>
+          {%- for block in section.blocks -%}
+            <span
+              class="trust-badge-ticker__item"
+              {% if i == 1 %}{{ block.shopify_attributes }}{% endif %}
+            >
+              {{- block.settings.text | escape -}}
+            </span>
+            {%- unless forloop.last -%}
+              <span class="trust-badge-ticker__divider" aria-hidden="true">{{ section.settings.divider }}</span>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Trust badge ticker",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-5"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "s",
+      "label": "Loop duration",
+      "info": "Time for one full loop. Lower is faster.",
+      "default": 25
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Scroll direction",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "divider",
+      "label": "Divider character",
+      "default": "•"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 16
+    }
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Badge text"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Trust badge ticker",
+      "blocks": [
+        { "type": "badge", "settings": { "text": "Proudly Asian Owned" } },
+        { "type": "badge", "settings": { "text": "100% customers rate us 4.7/5 stars" } },
+        { "type": "badge", "settings": { "text": "Free shipping over $50" } },
+        { "type": "badge", "settings": { "text": "Doctor developed formulas" } },
+        { "type": "badge", "settings": { "text": "100% Gluten Free" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

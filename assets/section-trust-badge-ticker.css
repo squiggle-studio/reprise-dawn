@@ -1,0 +1,52 @@
+.trust-badge-ticker {
+  overflow: hidden;
+}
+
+.trust-badge-ticker__track {
+  display: flex;
+  width: max-content;
+  animation-name: trust-badge-ticker-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: var(--ticker-duration, 25s);
+  animation-direction: var(--ticker-direction, normal);
+}
+
+.trust-badge-ticker__track--pause-on-hover:hover,
+.trust-badge-ticker__track--pause-on-hover:focus-within {
+  animation-play-state: paused;
+}
+
+.trust-badge-ticker__set {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.trust-badge-ticker__item {
+  white-space: nowrap;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding-inline: 0.75rem;
+}
+
+.trust-badge-ticker__divider {
+  padding-inline: 0.5rem;
+  opacity: 0.6;
+}
+
+@keyframes trust-badge-ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trust-badge-ticker__track {
+    animation: none;
+  }
+}

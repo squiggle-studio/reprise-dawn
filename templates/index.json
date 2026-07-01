@@ -6,37 +6,96 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "heading": "Eastern Herbal Wellness",
+            "heading_size": "hxl"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Made for the modern world",
+            "text_style": "subtitle"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Shop Daily Gummies",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Find Reprise Near You",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
       "block_order": [
         "heading",
+        "text",
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 0,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
         "image_behavior": "none",
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
-        "show_text_below": false
+        "show_text_below": true
+      }
+    },
+    "trust_badge_ticker": {
+      "type": "trust-badge-ticker",
+      "blocks": {
+        "badge_1": {
+          "type": "badge",
+          "settings": {
+            "text": "Proudly Asian Owned"
+          }
+        },
+        "badge_2": {
+          "type": "badge",
+          "settings": {
+            "text": "100% customers rate us 4.7/5 stars"
+          }
+        },
+        "badge_3": {
+          "type": "badge",
+          "settings": {
+            "text": "Free shipping over $50"
+          }
+        },
+        "badge_4": {
+          "type": "badge",
+          "settings": {
+            "text": "Doctor developed formulas"
+          }
+        },
+        "badge_5": {
+          "type": "badge",
+          "settings": {
+            "text": "100% Gluten Free"
+          }
+        }
+      },
+      "block_order": [
+        "badge_1",
+        "badge_2",
+        "badge_3",
+        "badge_4",
+        "badge_5"
+      ],
+      "settings": {
+        "color_scheme": "scheme-5",
+        "speed": 25,
+        "direction": "left",
+        "pause_on_hover": true,
+        "divider": "•",
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "featured_collection": {
@@ -70,6 +129,7 @@
   },
   "order": [
     "image_banner",
+    "trust_badge_ticker",
     "featured_collection"
   ]
 }
