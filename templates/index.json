@@ -1,114 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "hero": {
+    "image_with_text_ardYBV": {
       "type": "image-with-text",
       "blocks": {
-        "heading": {
+        "heading_TP8AHC": {
           "type": "heading",
           "settings": {
-            "heading": "Eastern Herbal Wellness",
-            "heading_size": "hxl"
-          }
-        },
-        "caption": {
-          "type": "caption",
-          "settings": {
-            "caption": "Made for the modern world",
-            "text_style": "subtitle",
-            "text_size": "medium"
-          }
-        },
-        "buttons": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop Daily Gummies →",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "Find Reprise Near You →",
-            "button_link_2": "",
-            "button_style_secondary_2": true
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "caption",
-        "buttons"
-      ],
-      "settings": {
-        "height": "large",
-        "desktop_image_width": "large",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "ancient_wisdom": {
-      "type": "image-with-text",
-      "blocks": {
-        "top_heading": {
-          "type": "top_heading",
-          "settings": {
-            "heading": "Ancient wisdom in a daily gummy",
+            "heading": "Image with text",
             "heading_size": "h1"
           }
         },
-        "text": {
+        "text_xRHPF4": {
           "type": "text",
           "settings": {
-            "text": "<p>Reprise is rooted in the belief that herbal, holistic approaches to health are a universal tradition—found across cultures, grounded in nature, and passed down through generations. We honor our heritage at every step of our process.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         },
-        "accordion_1": {
-          "type": "accordion_item",
+        "button_d7BNx9": {
+          "type": "button",
           "settings": {
-            "title": "100% Whole Herbs",
-            "content": ""
-          }
-        },
-        "accordion_2": {
-          "type": "accordion_item",
-          "settings": {
-            "title": "Doctor Formulated",
-            "content": ""
-          }
-        },
-        "accordion_3": {
-          "type": "accordion_item",
-          "settings": {
-            "title": "Deliciously Crafted",
-            "content": ""
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "top_heading",
-        "text",
-        "accordion_1",
-        "accordion_2",
-        "accordion_3"
+        "heading_TP8AHC",
+        "text_xRHPF4",
+        "button_d7BNx9"
       ],
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
+        "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-3",
-        "color_scheme": "scheme-3",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "trust_badge_ticker": {
@@ -162,93 +107,140 @@
         "padding_bottom": 16
       }
     },
-    "how_can_we_help": {
+    "image_with_text_9WCzKi": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_wmqFxT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_KJNiHK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_FRYFmR": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_wmqFxT",
+        "text_KJNiHK",
+        "button_FRYFmR"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_zXFPcL": {
       "type": "multicolumn",
       "blocks": {
-        "column_1": {
+        "column_y4KepQ": {
           "type": "column",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/Chamomile_For_Sleep.png",
             "title": "",
             "text": "",
-            "link_label": "Better Sleep* →",
+            "link_label": "Better Sleep",
             "link": ""
           }
         },
-        "column_2": {
+        "column_GknA8U": {
           "type": "column",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/Ginseng_for_Energy.png",
             "title": "",
             "text": "",
-            "link_label": "Mood & Calm* →",
+            "link_label": "Focus & Energy",
             "link": ""
           }
         },
-        "column_3": {
+        "column_HKF3CQ": {
           "type": "column",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/Goji_For_Mood.png",
             "title": "",
             "text": "",
-            "link_label": "Focus & Energy* →",
+            "link_label": "Mood & Calm*",
             "link": ""
           }
         },
-        "column_4": {
+        "column_DAJ4EB": {
           "type": "column",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/Privet_For_Hot_Flashes.png",
             "title": "",
             "text": "",
-            "link_label": "Hot Flashes* →",
+            "link_label": "Hot Flashes*",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_1",
-        "column_2",
-        "column_3",
-        "column_4"
+        "column_y4KepQ",
+        "column_GknA8U",
+        "column_HKF3CQ",
+        "column_DAJ4EB"
       ],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "caption": "How can we help?",
         "title": "Discover the untapped power of herbal remedies for",
         "heading_size": "h1",
-        "image_width": "third",
+        "image_width": "full",
         "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
         "column_layout": "row",
-        "button_label": "Shop All →",
-        "button_link": "shopify://collections/all",
         "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "none",
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "show_dividers_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 52
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "Featured products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -256,16 +248,17 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "hero",
+    "image_with_text_ardYBV",
     "trust_badge_ticker",
-    "ancient_wisdom",
-    "how_can_we_help",
+    "image_with_text_9WCzKi",
+    "multicolumn_zXFPcL",
     "featured_collection"
   ]
 }
