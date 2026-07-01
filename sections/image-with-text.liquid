@@ -98,33 +98,6 @@
                       {{ block.settings.button_label | escape }}
                     </a>
                   {%- endif -%}
-                {%- when 'buttons' -%}
-                  <div class="image-with-text__buttons" {{ block.shopify_attributes }}>
-                    {%- if block.settings.button_label_1 != blank -%}
-                      <a
-                        {% if block.settings.button_link_1 == blank %}
-                          role="link" aria-disabled="true"
-                        {% else %}
-                          href="{{ block.settings.button_link_1 }}"
-                        {% endif %}
-                        class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
-                      >
-                        {{- block.settings.button_label_1 | escape -}}
-                      </a>
-                    {%- endif -%}
-                    {%- if block.settings.button_label_2 != blank -%}
-                      <a
-                        {% if block.settings.button_link_2 == blank %}
-                          role="link" aria-disabled="true"
-                        {% else %}
-                          href="{{ block.settings.button_link_2 }}"
-                        {% endif %}
-                        class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
-                      >
-                        {{- block.settings.button_label_2 | escape -}}
-                      </a>
-                    {%- endif -%}
-                  </div>
               {%- endcase -%}
             {%- endfor -%}
           </div>
@@ -490,54 +463,6 @@
           "id": "button_style_secondary",
           "default": false,
           "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
-        }
-      ]
-    },
-    {
-      "type": "buttons",
-      "name": "Buttons (stacked)",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "header",
-          "content": "First button"
-        },
-        {
-          "type": "text",
-          "id": "button_label_1",
-          "default": "Button label",
-          "label": "Label"
-        },
-        {
-          "type": "url",
-          "id": "button_link_1",
-          "label": "Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_1",
-          "default": false,
-          "label": "Use outline button style"
-        },
-        {
-          "type": "header",
-          "content": "Second button"
-        },
-        {
-          "type": "text",
-          "id": "button_label_2",
-          "label": "Label"
-        },
-        {
-          "type": "url",
-          "id": "button_link_2",
-          "label": "Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_2",
-          "default": true,
-          "label": "Use outline button style"
         }
       ]
     }

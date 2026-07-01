@@ -415,17 +415,3 @@
     row-gap: var(--grid-desktop-vertical-spacing);
   }
 }
-
-/*
-  Stacked buttons block added for the Reprise theme customization
-  (image-with-text extension, used by the homepage hero).
-*/
-.image-with-text__buttons {
-  display: grid;
-  grid-template-columns: auto;
-  gap: 1rem;
-}
-
-.image-with-text__buttons .button {
-  text-align: center;
-}

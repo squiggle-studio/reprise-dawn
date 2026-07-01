@@ -1,0 +1,354 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .split__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: 56vw;
+  }
+
+  .split__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .split__image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .split__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 4rem;
+  }
+
+  .split__heading {
+    margin: 0;
+  }
+
+  .split__subheading {
+    margin: 0;
+    opacity: 0.85;
+    white-space: nowrap;
+  }
+
+  .split__text {
+    margin: 0;
+  }
+
+  .split__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 38rem;
+  }
+
+  .split__buttons .button {
+    width: 100%;
+    justify-content: center;
+    font-weight: var(--font-body-weight-bold);
+  }
+
+  @media screen and (min-width: 750px) {
+    .split {
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
+    }
+
+    .split__image-wrapper {
+      min-height: unset;
+      order: 1;
+    }
+
+    .split__content {
+      order: 0;
+      align-items: flex-start;
+      text-align: left;
+      padding: 4rem 6rem;
+    }
+
+    .split__subheading {
+      white-space: normal;
+    }
+
+    .split--image-left .split__image-wrapper {
+      order: 0;
+    }
+
+    .split--image-left .split__content {
+      order: 1;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .split__content {
+      padding: 4rem 8rem;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
+
+<div class="split{% if section.settings.layout == 'image_left' %} split--image-left{% endif %} color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="split__image-wrapper">
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 2000
+        | image_tag:
+          widths: '375, 750, 900, 1200, 1500, 2000',
+          sizes: '(min-width: 750px) 50vw, 100vw',
+          fetchpriority: fetch_priority,
+          class: 'split__image'
+      }}
+    {%- else -%}
+      {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg split__image-placeholder' }}
+    {%- endif -%}
+  </div>
+
+  <div class="split__content section-{{ section.id }}-padding">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'heading' -%}
+          <h2 class="split__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+            {{ block.settings.heading }}
+          </h2>
+
+        {%- when 'subheading' -%}
+          <p class="split__subheading caption-with-letter-spacing" {{ block.shopify_attributes }}>
+            {{ block.settings.subheading | escape }}
+          </p>
+
+        {%- when 'text' -%}
+          <div class="split__text rte" {{ block.shopify_attributes }}>
+            {{ block.settings.text }}
+          </div>
+
+        {%- when 'buttons' -%}
+          <div class="split__buttons" {{ block.shopify_attributes }}>
+            {%- if block.settings.button_1_label != blank -%}
+              <a
+                {% if block.settings.button_1_link == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ block.settings.button_1_link }}"
+                {% endif %}
+                class="button{% if block.settings.button_1_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+              >
+                {{ block.settings.button_1_label | escape }}
+              </a>
+            {%- endif -%}
+            {%- if block.settings.button_2_label != blank -%}
+              <a
+                {% if block.settings.button_2_link == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ block.settings.button_2_link }}"
+                {% endif %}
+                class="button{% if block.settings.button_2_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+              >
+                {{ block.settings.button_2_label | escape }}
+              </a>
+            {%- endif -%}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image + text (split)",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Image position",
+      "options": [
+        { "value": "image_right", "label": "Image right" },
+        { "value": "image_left", "label": "Image left" }
+      ],
+      "default": "image_right"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Eastern Herbal Wellness",
+          "label": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "options": [
+            { "value": "h2", "label": "Small" },
+            { "value": "h1", "label": "Medium" },
+            { "value": "h0", "label": "Large" },
+            { "value": "hxl", "label": "Extra large" },
+            { "value": "hxxl", "label": "XX large" }
+          ],
+          "default": "h0"
+        }
+      ]
+    },
+    {
+      "type": "subheading",
+      "name": "Subheading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "subheading",
+          "default": "Made for the modern world",
+          "label": "Subheading"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "Buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_1_label",
+          "label": "Button 1 label",
+          "default": "Shop Daily Gummies"
+        },
+        {
+          "type": "url",
+          "id": "button_1_link",
+          "label": "Button 1 link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_1_style_secondary",
+          "label": "Button 1 outline style",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "button_2_label",
+          "label": "Button 2 label",
+          "default": "Find Reprise Near You"
+        },
+        {
+          "type": "url",
+          "id": "button_2_link",
+          "label": "Button 2 link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_2_style_secondary",
+          "label": "Button 2 outline style",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image + text (split)",
+      "blocks": [
+        { "type": "heading" },
+        { "type": "subheading" },
+        { "type": "buttons" }
+      ]
+    }
+  ]
+}
+{% endschema %}

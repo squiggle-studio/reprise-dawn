@@ -9,56 +9,46 @@
  */
 {
   "sections": {
-    "image_with_text_ardYBV": {
-      "type": "image-with-text",
+    "hero": {
+      "type": "image-text-split",
       "blocks": {
-        "heading_TP8AHC": {
+        "heading_hero": {
           "type": "heading",
           "settings": {
             "heading": "EASTERN HERBAL WELLNESS",
             "heading_size": "h0"
           }
         },
-        "caption_hero": {
-          "type": "caption",
+        "subheading_hero": {
+          "type": "subheading",
           "settings": {
-            "caption": "Made for the modern world",
-            "text_style": "subtitle",
-            "text_size": "medium"
+            "subheading": "Made for the modern world"
           }
         },
         "buttons_hero": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Daily Gummies →",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "Find Reprise Near You →",
-            "button_link_2": "",
-            "button_style_secondary_2": true
+            "button_1_label": "Shop Daily Gummies →",
+            "button_1_link": "shopify://collections/all",
+            "button_1_style_secondary": false,
+            "button_2_label": "Find Reprise Near You →",
+            "button_2_link": "",
+            "button_2_style_secondary": true
           }
         }
       },
       "block_order": [
-        "heading_TP8AHC",
-        "caption_hero",
+        "heading_hero",
+        "subheading_hero",
         "buttons_hero"
       ],
       "name": "Hero",
       "settings": {
         "image": "shopify://shop_images/herb-shelf-temp.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "center",
-        "section_color_scheme": "scheme-4",
+        "layout": "image_right",
         "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "trust_badge_ticker": {
@@ -256,7 +246,7 @@
     }
   },
   "order": [
-    "image_with_text_ardYBV",
+    "hero",
     "trust_badge_ticker",
     "image_text_accordion",
     "multicolumn_zXFPcL",
