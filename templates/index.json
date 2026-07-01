@@ -44,7 +44,7 @@
         "caption_hero",
         "buttons_hero"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "Hero",
       "settings": {
         "height": "large",
         "desktop_image_width": "large",
@@ -157,7 +157,7 @@
         "accordion_2",
         "accordion_3"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "Ancient wisdom",
       "settings": {
         "height": "adapt",
         "desktop_image_width": "small",
@@ -223,7 +223,7 @@
         "column_HKF3CQ",
         "column_DAJ4EB"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "How can we help",
       "settings": {
         "caption": "How can we help?",
         "title": "Discover the untapped power of herbal remedies for",
