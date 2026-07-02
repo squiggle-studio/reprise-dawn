@@ -371,6 +371,62 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "our_story": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_story": {
+          "type": "caption",
+          "settings": {
+            "caption": "Our story",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_story": {
+          "type": "heading",
+          "settings": {
+            "heading": "Inspired by Grandma",
+            "heading_size": "h1"
+          }
+        },
+        "text_story": {
+          "type": "text",
+          "settings": {
+            "text": "<p>David and Kai grew up on traditional herbal remedies – in teas, soups, and tonics, passed down for generations. None of it tasted good. They were fascinated by the science behind certain herbs, and extraction methods that preserved potency without the dreaded taste. When they connected with an eastern medicine doctor at Harvard, Reprise was born.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_story": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more →",
+            "button_link": "",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "caption_story",
+        "heading_story",
+        "text_story",
+        "button_story"
+      ],
+      "name": "Our story",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -379,6 +435,7 @@
     "image_text_accordion",
     "multicolumn_zXFPcL",
     "ingredient_grid",
+    "our_story",
     "featured_collection"
   ]
 }
