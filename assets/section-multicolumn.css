@@ -239,12 +239,13 @@
 .multicolumn--row .multicolumn-card {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
+  width: 17rem;
 }
 
 .multicolumn--row .multicolumn-card__image-wrapper {
-  width: 4.4rem;
-  flex-shrink: 0;
+  flex: 1 1 0;
+  min-width: 0;
   margin: 0;
   padding-top: 0;
 }
@@ -258,14 +259,18 @@
 }
 
 .multicolumn--row .multicolumn-card__info {
+  flex: 1 1 0;
+  min-width: 0;
   padding: 0;
 }
 
 .multicolumn--row .multicolumn-card__info .link {
+  display: block;
   color: rgb(var(--color-foreground));
   text-decoration: none;
   font-weight: 700;
   font-size: 1.6rem;
+  line-height: 1.25;
 }
 
 .multicolumn-list__item--divided-mobile {
