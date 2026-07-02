@@ -593,3 +593,30 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+/*
+  Metafield-driven eyebrow and Quick Add + Details row, opt-in via
+  card_eyebrow_metafield / show_details_link params on card-product.
+*/
+.card__eyebrow {
+  margin: 0 0 0.4rem;
+  color: #af412f;
+}
+
+.card__quick-add-row--with-details {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.card__quick-add-row--with-details .quick-add {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.card__details-link {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  text-decoration: none;
+  font-weight: 700;
+}

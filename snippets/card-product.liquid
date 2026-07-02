@@ -16,6 +16,10 @@
   - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
   - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
   - placeholder_image: {String} The placeholder image to use when no product exists. Default: 'product-apparel-2' (optional)
+  - card_eyebrow_metafield: {String} A "namespace.key" metafield reference (e.g. "custom.category") rendered as a
+    small caption above the title, when the referenced metafield has a value. Default: blank, no eyebrow (optional)
+  - show_details_link: {Boolean} Show a "Details" link next to the quick add button, linking to the product page.
+    Only has an effect when quick_add is "standard". Default: false (optional)
 
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
@@ -147,6 +151,13 @@
         </div>
         <div class="card__content">
           <div class="card__information">
+            {%- if card_eyebrow_metafield != blank -%}
+              {%- assign eyebrow_parts = card_eyebrow_metafield | split: '.' -%}
+              {%- assign eyebrow_value = card_product.metafields[eyebrow_parts[0]][eyebrow_parts[1]] -%}
+              {%- if eyebrow_value != blank -%}
+                <p class="card__eyebrow caption-with-letter-spacing">{{ eyebrow_value }}</p>
+              {%- endif -%}
+            {%- endif -%}
             <h3
               class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
               {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -292,6 +303,7 @@
           </div>
           {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
           {% if quick_add == 'standard' %}
+            <div class="card__quick-add-row{% if show_details_link %} card__quick-add-row--with-details{% endif %}">
             <div class="quick-add no-js-hidden">
               {%- liquid
                 assign qty_rules = false
@@ -305,7 +317,7 @@
                     id="{{ product_form_id }}-submit"
                     type="submit"
                     name="add"
-                    class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
+                    class="quick-add__submit button{% if show_details_link %} button--primary{% else %} button--full-width button--secondary{% endif %}{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
                     aria-haspopup="dialog"
                     aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                     data-product-url="{{ card_product.url }}"
@@ -360,7 +372,7 @@
                       id="{{ product_form_id }}-submit"
                       type="submit"
                       name="add"
-                      class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
+                      class="quick-add__submit button{% if show_details_link %} button--primary{% else %} button--full-width button--secondary{% endif %}{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
                       aria-haspopup="dialog"
                       aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                       aria-live="polite"
@@ -389,6 +401,10 @@
                   {%- endform -%}
                 </product-form>
               {%- endif -%}
+            </div>
+            {%- if show_details_link -%}
+              <a href="{{ card_product.url }}" class="card__details-link link link--text">Details&nbsp;→</a>
+            {%- endif -%}
             </div>
           {% elsif quick_add == 'bulk' %}
             {% if card_product.variants_count == 1 %}
