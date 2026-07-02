@@ -305,9 +305,10 @@
             "label": "Privet Fruit"
           }
         },
-        "mulberry": {
+        "ingredient_9fApya": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Mulberry_Fruit.svg",
             "label": "Mulberry"
           }
         }
@@ -324,7 +325,7 @@
         "jujube_seed",
         "turmeric",
         "privet_fruit",
-        "mulberry"
+        "ingredient_9fApya"
       ],
       "name": "Ingredients",
       "settings": {
