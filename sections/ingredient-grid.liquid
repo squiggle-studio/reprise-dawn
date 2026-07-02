@@ -1,0 +1,200 @@
+{{ 'section-ingredient-grid.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding ingredient-grid">
+    {%- if section.settings.caption != blank -%}
+      <p class="caption-with-letter-spacing">{{ section.settings.caption | escape }}</p>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="ingredient-grid__heading inline-richtext {{ section.settings.heading_size }}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+      <div class="ingredient-grid__text rte">
+        {{ section.settings.text }}
+      </div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <ul class="ingredient-grid__list" role="list">
+        {%- for block in section.blocks -%}
+          <li class="ingredient-grid__item" {{ block.shopify_attributes }}>
+            <div class="ingredient-grid__tile">
+              {%- if block.settings.image != blank -%}
+                {{
+                  block.settings.image
+                  | image_url: width: 200
+                  | image_tag: widths: '100, 150, 200', sizes: '100px', class: 'ingredient-grid__image'
+                }}
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg ingredient-grid__image' }}
+              {%- endif -%}
+            </div>
+            {%- if block.settings.label != blank -%}
+              <p class="ingredient-grid__label">{{ block.settings.label | escape }}</p>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if section.settings.link_label != blank -%}
+      <a
+        {% if section.settings.link == blank %}
+          role="link" aria-disabled="true"
+        {% else %}
+          href="{{ section.settings.link }}"
+        {% endif %}
+        class="ingredient-grid__link link link--text animate-arrow"
+      >
+        <span>{{ section.settings.link_label | escape }}</span>
+        {{- 'icon-arrow.svg' | inline_asset_content -}}
+      </a>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Ingredient grid",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption (eyebrow text above heading)",
+      "default": "Ingredients"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Sourced and extracted to the highest quality standards"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" },
+        { "value": "hxl", "label": "Extra large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Perfected over generations, our time-honored process ensures maximum potency and absorption.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Link"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label",
+      "default": "Learn more →"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-4"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingredient",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Ingredient"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ingredient grid",
+      "blocks": [
+        { "type": "ingredient", "settings": { "label": "Chamomile" } },
+        { "type": "ingredient", "settings": { "label": "Dong Quai" } },
+        { "type": "ingredient", "settings": { "label": "Reishi" } },
+        { "type": "ingredient", "settings": { "label": "Licorice Root" } },
+        { "type": "ingredient", "settings": { "label": "Ginseng" } },
+        { "type": "ingredient", "settings": { "label": "Peony" } },
+        { "type": "ingredient", "settings": { "label": "Goji" } },
+        { "type": "ingredient", "settings": { "label": "Lemon Balm" } },
+        { "type": "ingredient", "settings": { "label": "Jujube Seed" } },
+        { "type": "ingredient", "settings": { "label": "Turmeric" } },
+        { "type": "ingredient", "settings": { "label": "Privet Fruit" } },
+        { "type": "ingredient", "settings": { "label": "Mulberry" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

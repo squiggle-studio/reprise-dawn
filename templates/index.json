@@ -218,6 +218,49 @@
         "padding_bottom": 52
       }
     },
+    "ingredient_grid": {
+      "type": "ingredient-grid",
+      "blocks": {
+        "chamomile": { "type": "ingredient", "settings": { "label": "Chamomile" } },
+        "dong_quai": { "type": "ingredient", "settings": { "label": "Dong Quai" } },
+        "reishi": { "type": "ingredient", "settings": { "label": "Reishi" } },
+        "licorice_root": { "type": "ingredient", "settings": { "label": "Licorice Root" } },
+        "ginseng": { "type": "ingredient", "settings": { "label": "Ginseng" } },
+        "peony": { "type": "ingredient", "settings": { "label": "Peony" } },
+        "goji": { "type": "ingredient", "settings": { "label": "Goji" } },
+        "lemon_balm": { "type": "ingredient", "settings": { "label": "Lemon Balm" } },
+        "jujube_seed": { "type": "ingredient", "settings": { "label": "Jujube Seed" } },
+        "turmeric": { "type": "ingredient", "settings": { "label": "Turmeric" } },
+        "privet_fruit": { "type": "ingredient", "settings": { "label": "Privet Fruit" } },
+        "mulberry": { "type": "ingredient", "settings": { "label": "Mulberry" } }
+      },
+      "block_order": [
+        "chamomile",
+        "dong_quai",
+        "reishi",
+        "licorice_root",
+        "ginseng",
+        "peony",
+        "goji",
+        "lemon_balm",
+        "jujube_seed",
+        "turmeric",
+        "privet_fruit",
+        "mulberry"
+      ],
+      "name": "Ingredients",
+      "settings": {
+        "caption": "Ingredients",
+        "heading": "Sourced and extracted to the highest quality standards",
+        "heading_size": "h1",
+        "text": "<p>Perfected over generations, our time-honored process ensures maximum potency and absorption.</p>",
+        "link_label": "Learn more →",
+        "link": "",
+        "color_scheme": "scheme-4",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -252,6 +295,7 @@
     "trust_badge_ticker",
     "image_text_accordion",
     "multicolumn_zXFPcL",
+    "ingredient_grid",
     "featured_collection"
   ]
 }

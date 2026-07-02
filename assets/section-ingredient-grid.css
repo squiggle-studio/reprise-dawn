@@ -1,0 +1,75 @@
+.ingredient-grid__heading {
+  margin: 1.5rem 0 0;
+}
+
+.ingredient-grid__text {
+  margin: 1.5rem 0 0;
+}
+
+.ingredient-grid__list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1.5rem;
+  margin: 3rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ingredient-grid__item {
+  flex: 0 0 auto;
+  width: 8.8rem;
+  text-align: center;
+}
+
+.ingredient-grid__tile {
+  width: 8.8rem;
+  height: 8.8rem;
+  border-radius: 1.2rem;
+  background: rgba(var(--color-foreground), 0.15);
+  border: 0.1rem solid rgba(var(--color-foreground), 0.3);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ingredient-grid__image {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.ingredient-grid__label {
+  margin: 1rem 0 0;
+  font-size: 1.3rem;
+  font-weight: var(--font-body-weight-bold);
+}
+
+.ingredient-grid__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 3rem 0 0;
+  font-weight: var(--font-body-weight-bold);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 749px) {
+  .ingredient-grid__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: visible;
+    gap: 2rem 1.5rem;
+  }
+
+  .ingredient-grid__item {
+    width: 100%;
+  }
+
+  .ingredient-grid__tile {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}
