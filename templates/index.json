@@ -231,66 +231,77 @@
         "chamomile": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Chamomile_Flower_White.svg",
             "label": "Chamomile"
           }
         },
         "dong_quai": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Dong_Quai.svg",
             "label": "Dong Quai"
           }
         },
         "reishi": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Reishi_Mushrooms.svg",
             "label": "Reishi"
           }
         },
         "licorice_root": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Licorice_Root.svg",
             "label": "Licorice Root"
           }
         },
         "ginseng": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Ginseng.svg",
             "label": "Ginseng"
           }
         },
         "peony": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Peony_Root.svg",
             "label": "Peony"
           }
         },
         "goji": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Goji_Berries.svg",
             "label": "Goji"
           }
         },
         "lemon_balm": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Lemon_Balm_Leaf.svg",
             "label": "Lemon Balm"
           }
         },
         "jujube_seed": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Jujube.svg",
             "label": "Jujube Seed"
           }
         },
         "turmeric": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Turmeric.svg",
             "label": "Turmeric"
           }
         },
         "privet_fruit": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Privet_For_Hot_Flashes.png",
             "label": "Privet Fruit"
           }
         },
