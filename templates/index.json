@@ -162,7 +162,7 @@
             "image": "shopify://shop_images/Chamomile_For_Sleep.png",
             "title": "",
             "text": "",
-            "link_label": "Better Sleep",
+            "link_label": "Better Sleep* →",
             "link": ""
           }
         },
@@ -172,7 +172,7 @@
             "image": "shopify://shop_images/Ginseng_for_Energy.png",
             "title": "",
             "text": "",
-            "link_label": "Focus & Energy",
+"link_label": "Focus & Energy* →",
             "link": "shopify://products/super-focus-gummies"
           }
         },
@@ -182,7 +182,7 @@
             "image": "shopify://shop_images/Goji_For_Mood.png",
             "title": "",
             "text": "",
-            "link_label": "Mood & Calm*",
+            "link_label": "Mood & Calm* →",
             "link": ""
           }
         },
@@ -192,7 +192,7 @@
             "image": "shopify://shop_images/Privet_For_Hot_Flashes.png",
             "title": "",
             "text": "",
-            "link_label": "Hot Flashes*",
+            "link_label": "Hot Flashes* →",
             "link": ""
           }
         }
@@ -337,7 +337,7 @@
         "heading": "Sourced and extracted to the highest quality standards",
         "heading_size": "h1",
         "text": "<p>Perfected over generations, our time-honored process ensures maximum potency and absorption.</p>",
-        "link_label": "Learn more →",
+        "link_label": "Learn more →",
         "link": "",
         "color_scheme": "scheme-4",
         "padding_top": 52,
