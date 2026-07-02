@@ -29,15 +29,19 @@
     gap: 3rem;
   }
 
-  /* Mobile: full bleed image */
   .split-accordion__image-wrapper {
-    width: 100vw !important;
-    margin-left: calc(-1 * (100vw - 100%) / 2) !important;
-    margin-right: calc(-1 * (100vw - 100%) / 2) !important;
     height: 70vw;
     overflow: hidden;
     position: relative;
-    border-radius: 0 !important;
+  }
+
+  @media screen and (max-width: 749px) {
+    .split-accordion__image-wrapper {
+      width: 100vw;
+      margin-left: calc(-1 * (100vw - 100%) / 2);
+      margin-right: calc(-1 * (100vw - 100%) / 2);
+      border-radius: 0;
+    }
   }
 
   .split-accordion__image {
