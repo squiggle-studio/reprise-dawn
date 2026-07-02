@@ -61,10 +61,9 @@
         {% else %}
           href="{{ section.settings.link }}"
         {% endif %}
-        class="ingredient-grid__link link link--text animate-arrow"
+        class="ingredient-grid__link link link--text"
       >
-        <span>{{ section.settings.link_label | escape }}</span>
-        {{- 'icon-arrow.svg' | inline_asset_content -}}
+        {{ section.settings.link_label | escape }}
       </a>
     {%- endif -%}
   </div>

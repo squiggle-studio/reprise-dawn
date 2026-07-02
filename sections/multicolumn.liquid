@@ -132,7 +132,7 @@
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
                   <a
-                    class="link animate-arrow"
+                    class="link"
                     {% if block.settings.link == blank %}
                       role="link" aria-disabled="true"
                     {% else %}
@@ -140,9 +140,6 @@
                     {% endif %}
                   >
                     {{- block.settings.link_label | escape -}}
-                    <span class="svg-wrapper"
-                      ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
-                    >
                   </a>
                 {%- endif -%}
               </div>
@@ -178,7 +175,7 @@
         </div>
       {%- endif -%}
     </slider-component>
-    <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
+    <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}{% unless section.settings.show_button_on_desktop %} medium-hide large-up-hide{% endunless %}">
       {%- if section.settings.button_label != blank -%}
         <a
           class="button button--primary"
@@ -315,7 +312,14 @@
       "type": "url",
       "id": "button_link",
       "label": "t:sections.multicolumn.settings.button_link.label"
-    },    
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_on_desktop",
+      "default": true,
+      "label": "Show button on desktop",
+      "info": "Turn off to show the button on mobile only"
+    },
     {
       "type": "header",
       "content": "t:sections.multicolumn.settings.header_layout.content"

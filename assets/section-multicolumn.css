@@ -327,3 +327,7 @@
     padding-right: calc(1.5rem + 8px);
   }
 }
+
+.multicolumn .button {
+  font-weight: var(--font-body-weight-bold);
+}
