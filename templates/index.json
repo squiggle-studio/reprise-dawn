@@ -203,9 +203,7 @@
         "column_HKF3CQ",
         "column_DAJ4EB"
       ],
-      "custom_css": [
-        "a{font-size:1.5em; font-weight: 600;}"
-      ],
+      "custom_css": [],
       "name": "How can we help",
       "settings": {
         "caption": "How can we help?",
@@ -215,14 +213,14 @@
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "shopify://collections/all",
-        "column_layout": "stacked",
+        "column_layout": "row",
         "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "scheme-1",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "show_dividers_mobile": false,
+        "show_dividers_mobile": true,
         "banner_image": "shopify://shop_images/Bamboo-Texture-Transition.png",
         "banner_image_height": 40,
         "padding_top": 52,
@@ -331,6 +329,7 @@
         "privet_fruit",
         "ingredient_9fApya"
       ],
+      "custom_css": [],
       "name": "Ingredients",
       "settings": {
         "caption": "Ingredients",
