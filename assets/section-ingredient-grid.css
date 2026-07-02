@@ -7,24 +7,22 @@
 }
 
 .ingredient-grid__list {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(var(--ingredient-count, 4), minmax(0, 1fr));
+  gap: 1rem;
   margin: 3rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .ingredient-grid__item {
-  flex: 0 0 auto;
-  width: 8.8rem;
+  min-width: 0;
   text-align: center;
 }
 
 .ingredient-grid__tile {
-  width: 8.8rem;
-  height: 8.8rem;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 1.2rem;
   background: rgba(var(--color-foreground), 0.15);
   border: 0.1rem solid rgba(var(--color-foreground), 0.3);
@@ -35,9 +33,18 @@
 }
 
 .ingredient-grid__image {
-  width: 70%;
-  height: 70%;
-  object-fit: contain;
+  display: block;
+  width: 55%;
+  height: 55%;
+  background-color: rgb(var(--color-foreground));
+  -webkit-mask-image: var(--ingredient-icon-url);
+  mask-image: var(--ingredient-icon-url);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 
 .ingredient-grid__label {
@@ -57,19 +64,7 @@
 
 @media screen and (max-width: 749px) {
   .ingredient-grid__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow-x: visible;
-    gap: 2rem 1.5rem;
-  }
-
-  .ingredient-grid__item {
-    width: 100%;
-  }
-
-  .ingredient-grid__tile {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem 1rem;
   }
 }

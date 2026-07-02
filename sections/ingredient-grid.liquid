@@ -31,16 +31,17 @@
     {%- endif -%}
 
     {%- if section.blocks.size > 0 -%}
-      <ul class="ingredient-grid__list" role="list">
+      <ul class="ingredient-grid__list" role="list" style="--ingredient-count: {{ section.blocks.size }};">
         {%- for block in section.blocks -%}
           <li class="ingredient-grid__item" {{ block.shopify_attributes }}>
             <div class="ingredient-grid__tile">
               {%- if block.settings.image != blank -%}
-                {{
-                  block.settings.image
-                  | image_url: width: 200
-                  | image_tag: widths: '100, 150, 200', sizes: '100px', class: 'ingredient-grid__image'
-                }}
+                <span
+                  class="ingredient-grid__image"
+                  style="--ingredient-icon-url: url('{{ block.settings.image | image_url }}');"
+                  role="img"
+                  aria-label="{{ block.settings.label | escape }}"
+                ></span>
               {%- else -%}
                 {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg ingredient-grid__image' }}
               {%- endif -%}
