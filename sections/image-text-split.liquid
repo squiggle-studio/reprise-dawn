@@ -15,8 +15,6 @@
     display: grid;
     grid-template-columns: 1fr;
     height: auto;
-    max-width: calc(var(--page-width) * 2);
-    margin: 0 auto;
   }
 
   .split__image-wrapper {
@@ -98,6 +96,7 @@
       align-items: flex-start;
       text-align: left;
       padding: 4rem 6rem;
+      max-width: var(--page-width);
     }
 
     .split__subheading {
@@ -127,8 +126,7 @@
   endif
 -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-<div class="split{% if section.settings.layout == 'image_left' %} split--image-left{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+<div class="split{% if section.settings.layout == 'image_left' %} split--image-left{% endif %} color-{{ section.settings.color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
   <div class="split__image-wrapper">
     {%- if section.settings.image != blank -%}
       {{
@@ -193,7 +191,6 @@
       {%- endcase -%}
     {%- endfor -%}
   </div>
-</div>
 </div>
 
 {% schema %}
