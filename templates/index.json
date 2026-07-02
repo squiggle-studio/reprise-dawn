@@ -19,8 +19,15 @@
             "heading_size": "h0"
           }
         },
+        "text_tBHynm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Made for the modern world</p>"
+          }
+        },
         "subheading_hero": {
           "type": "subheading",
+          "disabled": true,
           "settings": {
             "subheading": "Made for the modern world"
           }
@@ -39,6 +46,7 @@
       },
       "block_order": [
         "heading_hero",
+        "text_tBHynm",
         "subheading_hero",
         "buttons_hero"
       ],
