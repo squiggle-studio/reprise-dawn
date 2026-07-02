@@ -296,14 +296,15 @@
 .multicolumn--row .multicolumn-list.grid {
   column-gap: 3rem;
   row-gap: 2rem;
+  justify-content: flex-start;
 }
 
 @media screen and (min-width: 990px) {
   .multicolumn--row .grid__item {
-    width: auto;
-    max-width: none;
-    flex-grow: 0;
-    flex-shrink: 0;
+    width: auto !important;
+    max-width: none !important;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
   }
 }
 
