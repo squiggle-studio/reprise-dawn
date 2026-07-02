@@ -344,11 +344,25 @@
 }
 
 @media screen and (max-width: 749px) {
-  .multicolumn--row .multicolumn__title {
+  .multicolumn--row .multicolumn__title,
+  .multicolumn--row .multicolumn__title .caption-with-letter-spacing {
     text-align: center;
   }
 
   .multicolumn--row .multicolumn-card {
+    width: auto;
     margin: 0 auto;
+  }
+
+  .multicolumn--row .multicolumn-card__image-wrapper {
+    flex: 0 0 6rem;
+  }
+
+  .multicolumn--row .multicolumn-card__info {
+    flex: 0 0 auto;
+  }
+
+  .multicolumn--row .multicolumn-card__info .link {
+    white-space: nowrap;
   }
 }
