@@ -94,7 +94,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-5",
-        "speed": 25,
+        "speed": 45,
         "direction": "left",
         "pause_on_hover": true,
         "divider": "•",
@@ -212,7 +212,6 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "show_dividers_mobile": true,
-        "banner_image": "",
         "banner_image_height": 96,
         "padding_top": 52,
         "padding_bottom": 52
@@ -221,18 +220,78 @@
     "ingredient_grid": {
       "type": "ingredient-grid",
       "blocks": {
-        "chamomile": { "type": "ingredient", "settings": { "label": "Chamomile" } },
-        "dong_quai": { "type": "ingredient", "settings": { "label": "Dong Quai" } },
-        "reishi": { "type": "ingredient", "settings": { "label": "Reishi" } },
-        "licorice_root": { "type": "ingredient", "settings": { "label": "Licorice Root" } },
-        "ginseng": { "type": "ingredient", "settings": { "label": "Ginseng" } },
-        "peony": { "type": "ingredient", "settings": { "label": "Peony" } },
-        "goji": { "type": "ingredient", "settings": { "label": "Goji" } },
-        "lemon_balm": { "type": "ingredient", "settings": { "label": "Lemon Balm" } },
-        "jujube_seed": { "type": "ingredient", "settings": { "label": "Jujube Seed" } },
-        "turmeric": { "type": "ingredient", "settings": { "label": "Turmeric" } },
-        "privet_fruit": { "type": "ingredient", "settings": { "label": "Privet Fruit" } },
-        "mulberry": { "type": "ingredient", "settings": { "label": "Mulberry" } }
+        "chamomile": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Chamomile"
+          }
+        },
+        "dong_quai": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Dong Quai"
+          }
+        },
+        "reishi": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Reishi"
+          }
+        },
+        "licorice_root": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Licorice Root"
+          }
+        },
+        "ginseng": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Ginseng"
+          }
+        },
+        "peony": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Peony"
+          }
+        },
+        "goji": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Goji"
+          }
+        },
+        "lemon_balm": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Lemon Balm"
+          }
+        },
+        "jujube_seed": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Jujube Seed"
+          }
+        },
+        "turmeric": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Turmeric"
+          }
+        },
+        "privet_fruit": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Privet Fruit"
+          }
+        },
+        "mulberry": {
+          "type": "ingredient",
+          "settings": {
+            "label": "Mulberry"
+          }
+        }
       },
       "block_order": [
         "chamomile",
