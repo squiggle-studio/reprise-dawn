@@ -36,7 +36,7 @@
   display: block;
   width: 55%;
   height: 55%;
-  background-color: rgb(var(--color-foreground));
+  background-color: #6E1E00;
   -webkit-mask-image: var(--ingredient-icon-url);
   mask-image: var(--ingredient-icon-url);
   -webkit-mask-repeat: no-repeat;
