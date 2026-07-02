@@ -64,7 +64,12 @@
 
 @media screen and (max-width: 749px) {
   .ingredient-grid__list {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem 0.6rem;
+  }
+
+  .ingredient-grid.page-width {
+    padding-left: calc(1.5rem + 8px);
+    padding-right: calc(1.5rem + 8px);
   }
 }

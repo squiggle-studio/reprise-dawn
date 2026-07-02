@@ -320,3 +320,10 @@
   height: var(--multicolumn-banner-height, 96px);
   object-fit: cover;
 }
+
+@media screen and (max-width: 749px) {
+  .multicolumn .page-width {
+    padding-left: calc(1.5rem + 8px);
+    padding-right: calc(1.5rem + 8px);
+  }
+}

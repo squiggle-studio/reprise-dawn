@@ -11,6 +11,13 @@
     }
   }
 
+  @media screen and (max-width: 749px) {
+    .split-accordion-page-width {
+      padding-left: calc(1.5rem + 8px);
+      padding-right: calc(1.5rem + 8px);
+    }
+  }
+
   .split-accordion__heading {
     margin: 0 0 2.4rem;
     text-align: center;
@@ -24,11 +31,13 @@
 
   /* Mobile: full bleed image */
   .split-accordion__image-wrapper {
-    width: 100vw;
-    margin-left: calc(-1 * (100vw - 100%) / 2);
+    width: 100vw !important;
+    margin-left: calc(-1 * (100vw - 100%) / 2) !important;
+    margin-right: calc(-1 * (100vw - 100%) / 2) !important;
     height: 70vw;
     overflow: hidden;
     position: relative;
+    border-radius: 0 !important;
   }
 
   .split-accordion__image {
@@ -194,7 +203,7 @@
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width section-{{ section.id }}-padding">
+  <div class="page-width section-{{ section.id }}-padding split-accordion-page-width">
 
     {%- if section.settings.heading != blank -%}
       <h2 class="split-accordion__heading {{ section.settings.heading_size }}">
