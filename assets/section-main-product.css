@@ -1560,8 +1560,8 @@ a.product__text {
 .product__info-drawer--pill_button .product__info-drawer-trigger {
   width: 100%;
   justify-content: center;
-  color: var(--product-accent-color, rgb(var(--color-button)));
-  border-color: var(--product-accent-color, rgb(var(--color-button)));
+  color: var(--product-accent-color, #000000);
+  border-color: var(--product-accent-color, #000000);
 }
 
 .product__info-container .product-form__submit {

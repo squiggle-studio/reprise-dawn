@@ -252,26 +252,18 @@
                     </details>
                   </div>
                 {%- when 'dynamic_text' -%}
-                  {%- liquid
-                    assign df_parts = block.settings.metafield | split: '.'
-                    assign df_value = product.metafields[df_parts[0]][df_parts[1]]
-                  -%}
-                  {%- if df_value != blank -%}
+                  {%- if block.settings.text != blank -%}
                     <p
                       class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                       {{ block.shopify_attributes }}
                     >
-                      {{- df_value -}}
+                      {{- block.settings.text -}}
                     </p>
                   {%- endif -%}
                 {%- when 'checkmark_list' -%}
-                  {%- liquid
-                    assign cl_parts = block.settings.metafield | split: '.'
-                    assign cl_value = product.metafields[cl_parts[0]][cl_parts[1]]
-                  -%}
-                  {%- if cl_value != blank -%}
+                  {%- if block.settings.content != blank -%}
                     <div class="product__checkmark-list rte" {{ block.shopify_attributes }}>
-                      {{ cl_value }}
+                      {{ block.settings.content }}
                     </div>
                   {%- endif -%}
                 {%- when 'info_drawer' -%}
@@ -1280,10 +1272,9 @@
       "settings": [
         {
           "type": "text",
-          "id": "metafield",
-          "label": "Metafield",
-          "info": "Enter as \"namespace.key\", e.g. custom.subheading",
-          "default": "custom.subheading"
+          "id": "text",
+          "label": "Text",
+          "info": "Use the dynamic source icon (next to this field) to connect it to a product metafield, e.g. a subheading field you've created in Settings > Custom data > Products."
         },
         {
           "type": "select",
@@ -1303,11 +1294,10 @@
       "name": "Checkmark list",
       "settings": [
         {
-          "type": "text",
-          "id": "metafield",
-          "label": "Metafield",
-          "info": "Enter as \"namespace.key\" - the metafield should be a rich text field containing a bulleted list.",
-          "default": "custom.benefit_bullets"
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "info": "A bulleted list. Use the dynamic source icon (next to this field) to connect it to a rich-text product metafield, e.g. one you've created in Settings > Custom data > Products."
         }
       ]
     },
