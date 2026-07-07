@@ -68,7 +68,7 @@
           "settings": {
             "heading": "Ingredients and allergies",
             "article": "",
-            "content": "<p>Lorum epsum add this</p>",
+            "content": "{{ product.metafields.shopify[\"detailed-ingredients\"] | metafield_tag: field: 'label' }}",
             "display_style": "row"
           }
         },
