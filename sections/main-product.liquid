@@ -1,6 +1,15 @@
 {%- liquid
   assign product_accent_color = product.metafields.custom.accent_color
   assign info_drawer_blocks = section.blocks | where: 'type', 'info_drawer'
+
+  assign media_column_drawer_id = blank
+  for drawer_block in info_drawer_blocks
+    if drawer_block.settings.display_style == 'pill_button'
+      assign media_column_drawer_id = drawer_block.id
+      assign media_column_drawer_block = drawer_block
+      break
+    endif
+  endfor
 -%}
 <product-info
   id="MainProduct-{{ section.id }}"
@@ -89,6 +98,9 @@
       <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
         <div class="grid__item product__media-wrapper">
           {% render 'product-media-gallery', variant_images: variant_images %}
+          {%- if media_column_drawer_block -%}
+            {%- render 'product-info-drawer', block: media_column_drawer_block -%}
+          {%- endif -%}
         </div>
         <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           <section
@@ -263,61 +275,11 @@
                     </div>
                   {%- endif -%}
                 {%- when 'info_drawer' -%}
-                  {%- liquid
-                    assign drawer_heading = block.settings.heading
-                    if block.settings.article != blank
-                      assign drawer_content = block.settings.article.content
-                      if drawer_heading == blank
-                        assign drawer_heading = block.settings.article.title
-                      endif
-                    else
-                      assign drawer_content = block.settings.content
-                    endif
-                  -%}
-                  {%- if drawer_heading != blank or drawer_content != blank -%}
-                    <div
-                      class="product__info-drawer product__info-drawer--{{ block.settings.display_style }}"
-                      {{ block.shopify_attributes }}
-                    >
-                      <modal-opener data-modal="#ProductDrawer-{{ block.id }}">
-                        <button
-                          type="button"
-                          class="product__info-drawer-trigger{% if block.settings.display_style == 'pill_button' %} button button--secondary{% endif %}"
-                          aria-haspopup="dialog"
-                        >
-                          <span>{{ drawer_heading | escape }}</span>
-                          {%- unless block.settings.display_style == 'pill_button' -%}
-                            {{- 'icon-arrow.svg' | inline_asset_content -}}
-                          {%- endunless -%}
-                        </button>
-                      </modal-opener>
-                      <product-drawer id="ProductDrawer-{{ block.id }}" class="product-drawer">
-                        <div
-                          class="product-drawer__inner"
-                          role="dialog"
-                          aria-modal="true"
-                          aria-labelledby="ProductDrawerHeading-{{ block.id }}"
-                        >
-                          <div class="product-drawer__header">
-                            <h2 class="product-drawer__heading h3" id="ProductDrawerHeading-{{ block.id }}">
-                              {{ drawer_heading | escape }}
-                            </h2>
-                            <button
-                              id="ModalClose-{{ block.id }}"
-                              type="button"
-                              class="product-drawer__close"
-                              aria-label="{{ 'accessibility.close' | t }}"
-                            >
-                              {{- 'icon-close.svg' | inline_asset_content -}}
-                            </button>
-                          </div>
-                          <div class="product-drawer__body rte">
-                            {{ drawer_content }}
-                          </div>
-                        </div>
-                      </product-drawer>
-                    </div>
-                  {%- endif -%}
+                  {% comment %}theme-check-disable BlockIdUsage{% endcomment %}
+                  {%- unless block.id == media_column_drawer_id -%}
+                    {%- render 'product-info-drawer', block: block -%}
+                  {%- endunless -%}
+                  {% comment %}theme-check-enable BlockIdUsage{% endcomment %}
                 {%- when 'quantity_selector' -%}
                   <div
                     id="Quantity-Form-{{ section.id }}"

@@ -1,0 +1,54 @@
+{% comment %}
+  Renders an info_drawer block's trigger (row or pill button) and its
+  slide-in drawer content (from a linked article, or manual content).
+
+  Accepts:
+  - block: {Object} The info_drawer block
+{% endcomment %}
+{%- liquid
+  assign drawer_heading = block.settings.heading
+  if block.settings.article != blank
+    assign drawer_content = block.settings.article.content
+    if drawer_heading == blank
+      assign drawer_heading = block.settings.article.title
+    endif
+  else
+    assign drawer_content = block.settings.content
+  endif
+-%}
+{%- if drawer_heading != blank or drawer_content != blank -%}
+  <div class="product__info-drawer product__info-drawer--{{ block.settings.display_style }}" {{ block.shopify_attributes }}>
+    <modal-opener data-modal="#ProductDrawer-{{ block.id }}">
+      <button
+        type="button"
+        class="product__info-drawer-trigger{% if block.settings.display_style == 'pill_button' %} button button--secondary{% endif %}"
+        aria-haspopup="dialog"
+      >
+        <span>{{ drawer_heading | escape }}</span>
+        {%- unless block.settings.display_style == 'pill_button' -%}
+          {{- 'icon-arrow.svg' | inline_asset_content -}}
+        {%- endunless -%}
+      </button>
+    </modal-opener>
+    <product-drawer id="ProductDrawer-{{ block.id }}" class="product-drawer">
+      <div class="product-drawer__inner" role="dialog" aria-modal="true" aria-labelledby="ProductDrawerHeading-{{ block.id }}">
+        <div class="product-drawer__header">
+          <h2 class="product-drawer__heading h3" id="ProductDrawerHeading-{{ block.id }}">
+            {{ drawer_heading | escape }}
+          </h2>
+          <button
+            id="ModalClose-{{ block.id }}"
+            type="button"
+            class="product-drawer__close"
+            aria-label="{{ 'accessibility.close' | t }}"
+          >
+            {{- 'icon-close.svg' | inline_asset_content -}}
+          </button>
+        </div>
+        <div class="product-drawer__body rte">
+          {{ drawer_content }}
+        </div>
+      </div>
+    </product-drawer>
+  </div>
+{%- endif -%}
