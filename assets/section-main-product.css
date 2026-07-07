@@ -1492,3 +1492,75 @@ a.product__text {
     border: none;
   }
 }
+
+/*
+  Checkmark bullet list, driven by a rich-text metafield via the
+  checkmark_list block.
+*/
+.product__checkmark-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product__checkmark-list li {
+  position: relative;
+  padding-left: 2.2rem;
+  margin: 0 0 0.6rem;
+}
+
+.product__checkmark-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--product-accent-color, rgb(var(--color-foreground)));
+  font-weight: var(--font-body-weight-bold);
+}
+
+/*
+  Info drawer triggers (info_drawer block) - either an underlined
+  full-width row with a trailing arrow, or a pill button. Both open
+  a product-drawer (assets/component-product-drawer.css).
+*/
+.product__info-drawer--row {
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.15);
+}
+
+.product__info-drawer--row .product__info-drawer-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.4rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(var(--color-foreground));
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: var(--font-body-weight-bold);
+  text-align: left;
+}
+
+.product__info-drawer--row .product__info-drawer-trigger .icon-arrow {
+  flex-shrink: 0;
+  width: 1.4rem;
+  color: var(--product-accent-color, rgb(var(--color-foreground)));
+}
+
+.product__info-drawer--pill_button {
+  margin: 0 0 2rem;
+}
+
+.product__info-drawer--pill_button .product__info-drawer-trigger {
+  width: 100%;
+  justify-content: center;
+  color: var(--product-accent-color, rgb(var(--color-button)));
+  border-color: var(--product-accent-color, rgb(var(--color-button)));
+}
+
+.product__info-container .product-form__submit {
+  background-color: var(--product-accent-color, rgb(var(--color-button)));
+  border-color: var(--product-accent-color, rgb(var(--color-button)));
+}
