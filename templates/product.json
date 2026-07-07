@@ -1,35 +1,36 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
-        "supplement_facts": {
+        "info_drawer_RRcmFD": {
           "type": "info_drawer",
           "settings": {
             "heading": "Supplement Facts",
+            "article": "",
+            "content": "",
             "display_style": "pill_button"
           }
         },
-        "rating": {
-          "type": "rating",
-          "settings": {}
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "subtitle"
+          }
         },
         "title": {
           "type": "title",
           "settings": {}
-        },
-        "subheading": {
-          "type": "dynamic_text",
-          "settings": {
-            "metafield": "custom.subheading",
-            "text_style": "subtitle"
-          }
-        },
-        "benefit_bullets": {
-          "type": "checkmark_list",
-          "settings": {
-            "metafield": "custom.benefit_bullets"
-          }
         },
         "price": {
           "type": "price",
@@ -53,73 +54,87 @@
             "show_gift_card_recipient": true
           }
         },
-        "drawer_subscriber_benefits": {
+        "info_drawer_QJ6DrL": {
           "type": "info_drawer",
           "settings": {
             "heading": "Subscriber benefits",
+            "article": "",
+            "content": "",
             "display_style": "row"
           }
         },
-        "drawer_ingredients": {
+        "info_drawer_GWFDcd": {
           "type": "info_drawer",
           "settings": {
             "heading": "Ingredients and allergies",
+            "article": "",
+            "content": "<p>Lorum epsum add this</p>",
             "display_style": "row"
           }
         },
-        "drawer_testing": {
+        "info_drawer_xj8bHG": {
           "type": "info_drawer",
           "settings": {
-            "heading": "Third party testing",
+            "heading": "Ingredients and allergies",
+            "article": "",
+            "content": "<p>Lorum epsum add this</p>",
             "display_style": "row"
           }
         },
-        "drawer_directions": {
+        "info_drawer_B7gmTQ": {
           "type": "info_drawer",
           "settings": {
-            "heading": "Directions",
+            "heading": "Ingredients and allergies",
+            "article": "",
+            "content": "<p>Lorum epsum add this</p>",
             "display_style": "row"
           }
         },
-        "drawer_flavor": {
+        "info_drawer_XCj6Tk": {
           "type": "info_drawer",
           "settings": {
-            "heading": "Flavor",
+            "heading": "Ingredients and allergies",
+            "article": "",
+            "content": "<p>Lorum epsum add this</p>",
             "display_style": "row"
           }
         },
-        "drawer_benefits": {
-          "type": "info_drawer",
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
           "settings": {
-            "heading": "Benefits",
-            "display_style": "row"
+            "share_label": "Share"
           }
         }
       },
       "block_order": [
-        "supplement_facts",
-        "rating",
+        "info_drawer_RRcmFD",
+        "vendor",
         "title",
-        "subheading",
-        "benefit_bullets",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "drawer_subscriber_benefits",
-        "drawer_ingredients",
-        "drawer_testing",
-        "drawer_directions",
-        "drawer_flavor",
-        "drawer_benefits"
+        "info_drawer_QJ6DrL",
+        "info_drawer_GWFDcd",
+        "info_drawer_xj8bHG",
+        "info_drawer_B7gmTQ",
+        "info_drawer_XCj6Tk",
+        "description",
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
@@ -148,5 +163,8 @@
       }
     }
   },
-  "order": ["main", "related-products"]
+  "order": [
+    "main",
+    "related-products"
+  ]
 }
