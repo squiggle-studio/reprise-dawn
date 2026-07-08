@@ -13,6 +13,12 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  {%- if section.settings.enable_card_style -%}
+    #shopify-section-{{ section.id }} {
+      --multicolumn-card-radius: {{ section.settings.card_corner_radius }}px;
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 {%- liquid
@@ -80,7 +86,9 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container">
+            <div
+              class="multicolumn-card content-container{% if section.settings.enable_card_style %} multicolumn-card--styled color-{{ section.settings.card_color_scheme }} gradient{% endif %}"
+            >
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -387,7 +395,36 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
-    },    
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_card_style",
+      "default": false,
+      "label": "Give each column a card background",
+      "info": "Adds a background, rounded corners, and shadow around each column's image + text."
+    },
+    {
+      "type": "color_scheme",
+      "id": "card_color_scheme",
+      "label": "Card color scheme",
+      "default": "scheme-1",
+      "info": "Only applies when card style is enabled."
+    },
+    {
+      "type": "range",
+      "id": "card_corner_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card corner radius",
+      "default": 16,
+      "info": "Only applies when card style is enabled."
+    },
     {
       "type": "header",
       "content": "t:sections.multicolumn.settings.header_mobile.content"

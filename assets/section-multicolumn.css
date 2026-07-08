@@ -2,6 +2,29 @@
   margin: 0;
 }
 
+/* Optional per-column card style (background, rounded corners, shadow) */
+.multicolumn-card--styled {
+  background: rgb(var(--color-background));
+  border-radius: var(--multicolumn-card-radius, 0);
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.multicolumn-card--styled .multicolumn-card__image-wrapper {
+  border-radius: var(--multicolumn-card-radius, 0) var(--multicolumn-card-radius, 0) 0 0;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 0;
+}
+
+.multicolumn-card--styled .multicolumn-card__image-wrapper .media {
+  border-radius: 0;
+}
+
+.multicolumn-card--styled .multicolumn-card__info {
+  padding: 2rem;
+}
+
 .multicolumn.no-heading .title {
   display: none;
 }
