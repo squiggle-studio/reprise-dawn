@@ -1018,8 +1018,9 @@ a.product__text {
     width: calc(25% - 0.8rem);
   }
 
+  /* No prev/next arrows on the thumbnail row, matching the reference design */
   .product--thumbnail_slider .slider-mobile-gutter .slider-button {
-    display: flex;
+    display: none;
   }
 }
 
@@ -1112,6 +1113,19 @@ a.product__text {
 
 .js .product__media {
   overflow: hidden !important;
+}
+
+/*
+  Remove the global "Media" theme setting's border/shadow outline
+  specifically on the product gallery, without touching the shared
+  .global-media-settings class used elsewhere in the theme.
+*/
+.product-media-container.global-media-settings {
+  border: none;
+}
+
+.product-media-container.global-media-settings:after {
+  content: none;
 }
 
 /* Rounded corners on the main image and thumbnail strip, both breakpoints */
