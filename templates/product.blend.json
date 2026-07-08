@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -138,16 +147,65 @@
     "trust_badge_certifications": {
       "type": "trust-badge-ticker",
       "blocks": {
-        "badge_1": { "type": "badge", "settings": { "text": "Vegan" } },
-        "badge_2": { "type": "badge", "settings": { "text": "Low Sugar" } },
-        "badge_3": { "type": "badge", "settings": { "text": "Non-GMO" } },
-        "badge_4": { "type": "badge", "settings": { "text": "Gluten-free" } },
-        "badge_5": { "type": "badge", "settings": { "text": "Gelatin-free" } },
-        "badge_6": { "type": "badge", "settings": { "text": "No artificial color" } },
-        "badge_7": { "type": "badge", "settings": { "text": "No artificial flavor" } },
-        "badge_8": { "type": "badge", "settings": { "text": "No preservatives" } }
+        "badge_1": {
+          "type": "badge",
+          "settings": {
+            "text": "Vegan"
+          }
+        },
+        "badge_2": {
+          "type": "badge",
+          "settings": {
+            "text": "Low Sugar"
+          }
+        },
+        "badge_3": {
+          "type": "badge",
+          "settings": {
+            "text": "Non-GMO"
+          }
+        },
+        "badge_4": {
+          "type": "badge",
+          "settings": {
+            "text": "Gluten-free"
+          }
+        },
+        "badge_5": {
+          "type": "badge",
+          "settings": {
+            "text": "Gelatin-free"
+          }
+        },
+        "badge_6": {
+          "type": "badge",
+          "settings": {
+            "text": "No artificial color"
+          }
+        },
+        "badge_7": {
+          "type": "badge",
+          "settings": {
+            "text": "No artificial flavor"
+          }
+        },
+        "badge_8": {
+          "type": "badge",
+          "settings": {
+            "text": "No preservatives"
+          }
+        }
       },
-      "block_order": ["badge_1", "badge_2", "badge_3", "badge_4", "badge_5", "badge_6", "badge_7", "badge_8"],
+      "block_order": [
+        "badge_1",
+        "badge_2",
+        "badge_3",
+        "badge_4",
+        "badge_5",
+        "badge_6",
+        "badge_7",
+        "badge_8"
+      ],
       "name": "Certifications",
       "settings": {
         "color_scheme": "scheme-5",
@@ -164,7 +222,10 @@
       "blocks": {
         "heading_crafted": {
           "type": "heading",
-          "settings": { "heading": "Meticulously and Deliciously Crafted", "heading_size": "h1" }
+          "settings": {
+            "heading": "Meticulously and Deliciously Crafted",
+            "heading_size": "h1"
+          }
         },
         "text_crafted": {
           "type": "text",
@@ -175,10 +236,18 @@
         },
         "button_crafted": {
           "type": "button",
-          "settings": { "button_label": "Experience the difference", "button_link": "", "button_style_secondary": false }
+          "settings": {
+            "button_label": "Experience the difference",
+            "button_link": "",
+            "button_style_secondary": false
+          }
         }
       },
-      "block_order": ["heading_crafted", "text_crafted", "button_crafted"],
+      "block_order": [
+        "heading_crafted",
+        "text_crafted",
+        "button_crafted"
+      ],
       "name": "Meticulously crafted",
       "settings": {
         "height": "adapt",
@@ -223,7 +292,11 @@
           }
         }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
       "name": "Why it works",
       "settings": {
         "heading": "Why it works",
@@ -238,7 +311,6 @@
         "ingredient_1": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "American Ginseng",
             "text": "<p>Lorem ipsum - what makes American Ginseng so great? David to provide copy here.</p>",
             "link_label": "",
@@ -248,7 +320,6 @@
         "ingredient_2": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "Panax Ginseng",
             "text": "<p>Lorem ipsum - what makes Panax Ginseng so great? David to provide copy here.</p>",
             "link_label": "",
@@ -258,7 +329,6 @@
         "ingredient_3": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "Reishi Mushroom",
             "text": "<p>Lorem ipsum - what makes Reishi Mushroom so great? David to provide copy here.</p>",
             "link_label": "",
@@ -266,7 +336,11 @@
           }
         }
       },
-      "block_order": ["ingredient_1", "ingredient_2", "ingredient_3"],
+      "block_order": [
+        "ingredient_1",
+        "ingredient_2",
+        "ingredient_3"
+      ],
       "custom_css": [],
       "name": "What's inside",
       "settings": {
@@ -286,6 +360,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "show_dividers_mobile": false,
+        "banner_image_height": 96,
         "padding_top": 52,
         "padding_bottom": 52
       }
@@ -295,7 +370,10 @@
       "blocks": {
         "heading_routine": {
           "type": "heading",
-          "settings": { "heading": "A routine that's easy to commit to", "heading_size": "h1" }
+          "settings": {
+            "heading": "A routine that's easy to commit to",
+            "heading_size": "h1"
+          }
         },
         "text_routine": {
           "type": "text",
@@ -306,10 +384,18 @@
         },
         "button_routine": {
           "type": "button",
-          "settings": { "button_label": "Enjoy the benefits", "button_link": "", "button_style_secondary": false }
+          "settings": {
+            "button_label": "Enjoy the benefits",
+            "button_link": "",
+            "button_style_secondary": false
+          }
         }
       },
-      "block_order": ["heading_routine", "text_routine", "button_routine"],
+      "block_order": [
+        "heading_routine",
+        "text_routine",
+        "button_routine"
+      ],
       "name": "Easy routine",
       "settings": {
         "height": "adapt",
@@ -329,12 +415,49 @@
     "testimonial_banner": {
       "type": "multicolumn",
       "blocks": {
-        "testimonial_1": { "type": "column", "settings": { "image": "", "title": "", "text": "", "link_label": "", "link": "" } },
-        "testimonial_2": { "type": "column", "settings": { "image": "", "title": "Lorem ipsum", "text": "", "link_label": "", "link": "" } },
-        "testimonial_3": { "type": "column", "settings": { "image": "", "title": "", "text": "", "link_label": "", "link": "" } },
-        "testimonial_4": { "type": "column", "settings": { "image": "", "title": "Lorem ipsum", "text": "", "link_label": "", "link": "" } }
+        "testimonial_1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "testimonial_2": {
+          "type": "column",
+          "settings": {
+            "title": "Lorem ipsum",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "testimonial_3": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "testimonial_4": {
+          "type": "column",
+          "settings": {
+            "title": "Lorem ipsum",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["testimonial_1", "testimonial_2", "testimonial_3", "testimonial_4"],
+      "block_order": [
+        "testimonial_1",
+        "testimonial_2",
+        "testimonial_3",
+        "testimonial_4"
+      ],
       "custom_css": [],
       "name": "Join 1000+ customers",
       "settings": {
@@ -354,6 +477,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "show_dividers_mobile": false,
+        "banner_image_height": 96,
         "padding_top": 52,
         "padding_bottom": 52
       }
@@ -361,12 +485,42 @@
     "dietary_info": {
       "type": "product-dietary-info",
       "blocks": {
-        "badge_vegan": { "type": "icon_badge", "settings": { "icon": "", "label": "Vegan" } },
-        "badge_gluten_free": { "type": "icon_badge", "settings": { "icon": "", "label": "Gluten Free" } },
-        "badge_non_gmo": { "type": "icon_badge", "settings": { "icon": "", "label": "Non-GMO" } },
-        "badge_low_sugar": { "type": "icon_badge", "settings": { "icon": "", "label": "Low Sugar" } },
-        "badge_doctor_formulated": { "type": "icon_badge", "settings": { "icon": "", "label": "Doctor Formulated" } },
-        "badge_2_gummies": { "type": "icon_badge", "settings": { "icon": "", "label": "2 gummies = 1 cup herbal tea" } }
+        "badge_vegan": {
+          "type": "icon_badge",
+          "settings": {
+            "label": "Vegan"
+          }
+        },
+        "badge_gluten_free": {
+          "type": "icon_badge",
+          "settings": {
+            "label": "Gluten Free"
+          }
+        },
+        "badge_non_gmo": {
+          "type": "icon_badge",
+          "settings": {
+            "label": "Non-GMO"
+          }
+        },
+        "badge_low_sugar": {
+          "type": "icon_badge",
+          "settings": {
+            "label": "Low Sugar"
+          }
+        },
+        "badge_doctor_formulated": {
+          "type": "icon_badge",
+          "settings": {
+            "label": "Doctor Formulated"
+          }
+        },
+        "badge_2_gummies": {
+          "type": "icon_badge",
+          "settings": {
+            "label": "2 gummies = 1 cup herbal tea"
+          }
+        }
       },
       "block_order": [
         "badge_vegan",
@@ -380,8 +534,8 @@
       "settings": {
         "always_heading": "Always",
         "free_from_heading": "Free From",
-        "free_from_content": "<ul><li>Artificial Sweeteners</li><li>Gelatin</li><li>Added Colors &amp; Dyes</li><li>Heavy Metals</li><li>Herbicides</li><li>Pesticides</li><li>High-Fructose Corn Syrup</li><li>Synthetic Vitamins</li></ul>",
-        "color_scheme": "scheme-5",
+        "free_from_content": "<ul><li>Artificial Sweeteners</li><li>Gelatin</li><li>Added Colors & Dyes</li><li>Heavy Metals</li><li>Herbicides</li><li>Pesticides</li><li>High-Fructose Corn Syrup</li><li>Synthetic Vitamins</li></ul>",
+        "color_scheme": "scheme-1",
         "padding_top": 52,
         "padding_bottom": 52
       }
@@ -391,30 +545,67 @@
       "blocks": {
         "faq_1": {
           "type": "collapsible_row",
-          "settings": { "heading": "How do you source your herbs?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+          "settings": {
+            "heading": "How do you source your herbs?",
+            "icon": "none",
+            "row_content": "<p>Answer coming soon.</p>",
+            "page": ""
+          }
         },
         "faq_2": {
           "type": "collapsible_row",
-          "settings": { "heading": "How strict are your quality thresholds?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+          "settings": {
+            "heading": "How strict are your quality thresholds?",
+            "icon": "none",
+            "row_content": "<p>Answer coming soon.</p>",
+            "page": ""
+          }
         },
         "faq_3": {
           "type": "collapsible_row",
-          "settings": { "heading": "How do you determine dosage?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+          "settings": {
+            "heading": "How do you determine dosage?",
+            "icon": "none",
+            "row_content": "<p>Answer coming soon.</p>",
+            "page": ""
+          }
         },
         "faq_4": {
           "type": "collapsible_row",
-          "settings": { "heading": "How potent are your extracts?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+          "settings": {
+            "heading": "How potent are your extracts?",
+            "icon": "none",
+            "row_content": "<p>Answer coming soon.</p>",
+            "page": ""
+          }
         },
         "faq_5": {
           "type": "collapsible_row",
-          "settings": { "heading": "Do your herbs have clinically studied benefits?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+          "settings": {
+            "heading": "Do your herbs have clinically studied benefits?",
+            "icon": "none",
+            "row_content": "<p>Answer coming soon.</p>",
+            "page": ""
+          }
         },
         "faq_6": {
           "type": "collapsible_row",
-          "settings": { "heading": "What other herbs can support my mental health?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+          "settings": {
+            "heading": "What other herbs can support my mental health?",
+            "icon": "none",
+            "row_content": "<p>Answer coming soon.</p>",
+            "page": ""
+          }
         }
       },
-      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"],
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
       "name": "Any questions?",
       "settings": {
         "caption": "",
@@ -425,7 +616,6 @@
         "container_color_scheme": "scheme-5",
         "color_scheme": "scheme-5",
         "open_first_collapsible_row": false,
-        "image": "",
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 52,
