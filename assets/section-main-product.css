@@ -27,6 +27,20 @@ product-info {
     z-index: 2;
   }
 
+  /*
+    When the media wrapper's own sticky div (added so Supplement Facts
+    can travel with the gallery) contains Dawn's <media-gallery>, which
+    independently gets this same class, don't let both be sticky at
+    once - two nested sticky contexts at the same offset is what was
+    causing the gallery to visually overlap/cover the button on scroll.
+    Only the outer wrapper should control stickiness here.
+  */
+  .product__media-wrapper .product__column-sticky media-gallery.product__column-sticky {
+    position: static;
+    top: auto;
+    z-index: auto;
+  }
+
   .product--thumbnail .thumbnail-list {
     padding-right: var(--media-shadow-horizontal-offset);
   }
@@ -76,16 +90,25 @@ product-info {
     padding: 0 4rem 0 0;
   }
 
-  .product--medium:not(.product--no-media) .product__media-wrapper,
-  .product--small:not(.product--no-media) .product__info-wrapper {
+  .product--medium:not(.product--no-media) .product__media-wrapper {
     max-width: 55%;
     width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
-  .product--medium:not(.product--no-media) .product__info-wrapper,
-  .product--small:not(.product--no-media) .product__media-wrapper {
+  .product--medium:not(.product--no-media) .product__info-wrapper {
     max-width: 45%;
     width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
+  }
+
+  /* "small" is used as a 1/3 media, 2/3 info split (rather than stock 45/55) */
+  .product--small:not(.product--no-media) .product__info-wrapper {
+    max-width: 66.66%;
+    width: calc(66.66% - var(--grid-desktop-horizontal-spacing) / 2);
+  }
+
+  .product--small:not(.product--no-media) .product__media-wrapper {
+    max-width: 33.33%;
+    width: calc(33.33% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 }
 
@@ -1393,12 +1416,13 @@ a.product__text {
   }
 
   /*
-    Reserve extra room when a pill-button info_drawer (Supplement Facts)
-    sits below the gallery in the same sticky column, so it's visible on
-    load instead of pushed off the bottom of the viewport.
+    Hard cap (not just a bigger viewport-offset) when a pill-button
+    info_drawer (Supplement Facts) sits below the gallery in the same
+    sticky column, so it's reliably visible on load regardless of
+    viewport height, rather than depending on Dawn's vh-minus-offset math.
   */
   .product__column-sticky:has(.product__info-drawer--pill_button) .product-media-container.constrain-height {
-    --viewport-offset: 400px;
+    --constrained-height: min(48vh, 420px);
   }
 
   .product-media-container.media-fit-cover,
@@ -1606,7 +1630,6 @@ a.product__text {
 
 .product__info-drawer--pill_button {
   margin: 0 0 2rem;
-  text-align: center;
 }
 
 .product__media-wrapper .product__info-drawer--pill_button {
@@ -1614,9 +1637,7 @@ a.product__text {
 }
 
 .product__info-drawer--pill_button .product__info-drawer-trigger {
-  display: inline-flex;
-  width: auto;
-  padding: 1.2rem 3.5rem;
+  width: 100%;
   justify-content: center;
   color: var(--product-accent-color, #000000);
   border-color: var(--product-accent-color, #000000);
