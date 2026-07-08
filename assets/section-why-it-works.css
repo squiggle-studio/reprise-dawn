@@ -1,0 +1,43 @@
+.why-it-works__heading {
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+.why-it-works__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.why-it-works__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.why-it-works__marker {
+  flex: 0 0 4rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 0.15rem solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.why-it-works__sub-heading {
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+}
+
+.why-it-works__description {
+  margin: 0;
+}
+
+.why-it-works__description p {
+  margin: 0;
+}

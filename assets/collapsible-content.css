@@ -3,6 +3,22 @@
   z-index: 0;
 }
 
+/* Trailing arrow instead of the default caret, matching the "Any questions?"
+   reference mockup. Scoped to this section only. */
+.collapsible-content .accordion summary .icon-caret {
+  display: none;
+}
+
+.collapsible-content .accordion summary {
+  position: relative;
+}
+
+.collapsible-content .accordion summary::after {
+  content: '\2192';
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
 .collapsible-section-layout {
   padding-bottom: 5rem;
   padding-top: 5rem;

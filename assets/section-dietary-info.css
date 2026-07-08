@@ -1,0 +1,62 @@
+.dietary-info__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.6rem;
+}
+
+@media screen and (min-width: 750px) {
+  .dietary-info__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+.dietary-info__heading {
+  text-align: center;
+  margin: 0 0 1.6rem;
+}
+
+.dietary-info__badges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 1.2rem;
+}
+
+.dietary-info__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+}
+
+.dietary-info__badge-icon img {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
+.dietary-info__badge-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.dietary-info__exclusions {
+  max-width: 44rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dietary-info__exclusions ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 2rem;
+  text-align: left;
+}
+
+.dietary-info__exclusions li {
+  margin: 0 0 0.6rem;
+}

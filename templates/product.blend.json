@@ -1,0 +1,466 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "info_drawer_RRcmFD": {
+          "type": "info_drawer",
+          "settings": {
+            "heading": "Supplement Facts",
+            "article": "",
+            "content": "",
+            "display_style": "pill_button"
+          }
+        },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "subtitle"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "info_drawer_QJ6DrL": {
+          "type": "info_drawer",
+          "settings": {
+            "heading": "Subscriber benefits",
+            "article": "",
+            "content": "",
+            "display_style": "row"
+          }
+        },
+        "info_drawer_GWFDcd": {
+          "type": "info_drawer",
+          "settings": {
+            "heading": "Ingredients and allergies",
+            "article": "",
+            "content": "{{ product.metafields.shopify[\"detailed-ingredients\"] | metafield_tag: field: 'label' }}",
+            "display_style": "row"
+          }
+        },
+        "info_drawer_xj8bHG": {
+          "type": "info_drawer",
+          "settings": {
+            "heading": "Ingredients and allergies",
+            "article": "",
+            "content": "<p>Lorum epsum add this</p>",
+            "display_style": "row"
+          }
+        },
+        "info_drawer_B7gmTQ": {
+          "type": "info_drawer",
+          "settings": {
+            "heading": "Ingredients and allergies",
+            "article": "",
+            "content": "<p>Lorum epsum add this</p>",
+            "display_style": "row"
+          }
+        },
+        "info_drawer_XCj6Tk": {
+          "type": "info_drawer",
+          "settings": {
+            "heading": "Ingredients and allergies",
+            "article": "",
+            "content": "<p>Lorum epsum add this</p>",
+            "display_style": "row"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "info_drawer_RRcmFD",
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "info_drawer_QJ6DrL",
+        "info_drawer_GWFDcd",
+        "info_drawer_xj8bHG",
+        "info_drawer_B7gmTQ",
+        "info_drawer_XCj6Tk",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "trust_badge_certifications": {
+      "type": "trust-badge-ticker",
+      "blocks": {
+        "badge_1": { "type": "badge", "settings": { "text": "Vegan" } },
+        "badge_2": { "type": "badge", "settings": { "text": "Low Sugar" } },
+        "badge_3": { "type": "badge", "settings": { "text": "Non-GMO" } },
+        "badge_4": { "type": "badge", "settings": { "text": "Gluten-free" } },
+        "badge_5": { "type": "badge", "settings": { "text": "Gelatin-free" } },
+        "badge_6": { "type": "badge", "settings": { "text": "No artificial color" } },
+        "badge_7": { "type": "badge", "settings": { "text": "No artificial flavor" } },
+        "badge_8": { "type": "badge", "settings": { "text": "No preservatives" } }
+      },
+      "block_order": ["badge_1", "badge_2", "badge_3", "badge_4", "badge_5", "badge_6", "badge_7", "badge_8"],
+      "name": "Certifications",
+      "settings": {
+        "color_scheme": "scheme-5",
+        "speed": 30,
+        "direction": "left",
+        "pause_on_hover": true,
+        "divider": "•",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "image_text_crafted": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_crafted": {
+          "type": "heading",
+          "settings": { "heading": "Meticulously and Deliciously Crafted", "heading_size": "h1" }
+        },
+        "text_crafted": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We've created a new standard for ancient herbal remedies - using full spectrum water extraction, testing at every touchpoint, and removing the barriers that get in the way of feeling good.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_crafted": {
+          "type": "button",
+          "settings": { "button_label": "Experience the difference", "button_link": "", "button_style_secondary": false }
+        }
+      },
+      "block_order": ["heading_crafted", "text_crafted", "button_crafted"],
+      "name": "Meticulously crafted",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "why_it_works": {
+      "type": "product-why-it-works",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "marker": "",
+            "sub_heading": "Adaptogenic reishi*",
+            "description": "<p>Red reishi are adaptogenic mushrooms harvested from \"duanwood reishi\" logs for full-spectrum high functional mushroom extracts.</p>"
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "marker": "",
+            "sub_heading": "Support at a cellular level*",
+            "description": "<p>Antioxidants in reishi, panax ginseng, and American ginseng support healthy aging and immune response.</p>"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "marker": "",
+            "sub_heading": "Synergistic Blend",
+            "description": "<p>Reprise Super Focus Gummies contain clinical-grade herbs that work in synergy to promote focus and mental clarity.</p>"
+          }
+        }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "name": "Why it works",
+      "settings": {
+        "heading": "Why it works",
+        "color_scheme": "scheme-3",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "ingredient_spotlight": {
+      "type": "multicolumn",
+      "blocks": {
+        "ingredient_1": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "American Ginseng",
+            "text": "<p>Lorem ipsum - what makes American Ginseng so great? David to provide copy here.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "ingredient_2": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Panax Ginseng",
+            "text": "<p>Lorem ipsum - what makes Panax Ginseng so great? David to provide copy here.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "ingredient_3": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Reishi Mushroom",
+            "text": "<p>Lorem ipsum - what makes Reishi Mushroom so great? David to provide copy here.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["ingredient_1", "ingredient_2", "ingredient_3"],
+      "custom_css": [],
+      "name": "What's inside",
+      "settings": {
+        "caption": "",
+        "title": "What's inside",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "show_button_on_desktop": false,
+        "column_layout": "stacked",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_dividers_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "image_text_routine": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_routine": {
+          "type": "heading",
+          "settings": { "heading": "A routine that's easy to commit to", "heading_size": "h1" }
+        },
+        "text_routine": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Because herbs work gently within your body's natural systems, they require consistent daily use. Our delicious daily gummies make your herbs easy to commit to, so results continue to build over time.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_routine": {
+          "type": "button",
+          "settings": { "button_label": "Enjoy the benefits", "button_link": "", "button_style_secondary": false }
+        }
+      },
+      "block_order": ["heading_routine", "text_routine", "button_routine"],
+      "name": "Easy routine",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "testimonial_banner": {
+      "type": "multicolumn",
+      "blocks": {
+        "testimonial_1": { "type": "column", "settings": { "image": "", "title": "", "text": "", "link_label": "", "link": "" } },
+        "testimonial_2": { "type": "column", "settings": { "image": "", "title": "Lorem ipsum", "text": "", "link_label": "", "link": "" } },
+        "testimonial_3": { "type": "column", "settings": { "image": "", "title": "", "text": "", "link_label": "", "link": "" } },
+        "testimonial_4": { "type": "column", "settings": { "image": "", "title": "Lorem ipsum", "text": "", "link_label": "", "link": "" } }
+      },
+      "block_order": ["testimonial_1", "testimonial_2", "testimonial_3", "testimonial_4"],
+      "custom_css": [],
+      "name": "Join 1000+ customers",
+      "settings": {
+        "caption": "★★★★★",
+        "title": "Join 1000+ customers in a delicious daily ritual",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "show_button_on_desktop": false,
+        "column_layout": "stacked",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "show_dividers_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "dietary_info": {
+      "type": "product-dietary-info",
+      "blocks": {
+        "badge_vegan": { "type": "icon_badge", "settings": { "icon": "", "label": "Vegan" } },
+        "badge_gluten_free": { "type": "icon_badge", "settings": { "icon": "", "label": "Gluten Free" } },
+        "badge_non_gmo": { "type": "icon_badge", "settings": { "icon": "", "label": "Non-GMO" } },
+        "badge_low_sugar": { "type": "icon_badge", "settings": { "icon": "", "label": "Low Sugar" } },
+        "badge_doctor_formulated": { "type": "icon_badge", "settings": { "icon": "", "label": "Doctor Formulated" } },
+        "badge_2_gummies": { "type": "icon_badge", "settings": { "icon": "", "label": "2 gummies = 1 cup herbal tea" } }
+      },
+      "block_order": [
+        "badge_vegan",
+        "badge_gluten_free",
+        "badge_non_gmo",
+        "badge_low_sugar",
+        "badge_doctor_formulated",
+        "badge_2_gummies"
+      ],
+      "name": "Dietary info",
+      "settings": {
+        "always_heading": "Always",
+        "free_from_heading": "Free From",
+        "free_from_content": "<ul><li>Artificial Sweeteners</li><li>Gelatin</li><li>Added Colors &amp; Dyes</li><li>Heavy Metals</li><li>Herbicides</li><li>Pesticides</li><li>High-Fructose Corn Syrup</li><li>Synthetic Vitamins</li></ul>",
+        "color_scheme": "scheme-5",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq_1": {
+          "type": "collapsible_row",
+          "settings": { "heading": "How do you source your herbs?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+        },
+        "faq_2": {
+          "type": "collapsible_row",
+          "settings": { "heading": "How strict are your quality thresholds?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+        },
+        "faq_3": {
+          "type": "collapsible_row",
+          "settings": { "heading": "How do you determine dosage?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+        },
+        "faq_4": {
+          "type": "collapsible_row",
+          "settings": { "heading": "How potent are your extracts?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+        },
+        "faq_5": {
+          "type": "collapsible_row",
+          "settings": { "heading": "Do your herbs have clinically studied benefits?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+        },
+        "faq_6": {
+          "type": "collapsible_row",
+          "settings": { "heading": "What other herbs can support my mental health?", "icon": "none", "row_content": "<p>Answer coming soon.</p>" }
+        }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"],
+      "name": "Any questions?",
+      "settings": {
+        "caption": "",
+        "heading": "Any questions?",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-5",
+        "color_scheme": "scheme-5",
+        "open_first_collapsible_row": false,
+        "image": "",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trust_badge_certifications",
+    "image_text_crafted",
+    "why_it_works",
+    "ingredient_spotlight",
+    "image_text_routine",
+    "testimonial_banner",
+    "dietary_info",
+    "faq",
+    "related-products"
+  ]
+}

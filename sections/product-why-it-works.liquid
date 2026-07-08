@@ -1,0 +1,112 @@
+<div class="why-it-works color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  {{ 'section-why-it-works.css' | asset_url | stylesheet_tag }}
+
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="why-it-works__heading h1">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+    <div class="why-it-works__list">
+      {%- for block in section.blocks -%}
+        <div class="why-it-works__item" {{ block.shopify_attributes }}>
+          <span class="why-it-works__marker" aria-hidden="true">{{ block.settings.marker }}</span>
+          <div class="why-it-works__content">
+            {%- if block.settings.sub_heading != blank -%}
+              <p class="why-it-works__sub-heading">{{ block.settings.sub_heading | escape }}</p>
+            {%- endif -%}
+            {%- if block.settings.description != blank -%}
+              <div class="why-it-works__description rte">{{ block.settings.description }}</div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Why it works",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Why it works",
+      "label": "Heading"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-4",
+      "label": "Color scheme"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "marker",
+          "label": "Marker",
+          "info": "Optional short label inside the circle (e.g. a number). Leave blank for a plain circle."
+        },
+        {
+          "type": "text",
+          "id": "sub_heading",
+          "label": "Sub-heading"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why it works",
+      "blocks": [
+        { "type": "feature" },
+        { "type": "feature" },
+        { "type": "feature" }
+      ]
+    }
+  ]
+}
+{% endschema %}
