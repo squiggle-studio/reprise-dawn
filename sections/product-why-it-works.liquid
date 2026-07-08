@@ -22,7 +22,11 @@
     <div class="why-it-works__list">
       {%- for block in section.blocks -%}
         <div class="why-it-works__item" {{ block.shopify_attributes }}>
-          <span class="why-it-works__marker" aria-hidden="true">{{ block.settings.marker }}</span>
+          <span class="why-it-works__marker">
+            {%- if block.settings.icon != blank -%}
+              {{ block.settings.icon | image_url: width: 160 | image_tag: widths: '40, 80, 160', loading: 'lazy', alt: block.settings.sub_heading }}
+            {%- endif -%}
+          </span>
           <div class="why-it-works__content">
             {%- if block.settings.sub_heading != blank -%}
               <p class="why-it-works__sub-heading">{{ block.settings.sub_heading | escape }}</p>
@@ -80,10 +84,10 @@
       "name": "Feature",
       "settings": [
         {
-          "type": "text",
-          "id": "marker",
-          "label": "Marker",
-          "info": "Optional short label inside the circle (e.g. a number). Leave blank for a plain circle."
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon",
+          "info": "Optional image shown inside the circle. Leave blank for a plain circle."
         },
         {
           "type": "text",
