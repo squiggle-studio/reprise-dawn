@@ -1005,8 +1005,13 @@ a.product__text {
     width: calc(25% - 0.8rem);
   }
 
+  /*
+    Keep showing exactly 4 thumbnails at a time (matching the reference
+    design) instead of Dawn's stock 5-per-row at this breakpoint. Extra
+    thumbnails scroll via the existing slider-buttons controls.
+  */
   .thumbnail-list.slider--tablet-up .thumbnail-list__item.slider__slide {
-    width: calc(20% - 0.8rem);
+    width: calc(25% - 0.8rem);
   }
 }
 
@@ -1387,6 +1392,15 @@ a.product__text {
     --constrained-min-height: 500px;
   }
 
+  /*
+    Reserve extra room when a pill-button info_drawer (Supplement Facts)
+    sits below the gallery in the same sticky column, so it's visible on
+    load instead of pushed off the bottom of the viewport.
+  */
+  .product__column-sticky:has(.product__info-drawer--pill_button) .product-media-container.constrain-height {
+    --viewport-offset: 400px;
+  }
+
   .product-media-container.media-fit-cover,
   .product-media-container.media-fit-cover .product__modal-opener,
   .product-media-container.media-fit-cover .media {
@@ -1592,6 +1606,7 @@ a.product__text {
 
 .product__info-drawer--pill_button {
   margin: 0 0 2rem;
+  text-align: center;
 }
 
 .product__media-wrapper .product__info-drawer--pill_button {
@@ -1599,7 +1614,9 @@ a.product__text {
 }
 
 .product__info-drawer--pill_button .product__info-drawer-trigger {
-  width: 100%;
+  display: inline-flex;
+  width: auto;
+  padding: 1.2rem 3.5rem;
   justify-content: center;
   color: var(--product-accent-color, #000000);
   border-color: var(--product-accent-color, #000000);
