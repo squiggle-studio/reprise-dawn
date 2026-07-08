@@ -1,6 +1,15 @@
 {%- liquid
   assign product_accent_color = product.metafields.custom.accent_color
   assign info_drawer_blocks = section.blocks | where: 'type', 'info_drawer'
+
+  assign media_column_drawer_id = blank
+  for drawer_block in info_drawer_blocks
+    if drawer_block.settings.display_style == 'pill_button'
+      assign media_column_drawer_id = drawer_block.id
+      assign media_column_drawer_block = drawer_block
+      break
+    endif
+  endfor
 -%}
 <product-info
   id="MainProduct-{{ section.id }}"
@@ -88,7 +97,12 @@
     <div class="page-width">
       <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
         <div class="grid__item product__media-wrapper">
-          {% render 'product-media-gallery', variant_images: variant_images %}
+          <div{% if section.settings.enable_sticky_info %} class="product__column-sticky"{% endif %}>
+            {% render 'product-media-gallery', variant_images: variant_images %}
+            {%- if media_column_drawer_block -%}
+              {%- render 'product-info-drawer', block: media_column_drawer_block -%}
+            {%- endif -%}
+          </div>
         </div>
         <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           <section
@@ -255,7 +269,11 @@
                     </div>
                   {%- endif -%}
                 {%- when 'info_drawer' -%}
-                  {%- render 'product-info-drawer', block: block -%}
+                  {% comment %}theme-check-disable BlockIdUsage{% endcomment %}
+                  {%- unless block.id == media_column_drawer_id -%}
+                    {%- render 'product-info-drawer', block: block -%}
+                  {%- endunless -%}
+                  {% comment %}theme-check-enable BlockIdUsage{% endcomment %}
                 {%- when 'quantity_selector' -%}
                   <div
                     id="Quantity-Form-{{ section.id }}"
