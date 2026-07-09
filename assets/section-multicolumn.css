@@ -2,11 +2,14 @@
   margin: 0;
 }
 
+.multicolumn__title--center {
+  text-align: center;
+}
+
 /* Optional per-column card style (background, rounded corners, shadow) */
 .multicolumn-card--styled {
   background: rgb(var(--color-background));
   border-radius: var(--multicolumn-card-radius, 0);
-  border: 0.1rem solid var(--product-accent-color, rgba(var(--color-foreground), 0.15));
   overflow: hidden;
 }
 
@@ -238,8 +241,24 @@
   overflow: hidden;
 }
 
+/* Same specificity problem as the card radius override above */
+.multicolumn-card--styled > .multicolumn-card__image-wrapper--full-width:not(.multicolumn-card-spacing) {
+  border-top-left-radius: var(--multicolumn-card-radius, 0);
+  border-top-right-radius: var(--multicolumn-card-radius, 0);
+}
+
 .multicolumn.background-none .multicolumn-card {
   border-radius: 0;
+}
+
+/*
+  .multicolumn.background-none .multicolumn-card (above) is more
+  specific than .multicolumn-card--styled alone, so it was silently
+  winning and resetting the card style's radius back to 0 whenever
+  background_style is "none" - re-assert it at matching specificity.
+*/
+.multicolumn.background-none .multicolumn-card--styled {
+  border-radius: var(--multicolumn-card-radius, 0);
 }
 
 .multicolumn-card__info .link {
