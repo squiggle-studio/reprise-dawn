@@ -24,7 +24,7 @@
         "vendor": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "{{ product.metafields.custom.subheading.value }}",
             "text_style": "subtitle"
           }
         },
@@ -270,7 +270,6 @@
         "feature_1": {
           "type": "feature",
           "settings": {
-            "icon": "",
             "sub_heading": "Adaptogenic reishi*",
             "description": "<p>Red reishi are adaptogenic mushrooms harvested from \"duanwood reishi\" logs for full-spectrum high functional mushroom extracts.</p>"
           }
@@ -278,7 +277,6 @@
         "feature_2": {
           "type": "feature",
           "settings": {
-            "icon": "",
             "sub_heading": "Support at a cellular level*",
             "description": "<p>Antioxidants in reishi, panax ginseng, and American ginseng support healthy aging and immune response.</p>"
           }
@@ -286,7 +284,6 @@
         "feature_3": {
           "type": "feature",
           "settings": {
-            "icon": "",
             "sub_heading": "Synergistic Blend",
             "description": "<p>Reprise Super Focus Gummies contain clinical-grade herbs that work in synergy to promote focus and mental clarity.</p>"
           }
@@ -477,6 +474,9 @@
         "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "scheme-3",
+        "enable_card_style": false,
+        "card_color_scheme": "",
+        "card_corner_radius": 16,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "show_dividers_mobile": false,
