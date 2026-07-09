@@ -361,7 +361,7 @@
         "heading_story": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>We grew up on herbal teas, soups, and tonics. These recipes had been passed down for centuries, and they worked. </strong>",
+            "heading": "<strong>We grew up on herbal teas, soups, and tonics. Recipes that had been passed down for centuries, because they worked. </strong>",
             "heading_size": "h2"
           }
         },
@@ -457,8 +457,8 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "standard",
-        "show_details_link": true,
+        "quick_add": "none",
+        "show_details_link": false,
         "card_eyebrow_metafield": "custom_In_A_Word",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
