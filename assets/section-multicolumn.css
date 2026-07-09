@@ -6,7 +6,7 @@
 .multicolumn-card--styled {
   background: rgb(var(--color-background));
   border-radius: var(--multicolumn-card-radius, 0);
-  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.06);
+  border: 0.1rem solid var(--product-accent-color, rgba(var(--color-foreground), 0.15));
   overflow: hidden;
 }
 
