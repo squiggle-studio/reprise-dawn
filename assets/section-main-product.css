@@ -258,6 +258,11 @@ product-info {
   margin-bottom: 0;
 }
 
+.product__text.subtitle {
+  color: rgb(var(--color-foreground));
+  font-weight: 700;
+}
+
 a.product__text {
   display: block;
   text-decoration: none;
@@ -1659,5 +1664,19 @@ a.product__text {
 
 .product__info-container .product-form__submit {
   background-color: var(--product-accent-color, rgb(var(--color-button)));
-  border-color: var(--product-accent-color, rgb(var(--color-button)));
+  color: #f5f3ea;
+  font-weight: 700;
+}
+
+/*
+  Dawn simulates the button--secondary border via this pseudo-element's
+  box-shadow (colored from the scheme's secondary-button-label color, not
+  a real border property) - override its opacity directly to remove it.
+*/
+.product__info-container .product-form__submit:after {
+  --border-opacity: 0;
+}
+
+.product__info-container .product-form__submit:hover {
+  background-color: #000000;
 }
