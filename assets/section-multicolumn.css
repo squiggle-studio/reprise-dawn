@@ -21,6 +21,10 @@
   border-radius: 0;
 }
 
+.multicolumn-card--styled .multicolumn-card__image-wrapper .media img {
+  object-fit: contain;
+}
+
 .multicolumn-card--styled .multicolumn-card__info {
   padding: 2rem;
 }
