@@ -35,7 +35,8 @@
         "checkmark_list_DFt3ti": {
           "type": "checkmark_list",
           "settings": {
-            "content": "{{ product.metafields.custom.benefit_bullets | metafield_tag }}"
+            "content": "{{ product.metafields.custom.benefit_bullets | metafield_tag }}",
+            "columns": "1"
           }
         },
         "price": {
@@ -58,6 +59,13 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
+          }
+        },
+        "checkmark_list_wJTPTi": {
+          "type": "checkmark_list",
+          "settings": {
+            "content": "<p><strong>Subscriber Benefits</strong></p><p>📦 Alway free shipping. <br/>🙋 Guaranteed delivery during sell-outs <br/>⏸️ Pause or cancel at any time <br/>🎁 Annual VIP gift</p>",
+            "columns": "2"
           }
         },
         "info_drawer_QJ6DrL": {
@@ -127,6 +135,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "checkmark_list_wJTPTi",
         "info_drawer_QJ6DrL",
         "info_drawer_GWFDcd",
         "info_drawer_xj8bHG",
