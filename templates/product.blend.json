@@ -12,6 +12,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
         "info_drawer_RRcmFD": {
           "type": "info_drawer",
           "settings": {
@@ -33,10 +37,6 @@
           "settings": {
             "content": "{{ product.metafields.custom.benefit_bullets | metafield_tag }}"
           }
-        },
-        "title": {
-          "type": "title",
-          "settings": {}
         },
         "price": {
           "type": "price",
@@ -119,10 +119,10 @@
         }
       },
       "block_order": [
+        "title",
         "info_drawer_RRcmFD",
         "vendor",
         "checkmark_list_DFt3ti",
-        "title",
         "price",
         "variant_picker",
         "quantity_selector",
