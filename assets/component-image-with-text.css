@@ -123,6 +123,11 @@
 
 .image-with-text .global-media-settings {
   overflow: hidden !important;
+  border: none;
+}
+
+.image-with-text .global-media-settings:after {
+  box-shadow: none;
 }
 
 .image-with-text .image-with-text__text-item > * {
