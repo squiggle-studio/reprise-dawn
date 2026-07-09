@@ -1665,7 +1665,17 @@ a.product__text {
   width: 100%;
   justify-content: center;
   color: var(--product-accent-color, #000000);
-  border-color: var(--product-accent-color, #000000);
+  border: 0.15rem solid var(--product-accent-color, #000000);
+}
+
+/*
+  Dawn simulates button--secondary's border via this pseudo-element's
+  box-shadow (colored from the scheme's secondary-button-label color),
+  not a real border - remove it in favor of the real border above so
+  the color actually follows --product-accent-color.
+*/
+.product__info-drawer--pill_button .product__info-drawer-trigger:after {
+  --border-opacity: 0;
 }
 
 .product__info-container .product-form__submit {

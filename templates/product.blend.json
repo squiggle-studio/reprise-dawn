@@ -269,6 +269,7 @@
       "name": "Meticulously crafted",
       "settings": {
         "image": "shopify://shop_images/gummies-in-hand.png",
+        "image_corner_radius": 16,
         "height": "medium",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -421,6 +422,7 @@
       "name": "Easy routine",
       "settings": {
         "image": "shopify://shop_images/ChatGPT_Image_Jul_1_2026_11_00_39_AM.png",
+        "image_corner_radius": 16,
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",

@@ -12,6 +12,13 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  {%- if section.settings.image_corner_radius > 0 -%}
+    #shopify-section-{{ section.id }} .image-with-text__media {
+      border-radius: {{ section.settings.image_corner_radius }}px;
+      overflow: hidden;
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 {%- liquid
@@ -119,6 +126,16 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "range",
+      "id": "image_corner_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image corner radius",
+      "default": 0
     },
     {
       "type": "select",
