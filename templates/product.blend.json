@@ -317,6 +317,7 @@
         "feature_2",
         "feature_3"
       ],
+      "disabled": true,
       "name": "Why it works",
       "settings": {
         "heading": "Why it works",
@@ -382,10 +383,10 @@
         "color_scheme": "scheme-1",
         "enable_card_style": true,
         "card_color_scheme": "scheme-1",
-        "card_corner_radius": 24,
+        "card_corner_radius": 40,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "show_dividers_mobile": true,
+        "show_dividers_mobile": false,
         "banner_image_height": 96,
         "padding_top": 52,
         "padding_bottom": 52
@@ -670,6 +671,37 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "rich_text_Kd4wM4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JmedQn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why it works",
+            "heading_size": "h1"
+          }
+        },
+        "text_aU3zXU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This combination promotes better focus because each herb supports a different part of the brain’s energy and stress-response systems in a complementary way. </p><p>Ginsenosides in both panax ginseng and American ginseng promote blood flow to the brain and increase cellular energy production—helping you feel more alert, steady, and mentally present.  </p><p>The adaptogenic, antioxidant and immune supportive qualities of reishi play a role in easing everyday stress and supporting a more stable, focused internal environment.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JmedQn",
+        "text_aU3zXU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -682,6 +714,7 @@
     "testimonial_banner",
     "dietary_info",
     "faq",
-    "related-products"
+    "related-products",
+    "rich_text_Kd4wM4"
   ]
 }
