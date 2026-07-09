@@ -340,6 +340,14 @@
   margin-top: 2rem;
 }
 
+.image-with-text__subheading {
+  margin: 0 0 0.6rem;
+}
+
+.image-with-text__subheading-text .image-with-text__text {
+  margin: 0;
+}
+
 .image-with-text__content > .image-with-text__text:empty ~ a {
   margin-top: 2rem;
 }

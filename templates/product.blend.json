@@ -548,58 +548,38 @@
       }
     },
     "dietary_info": {
-      "type": "product-dietary-info",
+      "type": "image-with-text",
       "blocks": {
-        "badge_vegan": {
-          "type": "icon_badge",
+        "always_block": {
+          "type": "subheading_text",
           "settings": {
-            "label": "Vegan"
+            "subheading": "Always",
+            "text": "<p>Vegan, Gluten-Free, Non-GMO, Doctor-Formulated, Drug-Free, Deliciously Convenient, 100% Authentic Whole Herbs, Lab Tested, Traditionally Extracted</p>"
           }
         },
-        "badge_gluten_free": {
-          "type": "icon_badge",
+        "free_from_block": {
+          "type": "subheading_text",
           "settings": {
-            "label": "Gluten Free"
-          }
-        },
-        "badge_non_gmo": {
-          "type": "icon_badge",
-          "settings": {
-            "label": "Non-GMO"
-          }
-        },
-        "badge_low_sugar": {
-          "type": "icon_badge",
-          "settings": {
-            "label": "Low Sugar"
-          }
-        },
-        "badge_doctor_formulated": {
-          "type": "icon_badge",
-          "settings": {
-            "label": "Doctor Formulated"
-          }
-        },
-        "badge_2_gummies": {
-          "type": "icon_badge",
-          "settings": {
-            "label": "2 gummies = 1 cup herbal tea"
+            "subheading": "Free From",
+            "text": "<p>Artificial Sweeteners, Gelatin, Added Colors &amp; Dyes, Heavy Metals, Herbicides, Pesticides, High-Fructose Corn Syrup, Synthetic Vitamins</p>"
           }
         }
       },
       "block_order": [
-        "badge_vegan",
-        "badge_gluten_free",
-        "badge_non_gmo",
-        "badge_low_sugar",
-        "badge_doctor_formulated",
-        "badge_2_gummies"
+        "always_block",
+        "free_from_block"
       ],
       "name": "Dietary info",
       "settings": {
-        "always_heading": "Always",
-        "free_from_heading": "Free From",
-        "free_from_content": "<ul><li>Artificial Sweeteners</li><li>Gelatin</li><li>Added Colors & Dyes</li><li>Heavy Metals</li><li>Herbicides</li><li>Pesticides</li><li>High-Fructose Corn Syrup</li><li>Synthetic Vitamins</li></ul>",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-1",
         "padding_top": 52,
         "padding_bottom": 52

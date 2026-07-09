@@ -91,6 +91,17 @@
                   <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                     {{ block.settings.text }}
                   </div>
+                {%- when 'subheading_text' -%}
+                  <div class="image-with-text__subheading-text" {{ block.shopify_attributes }}>
+                    {%- if block.settings.subheading != blank -%}
+                      <p class="image-with-text__subheading caption-with-letter-spacing">
+                        {{- block.settings.subheading | escape -}}
+                      </p>
+                    {%- endif -%}
+                    {%- if block.settings.text != blank -%}
+                      <div class="image-with-text__text rte">{{ block.settings.text }}</div>
+                    {%- endif -%}
+                  </div>
                 {%- when 'button' -%}
                   {%- if block.settings.button_label != blank -%}
                     <a
@@ -455,6 +466,22 @@
           ],
           "default": "body",
           "label": "t:sections.image-with-text.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "subheading_text",
+      "name": "Subheading + text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
         }
       ]
     },
