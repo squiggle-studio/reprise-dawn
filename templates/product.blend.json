@@ -22,6 +22,7 @@
             "heading": "Supplement Facts",
             "article": "",
             "content": "",
+            "image": "shopify://shop_images/Focus-supplements.png",
             "display_style": "pill_button"
           }
         },
@@ -70,6 +71,7 @@
         },
         "info_drawer_QJ6DrL": {
           "type": "info_drawer",
+          "disabled": true,
           "settings": {
             "heading": "Subscriber benefits",
             "article": "",
