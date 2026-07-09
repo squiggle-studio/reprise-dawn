@@ -438,6 +438,29 @@
   justify-content: flex-start;
 }
 
+.footer-block__brand-description--bordered {
+  border: 0.1rem solid currentColor;
+  padding: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+/* White rounded-square social icon buttons, scoped to the footer only */
+.footer-block__brand-info .footer__list-social .list-social__item {
+  margin-right: 0.8rem;
+}
+
+.footer-block__brand-info .footer__list-social .list-social__link {
+  background-color: #f5f3ea;
+  color: rgb(var(--color-background));
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+}
+
+.footer-block__brand-info .footer__list-social .list-social__item .icon {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
 .footer-block__details-content .placeholder-svg {
   max-width: 20rem;
 }

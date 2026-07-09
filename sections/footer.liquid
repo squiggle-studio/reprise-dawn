@@ -126,7 +126,9 @@
                         <h2 class="footer-block__heading rte">{{ settings.brand_headline }}</h2>
                       {%- endif -%}
                       {%- if settings.brand_description != blank -%}
-                        <div class="rte">{{ settings.brand_description }}</div>
+                        <div class="rte{% if block.settings.description_border %} footer-block__brand-description--bordered{% endif %}">
+                          {{ settings.brand_description }}
+                        </div>
                       {%- endif -%}
                       {%- if block.settings.show_social and has_social_icons -%}
                         {%- render 'social-icons', class: 'footer__list-social' -%}
@@ -251,7 +253,7 @@
   {%- endif -%}
 
   <div
-    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class="footer__content-bottom color-{{ section.settings.bottom_bar_color_scheme }} gradient{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
@@ -300,8 +302,8 @@
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
       <div class="footer__copyright caption">
         <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
-        </small>
+          >&copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: routes.root_url }}. All Rights Reserved.</small
+        >
         <small class="copyright__content">{{ powered_by_link }}</small>
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
@@ -360,6 +362,13 @@
           "default": true,
           "label": "t:sections.footer.blocks.brand_information.settings.show_social.label",
           "info": "t:sections.footer.blocks.brand_information.settings.show_social.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "description_border",
+          "default": false,
+          "label": "Show a border around the description",
+          "info": "Useful for disclaimers, e.g. an FDA statement."
         }
       ]
     },
@@ -428,6 +437,13 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "bottom_bar_color_scheme",
+      "label": "Bottom bar color scheme",
+      "info": "Color scheme for the copyright/policy links bar at the very bottom. Leave unset to match the main color scheme above.",
       "default": "scheme-1"
     },
     {
