@@ -46,6 +46,15 @@
           </button>
         </div>
         <div class="product-drawer__body rte">
+          {%- if block.settings.image != blank -%}
+            <div class="product-drawer__image">
+              {{
+                block.settings.image
+                | image_url: width: 800
+                | image_tag: widths: '400, 600, 800', loading: 'lazy', alt: drawer_heading
+              }}
+            </div>
+          {%- endif -%}
           {{ drawer_content }}
         </div>
       </div>

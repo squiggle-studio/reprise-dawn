@@ -60,6 +60,17 @@
   padding: 2.5rem;
 }
 
+.product-drawer__image {
+  margin: 0 0 2rem;
+}
+
+.product-drawer__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .product-drawer,
   .product-drawer__inner {
