@@ -268,7 +268,8 @@
       ],
       "name": "Meticulously crafted",
       "settings": {
-        "height": "adapt",
+        "image": "shopify://shop_images/gummies-in-hand.png",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
@@ -288,6 +289,7 @@
         "feature_1": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Reishi_Mushrooms.svg",
             "sub_heading": "Adaptogenic reishi*",
             "description": "<p>Red reishi are adaptogenic mushrooms harvested from \"duanwood reishi\" logs for full-spectrum high functional mushroom extracts.</p>"
           }
@@ -295,13 +297,15 @@
         "feature_2": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Ginseng.svg",
             "sub_heading": "Support at a cellular level*",
-            "description": "<p>Antioxidants in reishi, panax ginseng, and American ginseng support healthy aging and immune response.</p>"
+            "description": "<p>Ginsenosides promote blood flow to the brain and increase cellular energy production—helping you feel more alert, steady, and mentally present</p>"
           }
         },
         "feature_3": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Bamboo-Texture-Transition.png",
             "sub_heading": "Synergistic Blend",
             "description": "<p>Reprise Super Focus Gummies contain clinical-grade herbs that work in synergy to promote focus and mental clarity.</p>"
           }
@@ -416,6 +420,7 @@
       ],
       "name": "Easy routine",
       "settings": {
+        "image": "shopify://shop_images/ChatGPT_Image_Jul_1_2026_11_00_39_AM.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
