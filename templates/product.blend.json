@@ -81,25 +81,25 @@
         "info_drawer_xj8bHG": {
           "type": "info_drawer",
           "settings": {
-            "heading": "Ingredients and allergies",
+            "heading": "Third party testing",
             "article": "",
-            "content": "<p>Lorum epsum add this</p>",
+            "content": "",
             "display_style": "row"
           }
         },
         "info_drawer_B7gmTQ": {
           "type": "info_drawer",
           "settings": {
-            "heading": "Ingredients and allergies",
+            "heading": "Directions",
             "article": "",
-            "content": "<p>Lorum epsum add this</p>",
+            "content": "<p>Because herbs work gently within your body’s natural systems, they require consistent daily use.  Our delicious daily gummies make your herbs easy to commit to, so results continue to build over time.  </p><p>For best result, enjoy 2 gummies per day.</p>",
             "display_style": "row"
           }
         },
         "info_drawer_XCj6Tk": {
           "type": "info_drawer",
           "settings": {
-            "heading": "Ingredients and allergies",
+            "heading": "Flavor",
             "article": "",
             "content": "<p>Lorum epsum add this</p>",
             "display_style": "row"
