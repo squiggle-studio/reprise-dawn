@@ -52,11 +52,11 @@
       ],
       "name": "Hero",
       "settings": {
-        "image": "shopify://shop_images/herb-shelf-temp.png",
+        "image": "shopify://shop_images/Reprise_Signage_Background.png",
         "layout": "image_right",
         "color_scheme": "scheme-4",
-        "padding_top": 52,
-        "padding_bottom": 52
+        "padding_top": 60,
+        "padding_bottom": 64
       }
     },
     "trust_badge_ticker": {
@@ -145,7 +145,7 @@
         "heading": "Ancient wisdom in a daily gummy",
         "heading_size": "h1",
         "body_text": "<p>Reprise is rooted in the belief that herbal, holistic approaches to health are a universal tradition—found across cultures, grounded in nature, and passed down through generations. We honor our heritage at every step of our process.</p>",
-        "image": "shopify://shop_images/herb-drawer.png",
+        "image": "shopify://shop_images/Korean-Ginseng-Drawer.png",
         "image_border_radius": 16,
         "layout": "image_left",
         "color_scheme": "scheme-3",
@@ -172,7 +172,7 @@
             "image": "shopify://shop_images/Ginseng_for_Energy.png",
             "title": "",
             "text": "",
-"link_label": "Focus & Energy* →",
+            "link_label": "Focus & Energy* →",
             "link": "shopify://products/super-focus-gummies"
           }
         },
@@ -219,6 +219,9 @@
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "scheme-1",
+        "enable_card_style": false,
+        "card_color_scheme": "",
+        "card_corner_radius": 16,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "show_dividers_mobile": true,
@@ -344,6 +347,63 @@
         "padding_bottom": 52
       }
     },
+    "our_story": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_story": {
+          "type": "caption",
+          "settings": {
+            "caption": "Our story",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_story": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>We grew up on herbal teas, soups, and tonics. These recipes had been passed down for centuries, and they worked. </strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_story": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Yet as adults, we found the practice intimidating and inaccessible. We founded Reprise so that generations to come could experience our ancestors’ wisdom in a more convenient and sustainable way: delicious daily gummies.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_story": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn more →",
+            "button_link": "",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "caption_story",
+        "heading_story",
+        "text_story",
+        "button_story"
+      ],
+      "name": "Our story",
+      "settings": {
+        "image": "shopify://shop_images/Founders_Grandmas.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -372,62 +432,6 @@
         "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
-      }
-    },
-    "our_story": {
-      "type": "image-with-text",
-      "blocks": {
-        "caption_story": {
-          "type": "caption",
-          "settings": {
-            "caption": "Our story",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "heading_story": {
-          "type": "heading",
-          "settings": {
-            "heading": "Inspired by Grandma",
-            "heading_size": "h1"
-          }
-        },
-        "text_story": {
-          "type": "text",
-          "settings": {
-            "text": "<p>David and Kai grew up on traditional herbal remedies – in teas, soups, and tonics, passed down for generations. None of it tasted good. They were fascinated by the science behind certain herbs, and extraction methods that preserved potency without the dreaded taste. When they connected with an eastern medicine doctor at Harvard, Reprise was born.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_story": {
-          "type": "button",
-          "settings": {
-            "button_label": "Learn more →",
-            "button_link": "",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "caption_story",
-        "heading_story",
-        "text_story",
-        "button_story"
-      ],
-      "name": "Our story",
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-1",
-        "padding_top": 52,
-        "padding_bottom": 52
       }
     }
   },
