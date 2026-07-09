@@ -1601,6 +1601,12 @@ a.product__text {
   padding: 0;
 }
 
+.product__checkmark-list--2-col ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.6rem;
+}
+
 .product__checkmark-list li {
   position: relative;
   padding-left: 2.2rem;
