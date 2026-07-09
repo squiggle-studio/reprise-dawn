@@ -326,6 +326,37 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_Kd4wM4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JmedQn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why it works",
+            "heading_size": "h1"
+          }
+        },
+        "text_aU3zXU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This combination promotes better focus because each herb supports a different part of the brain’s energy and stress-response systems in a complementary way. </p><p>Ginsenosides in both panax ginseng and American ginseng promote blood flow to the brain and increase cellular energy production—helping you feel more alert, steady, and mentally present.  </p><p>The adaptogenic, antioxidant and immune supportive qualities of reishi play a role in easing everyday stress and supporting a more stable, focused internal environment.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JmedQn",
+        "text_aU3zXU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "ingredient_spotlight": {
       "type": "multicolumn",
       "blocks": {
@@ -371,6 +402,7 @@
         "caption": "",
         "title": "What's inside",
         "heading_size": "h1",
+        "heading_alignment": "left",
         "image_width": "third",
         "image_ratio": "square",
         "button_label": "",
@@ -493,6 +525,7 @@
         "caption": "★★★★★",
         "title": "Join 1000+ customers in a delicious daily ritual",
         "heading_size": "h1",
+        "heading_alignment": "left",
         "image_width": "full",
         "image_ratio": "square",
         "button_label": "",
@@ -671,37 +704,6 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "rich_text_Kd4wM4": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_JmedQn": {
-          "type": "heading",
-          "settings": {
-            "heading": "Why it works",
-            "heading_size": "h1"
-          }
-        },
-        "text_aU3zXU": {
-          "type": "text",
-          "settings": {
-            "text": "<p>This combination promotes better focus because each herb supports a different part of the brain’s energy and stress-response systems in a complementary way. </p><p>Ginsenosides in both panax ginseng and American ginseng promote blood flow to the brain and increase cellular energy production—helping you feel more alert, steady, and mentally present.  </p><p>The adaptogenic, antioxidant and immune supportive qualities of reishi play a role in easing everyday stress and supporting a more stable, focused internal environment.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_JmedQn",
-        "text_aU3zXU"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -709,12 +711,12 @@
     "trust_badge_certifications",
     "image_text_crafted",
     "why_it_works",
+    "rich_text_Kd4wM4",
     "ingredient_spotlight",
     "image_text_routine",
     "testimonial_banner",
     "dietary_info",
     "faq",
-    "related-products",
-    "rich_text_Kd4wM4"
+    "related-products"
   ]
 }
