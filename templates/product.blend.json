@@ -28,6 +28,12 @@
             "text_style": "subtitle"
           }
         },
+        "checkmark_list_DFt3ti": {
+          "type": "checkmark_list",
+          "settings": {
+            "content": "{{ product.metafields.custom.benefit_bullets | metafield_tag }}"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -115,6 +121,7 @@
       "block_order": [
         "info_drawer_RRcmFD",
         "vendor",
+        "checkmark_list_DFt3ti",
         "title",
         "price",
         "variant_picker",
