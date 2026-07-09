@@ -339,7 +339,7 @@
         "text_aU3zXU": {
           "type": "text",
           "settings": {
-            "text": "<p>This combination promotes better focus because each herb supports a different part of the brain’s energy and stress-response systems in a complementary way. </p><p>Ginsenosides in both panax ginseng and American ginseng promote blood flow to the brain and increase cellular energy production—helping you feel more alert, steady, and mentally present.  </p><p>The adaptogenic, antioxidant and immune supportive qualities of reishi play a role in easing everyday stress and supporting a more stable, focused internal environment.</p>"
+            "text": "<p>This caffeine free focus gummy promotes productive energy and attention with three key herbs that support your brain in complementary ways. </p><p>Ginsenosides in both panax ginseng and American ginseng promote blood flow to the brain and increase cellular energy production—helping you feel more alert, steady, and mentally present.  </p><p>The adaptogenic, antioxidant and immune supportive qualities of reishi play a role in easing everyday stress and supporting a more stable, focused internal environment.</p>"
           }
         }
       },
@@ -365,7 +365,7 @@
           "settings": {
             "image": "shopify://shop_images/Dong_Quai.svg",
             "title": "American Ginseng",
-            "text": "<p>Lorem ipsum - what makes American Ginseng so great? David to provide copy here.</p>",
+            "text": "<p>Often chosen for “calm energy,” supporting balanced alertness and cognitive performance, this Ginseng helps you stay mentally present and productive while still feeling grounded.</p>",
             "link_label": "",
             "link": ""
           }
@@ -375,7 +375,7 @@
           "settings": {
             "image": "shopify://shop_images/Ginseng.svg",
             "title": "Panax Ginseng",
-            "text": "<p>Lorem ipsum - what makes Panax Ginseng so great? David to provide copy here.</p>",
+            "text": "<p>Traditionally used to support mental clarity and sustained concentration, Panax Ginseng helps you feel more alert and focused without the jittery spike often associated with strong stimulants.</p>",
             "link_label": "",
             "link": ""
           }
@@ -385,7 +385,7 @@
           "settings": {
             "image": "shopify://shop_images/Reishi_Mushrooms.svg",
             "title": "Reishi Mushroom",
-            "text": "<p>Lorem ipsum - what makes Reishi Mushroom so great? David to provide copy here.</p>",
+            "text": "<p>Traditionally valued for nourishing the body’s stress and resilience pathways, American Ginseng can help support overall brain health and a steadier, more composed mindset under daily pressure.</p>",
             "link_label": "",
             "link": ""
           }
@@ -445,8 +445,8 @@
           "type": "button",
           "settings": {
             "button_label": "Enjoy the benefits",
-            "button_link": "",
-            "button_style_secondary": false
+            "button_link": "{{ product.url }}",
+            "button_style_secondary": true
           }
         }
       },
