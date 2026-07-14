@@ -26,6 +26,12 @@
             "display_style": "pill_button"
           }
         },
+        "recharge_subscriptions_subscription_widget_fdbm4H": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -42,6 +48,7 @@
         },
         "recharge_subscriptions_subscription_widget_v2_JiwHUT": {
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons": {
@@ -120,6 +127,7 @@
       "block_order": [
         "title",
         "info_drawer_RRcmFD",
+        "recharge_subscriptions_subscription_widget_fdbm4H",
         "vendor",
         "checkmark_list_DFt3ti",
         "recharge_subscriptions_subscription_widget_v2_JiwHUT",
