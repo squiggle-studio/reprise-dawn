@@ -26,12 +26,6 @@
             "display_style": "pill_button"
           }
         },
-        "recharge_subscriptions_subscription_widget_fdbm4H": {
-          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -44,6 +38,12 @@
           "settings": {
             "content": "{{ product.metafields.custom.benefit_bullets | metafield_tag }}",
             "columns": "1"
+          }
+        },
+        "recharge_subscriptions_subscription_widget_fdbm4H": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
           }
         },
         "recharge_subscriptions_subscription_widget_v2_JiwHUT": {
@@ -127,9 +127,9 @@
       "block_order": [
         "title",
         "info_drawer_RRcmFD",
-        "recharge_subscriptions_subscription_widget_fdbm4H",
         "vendor",
         "checkmark_list_DFt3ti",
+        "recharge_subscriptions_subscription_widget_fdbm4H",
         "recharge_subscriptions_subscription_widget_v2_JiwHUT",
         "buy_buttons",
         "checkmark_list_wJTPTi",
