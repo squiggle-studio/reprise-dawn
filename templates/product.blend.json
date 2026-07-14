@@ -42,6 +42,7 @@
         },
         "recharge_subscriptions_subscription_widget_fdbm4H": {
           "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
