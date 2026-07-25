@@ -1,0 +1,189 @@
+{
+  "sections": {
+    "hero": {
+      "type": "image-text-split",
+      "blocks": {
+        "subheading_hero": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Our Why"
+          }
+        },
+        "heading_hero": {
+          "type": "heading",
+          "settings": {
+            "heading": "Herbalism is a Universal Tradition",
+            "heading_size": "h0"
+          }
+        },
+        "text_hero": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Holistic remedies are grounded in nature and have been passed down through generations, yet they're often inaccessible in modern times. We're here to change that.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_hero",
+        "heading_hero",
+        "text_hero"
+      ],
+      "name": "Hero",
+      "settings": {
+        "image": "",
+        "layout": "image_left",
+        "color_scheme": "scheme-3",
+        "padding_top": 60,
+        "padding_bottom": 64
+      }
+    },
+    "it_starts_at_the_source": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_source": {
+          "type": "caption",
+          "settings": {
+            "caption": "It Starts at the Source",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "text_source": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We source our herbs from a 5th generation Taiwanese family company, recognized and trusted by herbalists and acupuncturists for over a century.</p><p>Every batch is lab-tested 3 times: at sourcing, after extraction, and once they're made into gummies.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_source": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More →",
+            "button_link": "",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "caption_source",
+        "text_source",
+        "button_source"
+      ],
+      "name": "It starts at the source",
+      "settings": {
+        "image": "",
+        "image_corner_radius": 24,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "not_grandmas_herbs": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_grandma": {
+          "type": "caption",
+          "settings": {
+            "caption": "(Not) Our Grandma's Herbs",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_grandma": {
+          "type": "heading",
+          "settings": {
+            "heading": "The original recipes work, but they're hard to get and they taste terrible.",
+            "heading_size": "h2"
+          }
+        },
+        "text_grandma": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We grew up on teas and tonics. We founded Reprise so that generations to come could experience our ancestors' wisdom in a more convenient and sustainable way.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "caption_grandma",
+        "heading_grandma",
+        "text_grandma"
+      ],
+      "name": "Not our grandma's herbs",
+      "settings": {
+        "image": "",
+        "image_corner_radius": 24,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-5",
+        "color_scheme": "scheme-5",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "delicious_daily_ritual": {
+      "type": "image-text-accordion",
+      "blocks": {
+        "accordion_1": {
+          "type": "accordion_item",
+          "settings": {
+            "question": "Authentic Ingredients",
+            "answer": "<p>Whole herbs sourced directly from a 5th generation family supplier, never isolated compounds.</p>"
+          }
+        },
+        "accordion_2": {
+          "type": "accordion_item",
+          "settings": {
+            "question": "Holistic Blends",
+            "answer": "<p>Formulas developed with doctors and herbalists to work with your body's natural systems.</p>"
+          }
+        },
+        "accordion_3": {
+          "type": "accordion_item",
+          "settings": {
+            "question": "Delicious Gummies",
+            "answer": "<p>A daily ritual without compromise on taste, only all natural ingredients with no added colors or dyes.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_1",
+        "accordion_2",
+        "accordion_3"
+      ],
+      "name": "A delicious daily ritual",
+      "settings": {
+        "heading": "A delicious daily ritual",
+        "heading_size": "h1",
+        "body_text": "<p>We set out to create a new standard for traditional remedies: removing the barriers that get in the way of feeling good.</p>",
+        "image": "",
+        "image_border_radius": 16,
+        "layout": "image_right",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "it_starts_at_the_source",
+    "not_grandmas_herbs",
+    "delicious_daily_ritual"
+  ]
+}

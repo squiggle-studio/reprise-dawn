@@ -1,0 +1,238 @@
+{
+  "sections": {
+    "hero": {
+      "type": "image-text-split",
+      "blocks": {
+        "subheading_hero": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "What's Inside"
+          }
+        },
+        "heading_hero": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ancient Asian Superfoods",
+            "heading_size": "h0"
+          }
+        },
+        "text_hero": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We source whole herbs from a 5th generation Taiwanese family company, and reject as much as 70% of raw materials before beginning the traditional water extraction process.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_hero",
+        "heading_hero",
+        "text_hero"
+      ],
+      "name": "Hero",
+      "settings": {
+        "image": "",
+        "layout": "image_left",
+        "color_scheme": "scheme-3",
+        "padding_top": 60,
+        "padding_bottom": 64
+      }
+    },
+    "trust_badge_ticker": {
+      "type": "trust-badge-ticker",
+      "blocks": {
+        "badge_1": {
+          "type": "badge",
+          "settings": {
+            "text": "Heritage Supplier"
+          }
+        },
+        "badge_2": {
+          "type": "badge",
+          "settings": {
+            "text": "Traditional Extraction Process"
+          }
+        },
+        "badge_3": {
+          "type": "badge",
+          "settings": {
+            "text": "茶葉"
+          }
+        },
+        "badge_4": {
+          "type": "badge",
+          "settings": {
+            "text": "Doctor-developed Formulas"
+          }
+        },
+        "badge_5": {
+          "type": "badge",
+          "settings": {
+            "text": "Full Spectrum"
+          }
+        },
+        "badge_6": {
+          "type": "badge",
+          "settings": {
+            "text": "Whole-Herb Extracts"
+          }
+        }
+      },
+      "block_order": [
+        "badge_1",
+        "badge_2",
+        "badge_3",
+        "badge_4",
+        "badge_5",
+        "badge_6"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "speed": 30,
+        "direction": "left",
+        "pause_on_hover": true,
+        "divider": "·",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "ingredient_cards": {
+      "type": "multicolumn",
+      "blocks": {
+        "chamomile": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Chamomile_Flower_White.svg",
+            "title": "Chamomile",
+            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Restful Sleep, Other linked products</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "goji": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Goji_Berries.svg",
+            "title": "Goji",
+            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "ginseng": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Ginseng.svg",
+            "title": "Ginseng",
+            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "dong_quai": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Dong_Quai.svg",
+            "title": "Dong Quai",
+            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "reishi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Reishi_Mushrooms.svg",
+            "title": "Reishi",
+            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "licorice_root": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Licorice_Root.svg",
+            "title": "Licorice Root",
+            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "peony": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Peony_Root.svg",
+            "title": "Peony",
+            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "privet": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Privet_For_Hot_Flashes.png",
+            "title": "Privet",
+            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "jujube_seed": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Jujube.svg",
+            "title": "Jujube Seed",
+            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "chamomile",
+        "goji",
+        "ginseng",
+        "dong_quai",
+        "reishi",
+        "licorice_root",
+        "peony",
+        "privet",
+        "jujube_seed"
+      ],
+      "custom_css": [],
+      "name": "Ingredient cards",
+      "settings": {
+        "caption": "",
+        "title": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "image_width": "third",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "show_button_on_desktop": false,
+        "column_layout": "stacked",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-5",
+        "enable_card_style": true,
+        "card_color_scheme": "scheme-1",
+        "card_corner_radius": 16,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_dividers_mobile": false,
+        "banner_image": "",
+        "banner_image_height": 96,
+        "padding_top": 64,
+        "padding_bottom": 88
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "trust_badge_ticker",
+    "ingredient_cards"
+  ]
+}
