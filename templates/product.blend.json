@@ -360,8 +360,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Dong_Quai.svg",
-            "title": "American Ginseng",
-            "text": "<p>Often chosen for “calm energy,” supporting balanced alertness and cognitive performance, this Ginseng helps you stay mentally present and productive while still feeling grounded.</p>",
+            "title": "{{ product.metafields.custom.herb1.value }}",
+            "text": "<p>{{ product.metafields.custom.herb1_descrip | metafield_tag }}</p>",
             "link_label": "",
             "link": ""
           }
