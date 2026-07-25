@@ -40,26 +40,23 @@
             "columns": "1"
           }
         },
-        "price": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
+        "recharge_subscriptions_subscription_widget_fdbm4H": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget/371eed76-0b44-4869-9813-730372ea378e",
+          "disabled": true,
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
+            "product": "{{product}}"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
+        "recharge_subscriptions_subscription_widget_v2_JiwHUT": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "disabled": true,
           "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
           }
         },
         "checkmark_list_wJTPTi": {
@@ -133,9 +130,8 @@
         "info_drawer_RRcmFD",
         "vendor",
         "checkmark_list_DFt3ti",
-        "price",
-        "variant_picker",
-        "quantity_selector",
+        "recharge_subscriptions_subscription_widget_fdbm4H",
+        "recharge_subscriptions_subscription_widget_v2_JiwHUT",
         "buy_buttons",
         "checkmark_list_wJTPTi",
         "info_drawer_QJ6DrL",
@@ -272,7 +268,7 @@
         "image_corner_radius": 16,
         "height": "medium",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "middle",
