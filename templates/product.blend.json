@@ -361,7 +361,7 @@
         "ingredient_1": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Dong_Quai.svg",
+            "image": "{{ product.metafields.custom.herb_1_img.value }}",
             "title": "{{ product.metafields.custom.herb1.value }}",
             "text": "<p>{{ product.metafields.custom.herb1_descrip | metafield_tag }}</p>",
             "link_label": "",
@@ -371,9 +371,9 @@
         "ingredient_2": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Ginseng.svg",
-            "title": "Panax Ginseng",
-            "text": "<p>Traditionally used to support mental clarity and sustained concentration, Panax Ginseng helps you feel more alert and focused without the jittery spike often associated with strong stimulants.</p>",
+            "image": "{{ product.metafields.custom.herb_2_img.value }}",
+            "title": "{{ product.metafields.custom.herb_2.value }}",
+            "text": "<p>{{ product.metafields.custom.herb_2_descrip | metafield_tag }}</p>",
             "link_label": "",
             "link": ""
           }
@@ -381,9 +381,9 @@
         "ingredient_3": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Reishi_Mushrooms.svg",
-            "title": "Reishi Mushroom",
-            "text": "<p>Traditionally valued for nourishing the body’s stress and resilience pathways, American Ginseng can help support overall brain health and a steadier, more composed mindset under daily pressure.</p>",
+            "image": "{{ product.metafields.custom.herb_3_img.value }}",
+            "title": "{{ product.metafields.custom.herb_3.value }}",
+            "text": "<p>{{ product.metafields.custom.herb_3_descrip | metafield_tag }}</p>",
             "link_label": "",
             "link": ""
           }
