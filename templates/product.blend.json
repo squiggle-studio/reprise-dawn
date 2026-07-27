@@ -22,7 +22,7 @@
             "heading": "Supplement Facts",
             "article": "",
             "content": "",
-            "image": "shopify://shop_images/Focus-supplements.png",
+            "image": "{{ product.metafields.custom.facts_and_ingredients.value }}",
             "display_style": "pill_button"
           }
         },
