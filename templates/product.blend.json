@@ -337,7 +337,7 @@
         "text_aU3zXU": {
           "type": "text",
           "settings": {
-            "text": "<p>This caffeine free focus gummy promotes productive energy and attention with three key herbs that support your brain in complementary ways. </p><p>Ginsenosides in both panax ginseng and American ginseng promote blood flow to the brain and increase cellular energy production—helping you feel more alert, steady, and mentally present.  </p><p>The adaptogenic, antioxidant and immune supportive qualities of reishi play a role in easing everyday stress and supporting a more stable, focused internal environment.</p>"
+            "text": "<p>{{ product.metafields.custom.why_it_works | metafield_tag }}</p>"
           }
         }
       },
