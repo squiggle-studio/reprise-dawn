@@ -90,7 +90,7 @@
           "type": "info_drawer",
           "settings": {
             "heading": "Third party testing",
-            "article": "",
+            "article": "{{ product.metafields.custom.coa.value }}",
             "content": "",
             "display_style": "row"
           }
