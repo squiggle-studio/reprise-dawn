@@ -16,6 +16,13 @@
           "type": "title",
           "settings": {}
         },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.subheading.value }}",
+            "text_style": "subtitle"
+          }
+        },
         "info_drawer_RRcmFD": {
           "type": "info_drawer",
           "settings": {
@@ -24,13 +31,6 @@
             "content": "",
             "image": "{{ product.metafields.custom.facts_and_ingredients.value }}",
             "display_style": "pill_button"
-          }
-        },
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.subheading.value }}",
-            "text_style": "subtitle"
           }
         },
         "checkmark_list_DFt3ti": {
@@ -106,10 +106,11 @@
         },
         "info_drawer_XCj6Tk": {
           "type": "info_drawer",
+          "disabled": true,
           "settings": {
             "heading": "Flavor",
             "article": "",
-            "content": "<p>Lorum epsum add this</p>",
+            "content": "",
             "display_style": "row"
           }
         },
@@ -128,8 +129,8 @@
       },
       "block_order": [
         "title",
-        "info_drawer_RRcmFD",
         "vendor",
+        "info_drawer_RRcmFD",
         "checkmark_list_DFt3ti",
         "recharge_subscriptions_subscription_widget_fdbm4H",
         "recharge_subscriptions_subscription_widget_v2_JiwHUT",
