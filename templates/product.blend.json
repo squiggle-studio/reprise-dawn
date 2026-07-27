@@ -81,7 +81,8 @@
           "settings": {
             "heading": "Ingredients and allergies",
             "article": "",
-            "content": "{{ product.metafields.shopify[\"detailed-ingredients\"] | metafield_tag: field: 'label' }}",
+            "content": "",
+            "image": "{{ product.metafields.custom.facts_and_ingredients.value }}",
             "display_style": "row"
           }
         },
