@@ -632,15 +632,6 @@
             "row_content": "<p>Answer coming soon.</p>",
             "page": ""
           }
-        },
-        "faq_6": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What other herbs can support my mental health?",
-            "icon": "none",
-            "row_content": "<p>Answer coming soon.</p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -648,8 +639,7 @@
         "faq_2",
         "faq_3",
         "faq_4",
-        "faq_5",
-        "faq_6"
+        "faq_5"
       ],
       "name": "Any questions?",
       "settings": {
