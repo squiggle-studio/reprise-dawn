@@ -109,7 +109,7 @@
         "text_grandma": {
           "type": "text",
           "settings": {
-            "text": "<p>We grew up on teas and tonics. The original recipes work, but they're hard to get and they taste terrible. </p><p>We founded Reprise so that generations to come could experience our ancestors' wisdom in a more convenient and sustainable way.</p>",
+            "text": "<p>We founded Reprise so that generations to come could experience our ancestors' wisdom in a more convenient and sustainable way.</p><p>We worked with </p>",
             "text_style": "body"
           }
         }

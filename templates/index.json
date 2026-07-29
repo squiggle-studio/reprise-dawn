@@ -209,6 +209,7 @@
         "caption": "How can we help?",
         "title": "Discover the untapped power of herbal remedies for",
         "heading_size": "h1",
+        "heading_alignment": "left",
         "image_width": "half",
         "image_ratio": "adapt",
         "button_label": "Shop All →",
@@ -361,14 +362,14 @@
         "heading_story": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>We grew up on herbal teas, soups, and tonics. Recipes that had been passed down for centuries, because they worked. </strong>",
+            "heading": "As children, we watched our grandmas brew bitter teas, guided by a deep-rooted tradition to nurture happy, healthy families.",
             "heading_size": "h2"
           }
         },
         "text_story": {
           "type": "text",
           "settings": {
-            "text": "<p>Yet as adults, we found the practice intimidating and inaccessible. We founded Reprise so that generations to come could experience our ancestors’ wisdom in a more convenient and sustainable way: delicious daily gummies.</p>",
+            "text": "<p>Drawing on centuries of Eastern herbal wisdom, we invite you to bring the benefits of these time-honored herbs into your everyday health.</p>",
             "text_style": "body"
           }
         },
@@ -390,6 +391,7 @@
       "name": "Our story",
       "settings": {
         "image": "shopify://shop_images/Founders_Grandmas.png",
+        "image_corner_radius": 0,
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
