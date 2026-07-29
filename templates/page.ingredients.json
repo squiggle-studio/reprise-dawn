@@ -46,65 +46,6 @@
         "padding_bottom": 64
       }
     },
-    "trust_badge_ticker": {
-      "type": "trust-badge-ticker",
-      "blocks": {
-        "badge_1": {
-          "type": "badge",
-          "settings": {
-            "text": "Heritage Supplier"
-          }
-        },
-        "badge_2": {
-          "type": "badge",
-          "settings": {
-            "text": "Traditional Extraction Process"
-          }
-        },
-        "badge_3": {
-          "type": "badge",
-          "settings": {
-            "text": "茶葉"
-          }
-        },
-        "badge_4": {
-          "type": "badge",
-          "settings": {
-            "text": "Doctor-developed Formulas"
-          }
-        },
-        "badge_5": {
-          "type": "badge",
-          "settings": {
-            "text": "Full Spectrum"
-          }
-        },
-        "badge_6": {
-          "type": "badge",
-          "settings": {
-            "text": "Whole-Herb Extracts"
-          }
-        }
-      },
-      "block_order": [
-        "badge_1",
-        "badge_2",
-        "badge_3",
-        "badge_4",
-        "badge_5",
-        "badge_6"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "scheme-4",
-        "speed": 30,
-        "direction": "left",
-        "pause_on_hover": true,
-        "divider": "·",
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
     "ingredient_cards": {
       "type": "multicolumn",
       "blocks": {
@@ -244,7 +185,6 @@
   },
   "order": [
     "hero",
-    "trust_badge_ticker",
     "ingredient_cards"
   ]
 }
