@@ -94,6 +94,7 @@
         "badge_5",
         "badge_6"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-4",
         "speed": 30,
@@ -142,7 +143,7 @@
           "settings": {
             "image": "shopify://shop_images/Dong_Quai.svg",
             "title": "Dong Quai",
-            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "text": "<p>Chamomile flower is rich in a flavonoid called apigenin, which has been shown to bind to GABA receptors in the brain. It's traditionally used to ease tension and calm the nervous system.*</p><h5></h5><h5><strong>You can enjoy chamomile in our</strong> <a href=\"/products/restful-sleep-gummies\" title=\"Restful Sleep Gummies\">Restful Sleep</a> and <a href=\"/products/pms-support-gummies\" title=\"Cycle Balance Gummies\">Cycle Balance </a>gummies</h5>",
             "link_label": "",
             "link": ""
           }
@@ -152,7 +153,7 @@
           "settings": {
             "image": "shopify://shop_images/Reishi_Mushrooms.svg",
             "title": "Reishi",
-            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "text": "<p>Chamomile flower is rich in a flavonoid called apigenin, which has been shown to bind to GABA receptors in the brain. It's traditionally used to ease tension and calm the nervous system.*</p><h5></h5><h5><strong>You can enjoy chamomile in our</strong> <a href=\"/products/restful-sleep-gummies\" title=\"Restful Sleep Gummies\">Restful Sleep</a> and <a href=\"/products/pms-support-gummies\" title=\"Cycle Balance Gummies\">Cycle Balance </a>gummies</h5>",
             "link_label": "",
             "link": ""
           }
@@ -162,7 +163,7 @@
           "settings": {
             "image": "shopify://shop_images/Licorice_Root.svg",
             "title": "Licorice Root",
-            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "text": "<p>Chamomile flower is rich in a flavonoid called apigenin, which has been shown to bind to GABA receptors in the brain. It's traditionally used to ease tension and calm the nervous system.*</p><h5></h5><h5><strong>You can enjoy chamomile in our</strong> <a href=\"/products/restful-sleep-gummies\" title=\"Restful Sleep Gummies\">Restful Sleep</a> and <a href=\"/products/pms-support-gummies\" title=\"Cycle Balance Gummies\">Cycle Balance </a>gummies</h5>",
             "link_label": "",
             "link": ""
           }
@@ -172,7 +173,7 @@
           "settings": {
             "image": "shopify://shop_images/Peony_Root.svg",
             "title": "Peony",
-            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "text": "<p>Chamomile flower is rich in a flavonoid called apigenin, which has been shown to bind to GABA receptors in the brain. It's traditionally used to ease tension and calm the nervous system.*</p><h5></h5><h5><strong>You can enjoy chamomile in our</strong> <a href=\"/products/restful-sleep-gummies\" title=\"Restful Sleep Gummies\">Restful Sleep</a> and <a href=\"/products/pms-support-gummies\" title=\"Cycle Balance Gummies\">Cycle Balance </a>gummies</h5>",
             "link_label": "",
             "link": ""
           }
@@ -182,7 +183,7 @@
           "settings": {
             "image": "shopify://shop_images/Privet_For_Hot_Flashes.png",
             "title": "Privet",
-            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "text": "<p>Chamomile flower is rich in a flavonoid called apigenin, which has been shown to bind to GABA receptors in the brain. It's traditionally used to ease tension and calm the nervous system.*</p><h5></h5><h5><strong>You can enjoy chamomile in our</strong> <a href=\"/products/restful-sleep-gummies\" title=\"Restful Sleep Gummies\">Restful Sleep</a> and <a href=\"/products/pms-support-gummies\" title=\"Cycle Balance Gummies\">Cycle Balance </a>gummies</h5>",
             "link_label": "",
             "link": ""
           }
@@ -192,7 +193,7 @@
           "settings": {
             "image": "shopify://shop_images/Jujube.svg",
             "title": "Jujube Seed",
-            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "text": "<p>Chamomile flower is rich in a flavonoid called apigenin, which has been shown to bind to GABA receptors in the brain. It's traditionally used to ease tension and calm the nervous system.*</p><h5></h5><h5><strong>You can enjoy chamomile in our</strong> <a href=\"/products/restful-sleep-gummies\" title=\"Restful Sleep Gummies\">Restful Sleep</a> and <a href=\"/products/pms-support-gummies\" title=\"Cycle Balance Gummies\">Cycle Balance </a>gummies</h5>",
             "link_label": "",
             "link": ""
           }
