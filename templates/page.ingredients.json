@@ -112,7 +112,7 @@
           "settings": {
             "image": "shopify://shop_images/Chamomile_Flower_White.svg",
             "title": "Chamomile",
-            "text": "<p> Chamomile flower contains flavonoids like apigenin that are studied for their calming effects on the nervous system.</p><h5></h5><h5><strong>You can enjoy chamomile in our</strong> <a href=\"/products/restful-sleep-gummies\" title=\"Restful Sleep Gummies\">Restful Sleep</a> and <a href=\"/products/pms-support-gummies\" title=\"Cycle Balance Gummies\">Cycle Balance </a>gummies</h5>",
+            "text": "<p>Chamomile flower is rich in a flavonoid called apigenin, which has been shown to bind to GABA receptors in the brain. It's traditionally used to ease tension and calm the nervous system.*</p><h5></h5><h5><strong>You can enjoy chamomile in our</strong> <a href=\"/products/restful-sleep-gummies\" title=\"Restful Sleep Gummies\">Restful Sleep</a> and <a href=\"/products/pms-support-gummies\" title=\"Cycle Balance Gummies\">Cycle Balance </a>gummies</h5>",
             "link_label": "",
             "link": ""
           }
@@ -122,7 +122,7 @@
           "settings": {
             "image": "shopify://shop_images/Goji_Berries.svg",
             "title": "Goji",
-            "text": "<p>Goji is rich in natural antioxidants and polysaccharides, and traditionally used to support overall health and vitality.</p><h5></h5><h5><strong>You can enjoy goji in our </strong><a href=\"/products/de-stress-gummies\" title=\"De-Stress Gummies\"><strong>Destress</strong></a> gummies, in combination with turmeric and ginseng.</h5>",
+            "text": "<p>Goji is rich in natural antioxidants and polysaccharides, and has a long history of traditional use in Chinese medicine to support healthy aging, balanced energy, and  overall vitality.*</p><h5></h5><h5><strong>You can enjoy goji in our </strong><a href=\"/products/de-stress-gummies\" title=\"De-Stress Gummies\"><strong>Destress</strong></a> gummies, in combination with turmeric and ginseng.</h5>",
             "link_label": "",
             "link": ""
           }
@@ -132,7 +132,7 @@
           "settings": {
             "image": "shopify://shop_images/Ginseng.svg",
             "title": "Ginseng",
-            "text": "<p>Lorem ipsum herb description – what are the benefits of this herb in 1-2 sentences and maybe link study if you want to do so here.</p><p><strong>Found in:</strong> Any linked products</p>",
+            "text": "<p>Both American and Panax ginseng contain ginsenosides, which have been studied for their effects on energy metabolism, stress hormones, and nervous‑system signaling.*</p><h5><strong>You can enjoy goji in our </strong><a href=\"/products/de-stress-gummies\" title=\"De-Stress Gummies\"><strong>Destress</strong></a> gummies, in combination with turmeric and ginseng.</h5>",
             "link_label": "",
             "link": ""
           }
