@@ -306,14 +306,13 @@
       "name": "The magic of [herb]",
       "settings": {
         "image": "{{ product.metafields.custom.herb_1_img.value }}",
-        "accent_icon": "",
-        "accent_color": "#AF412F",
+        "accent_color": "#af412f",
         "accent_icon_size": 38,
         "layout": "image_left",
         "image_corner_radius": 16,
         "card_corner_radius": 24,
         "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "padding_top": 52,
         "padding_bottom": 52
       }
