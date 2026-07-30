@@ -356,43 +356,6 @@
         "padding_bottom": 52
       }
     },
-    "image_banner_AFhXQe": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_fT7gYy": {
-          "type": "heading",
-          "settings": {
-            "heading": "Why it works",
-            "heading_size": "h1"
-          }
-        },
-        "text_hBpXKJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>—</p><p>{{ product.metafields.custom.why_it_works | metafield_tag }}</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_fT7gYy",
-        "text_hBpXKJ"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/background-reprise-clean.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
-      }
-    },
     "ingredient_spotlight": {
       "type": "multicolumn",
       "blocks": {
@@ -458,6 +421,43 @@
         "banner_image_height": 96,
         "padding_top": 52,
         "padding_bottom": 52
+      }
+    },
+    "image_banner_AFhXQe": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_fT7gYy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why it works",
+            "heading_size": "h1"
+          }
+        },
+        "text_hBpXKJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>—</p><p>{{ product.metafields.custom.why_it_works | metafield_tag }}</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fT7gYy",
+        "text_hBpXKJ"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/background-reprise-clean.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     },
     "image_text_routine": {
@@ -706,8 +706,8 @@
     "image_text_crafted",
     "why_it_works",
     "rich_text_Kd4wM4",
-    "image_banner_AFhXQe",
     "ingredient_spotlight",
+    "image_banner_AFhXQe",
     "image_text_routine",
     "image_banner_Ywe6Ww",
     "rich_text_eiKqaw",
