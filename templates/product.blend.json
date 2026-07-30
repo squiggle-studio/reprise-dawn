@@ -492,8 +492,8 @@
       ],
       "name": "Easy routine",
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_Jul_1_2026_11_00_39_AM.png",
-        "image_corner_radius": 16,
+        "image": "shopify://shop_images/Gemini_Generated_Image_ju3p0cju3p0cju3p.png",
+        "image_corner_radius": 20,
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -505,80 +505,66 @@
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-1",
         "padding_top": 52,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
-    "testimonial_banner": {
-      "type": "multicolumn",
+    "image_banner_Ywe6Ww": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2026-07-30_at_1.58.03_PM.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "rich_text_eiKqaw": {
+      "type": "rich-text",
       "blocks": {
-        "testimonial_1": {
-          "type": "column",
+        "heading_tYx7qA": {
+          "type": "heading",
           "settings": {
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "heading": "{{ product.metafields.custom.subheading.value }}",
+            "heading_size": "h1"
           }
         },
-        "testimonial_2": {
-          "type": "column",
+        "text_BEDALt": {
+          "type": "text",
           "settings": {
-            "title": "Lorem ipsum",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
           }
         },
-        "testimonial_3": {
-          "type": "column",
+        "button_Rf7kLE": {
+          "type": "button",
           "settings": {
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "testimonial_4": {
-          "type": "column",
-          "settings": {
-            "title": "Lorem ipsum",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "testimonial_1",
-        "testimonial_2",
-        "testimonial_3",
-        "testimonial_4"
+        "heading_tYx7qA",
+        "text_BEDALt",
+        "button_Rf7kLE"
       ],
-      "custom_css": [],
-      "name": "Join 1000+ customers",
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "caption": "★★★★★",
-        "title": "Join 1000+ customers in a delicious daily ritual",
-        "heading_size": "h1",
-        "heading_alignment": "left",
-        "image_width": "full",
-        "image_ratio": "square",
-        "button_label": "",
-        "button_link": "",
-        "show_button_on_desktop": false,
-        "column_layout": "stacked",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "color_scheme": "scheme-3",
-        "enable_card_style": false,
-        "card_color_scheme": "",
-        "card_corner_radius": 16,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "show_dividers_mobile": false,
-        "banner_image_height": 96,
-        "padding_top": 52,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
         "padding_bottom": 52
       }
     },
@@ -722,7 +708,8 @@
     "rich_text_Kd4wM4",
     "ingredient_spotlight",
     "image_text_routine",
-    "testimonial_banner",
+    "image_banner_Ywe6Ww",
+    "rich_text_eiKqaw",
     "dietary_info",
     "faq",
     "related-products"
