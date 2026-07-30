@@ -282,54 +282,40 @@
         "padding_bottom": 52
       }
     },
-    "image_banner_jcUpTc": {
-      "type": "image-banner",
+    "herb_spotlight": {
+      "type": "herb-spotlight",
       "blocks": {
-        "heading_AGHBKR": {
+        "heading_herb_spotlight": {
           "type": "heading",
           "settings": {
             "heading": "The magic of {{ product.metafields.custom.herb1.value }}",
             "heading_size": "h1"
           }
         },
-        "text_3LyfQe": {
+        "text_herb_spotlight": {
           "type": "text",
           "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        },
-        "buttons_hN7MEd": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p>{{ product.metafields.custom.herb1_descrip | metafield_tag }}</p>"
           }
         }
       },
       "block_order": [
-        "heading_AGHBKR",
-        "text_3LyfQe",
-        "buttons_hN7MEd"
+        "heading_herb_spotlight",
+        "text_herb_spotlight"
       ],
-      "disabled": true,
-      "name": "t:sections.image-banner.presets.name",
+      "name": "The magic of [herb]",
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
+        "image": "{{ product.metafields.custom.herb_1_img.value }}",
+        "accent_icon": "",
+        "accent_color": "#AF412F",
+        "accent_icon_size": 38,
+        "layout": "image_left",
+        "image_corner_radius": 16,
+        "card_corner_radius": 24,
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "why_it_works": {
@@ -713,7 +699,7 @@
     "main",
     "trust_badge_certifications",
     "image_text_crafted",
-    "image_banner_jcUpTc",
+    "herb_spotlight",
     "why_it_works",
     "rich_text_Kd4wM4",
     "image_text_routine",
