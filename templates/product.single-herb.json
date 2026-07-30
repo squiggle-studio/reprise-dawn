@@ -12,6 +12,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "rating_TmxDN8": {
+          "type": "rating",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -128,6 +132,7 @@
         }
       },
       "block_order": [
+        "rating_TmxDN8",
         "title",
         "vendor",
         "info_drawer_RRcmFD",
@@ -689,6 +694,32 @@
         "padding_bottom": 52
       }
     },
+    "17854089230c8536ec": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_69te7c": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "alireviews_product_app_block_wLLMf7": {
+          "type": "shopify://apps/alireviews/blocks/product-app-block/ed1f8756-3ef0-4b52-b2bc-4add334ee46d",
+          "settings": {
+            "product": "{{ product }}",
+            "product_id": "",
+            "hide_full_reviews": false
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_69te7c",
+        "alireviews_product_app_block_wLLMf7"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -721,6 +752,7 @@
     "rich_text_jiE9HK",
     "dietary_info",
     "faq",
+    "17854089230c8536ec",
     "related-products"
   ]
 }
