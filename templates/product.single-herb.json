@@ -445,6 +445,7 @@
         "testimonial_1": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/IMG_2089.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -454,7 +455,7 @@
         "testimonial_2": {
           "type": "column",
           "settings": {
-            "title": "Lorem ipsum",
+            "title": "I really like these gummies. They’re easy to chew and thin. They’re so good you would think they’re a snack. I could tell the difference when I was taking them vs not.",
             "text": "",
             "link_label": "",
             "link": ""
@@ -472,7 +473,7 @@
         "testimonial_4": {
           "type": "column",
           "settings": {
-            "title": "Lorem ipsum",
+            "title": "I have been using these gummies while traveling and really love them! They taste wonderful and I think the sweetness is just right, which gives me a nice pick up in energy. Will be ordering again!",
             "text": "",
             "link_label": "",
             "link": ""
@@ -491,24 +492,25 @@
         "caption": "★★★★★",
         "title": "Join 1000+ customers in a delicious daily ritual",
         "heading_size": "h1",
-        "heading_alignment": "left",
+        "heading_alignment": "center",
         "image_width": "full",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "button_label": "",
         "button_link": "",
         "show_button_on_desktop": false,
         "column_layout": "stacked",
         "columns_desktop": 4,
-        "column_alignment": "center",
+        "column_alignment": "left",
         "background_style": "primary",
         "color_scheme": "scheme-3",
-        "enable_card_style": false,
-        "card_color_scheme": "",
-        "card_corner_radius": 16,
+        "enable_card_style": true,
+        "card_color_scheme": "scheme-3",
+        "card_corner_radius": 28,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "show_dividers_mobile": false,
-        "banner_image_height": 96,
+        "banner_image": "shopify://shop_images/Bamboo-Texture-Transition.png",
+        "banner_image_height": 40,
         "padding_top": 52,
         "padding_bottom": 52
       }
@@ -642,56 +644,6 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "image_with_text_FVCb7c": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_LkQWqb": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_kAFKeg": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_Rwj4ni": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_LkQWqb",
-        "text_kAFKeg",
-        "button_Rwj4ni"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "{{ product.metafields.custom.herb_1_img.value }}",
-        "image_corner_radius": 0,
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-2",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -705,7 +657,6 @@
     "testimonial_banner",
     "dietary_info",
     "faq",
-    "related-products",
-    "image_with_text_FVCb7c"
+    "related-products"
   ]
 }
