@@ -43,15 +43,17 @@
       </div>
 
       <div class="herb-spotlight__media">
-        {%- if section.settings.image != blank -%}
-          {{
-            section.settings.image
-            | image_url: width: 1200
-            | image_tag: widths: '300, 450, 600, 900, 1200', sizes: '(min-width: 750px) 38vw, 100vw', class: 'herb-spotlight__image'
-          }}
-        {%- else -%}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg herb-spotlight__image-placeholder' }}
-        {%- endif -%}
+        <div class="herb-spotlight__image-frame">
+          {%- if section.settings.image != blank -%}
+            {{
+              section.settings.image
+              | image_url: width: 1200
+              | image_tag: widths: '300, 450, 600, 900, 1200', sizes: '(min-width: 750px) 38vw, 100vw', class: 'herb-spotlight__image'
+            }}
+          {%- else -%}
+            {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg herb-spotlight__image-placeholder' }}
+          {%- endif -%}
+        </div>
         {%- if section.settings.accent_icon != blank -%}
           <span
             class="herb-spotlight__accent"

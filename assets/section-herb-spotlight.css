@@ -1,4 +1,5 @@
 .herb-spotlight {
+  --herb-spotlight-pad: 2.4rem;
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -8,7 +9,7 @@
   gap: 2.4rem;
   border-radius: var(--herb-spotlight-card-radius, 24px);
   border: 0.1rem solid rgba(var(--color-foreground), 0.3);
-  padding: 2.4rem;
+  padding: var(--herb-spotlight-pad);
   overflow: visible;
 }
 
@@ -29,12 +30,22 @@
   margin-top: 1rem;
 }
 
+/* Bled on 3 sides (left, top, bottom), flush with the card edge on mobile
+   where the image spans full width below the text; the frame edge here
+   is the top, so no negative margin is applied there. */
 .herb-spotlight__media {
   grid-area: media;
   position: relative;
   aspect-ratio: 1 / 1;
-  border-radius: var(--herb-spotlight-image-radius, 16px);
+  margin: 0 calc(var(--herb-spotlight-pad) * -1) calc(var(--herb-spotlight-pad) * -1);
+}
+
+.herb-spotlight__image-frame {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  border-radius: var(--herb-spotlight-image-radius, 16px) var(--herb-spotlight-image-radius, 16px)
+    var(--herb-spotlight-card-radius, 24px) var(--herb-spotlight-card-radius, 24px);
 }
 
 .herb-spotlight__image,
@@ -45,10 +56,12 @@
   object-fit: cover;
 }
 
+/* Accent icon lives outside the clipped image frame so it's never cut off,
+   and stays inset from the image's own edges so it can't escape the card. */
 .herb-spotlight__accent {
   position: absolute;
-  right: -1.6rem;
-  bottom: -1.6rem;
+  bottom: 8%;
+  right: 6%;
   width: var(--herb-spotlight-accent-size, 38%);
   aspect-ratio: 1 / 1;
   background-color: var(--herb-spotlight-accent-color, #af412f);
@@ -65,15 +78,49 @@
 
 @media screen and (min-width: 750px) {
   .herb-spotlight {
+    --herb-spotlight-pad: 4rem;
     grid-template-columns: minmax(0, 38%) 1fr;
     grid-template-areas: 'media content';
-    align-items: center;
     gap: 4rem;
-    padding: 4rem;
+  }
+
+  /* Image column: bled on left/top/bottom (flush with the card), left
+     inset on the right so its right edge - the "frame" - stays aligned
+     with the column boundary and the accent icon overlapping it. */
+  .herb-spotlight__media {
+    aspect-ratio: auto;
+    margin: calc(var(--herb-spotlight-pad) * -1) 0 calc(var(--herb-spotlight-pad) * -1)
+      calc(var(--herb-spotlight-pad) * -1);
+  }
+
+  .herb-spotlight__image-frame {
+    border-radius: var(--herb-spotlight-card-radius, 24px) var(--herb-spotlight-image-radius, 16px)
+      var(--herb-spotlight-image-radius, 16px) var(--herb-spotlight-card-radius, 24px);
+  }
+
+  .herb-spotlight__accent {
+    bottom: auto;
+    top: 8%;
+    right: -8%;
   }
 
   .herb-spotlight--image-right {
     grid-template-columns: 1fr minmax(0, 38%);
     grid-template-areas: 'content media';
+  }
+
+  .herb-spotlight--image-right .herb-spotlight__media {
+    margin: calc(var(--herb-spotlight-pad) * -1) calc(var(--herb-spotlight-pad) * -1)
+      calc(var(--herb-spotlight-pad) * -1) 0;
+  }
+
+  .herb-spotlight--image-right .herb-spotlight__image-frame {
+    border-radius: var(--herb-spotlight-image-radius, 16px) var(--herb-spotlight-card-radius, 24px)
+      var(--herb-spotlight-card-radius, 24px) var(--herb-spotlight-image-radius, 16px);
+  }
+
+  .herb-spotlight--image-right .herb-spotlight__accent {
+    right: auto;
+    left: -8%;
   }
 }
