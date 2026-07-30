@@ -423,9 +423,9 @@
       ],
       "name": "Easy routine",
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_Jul_1_2026_11_00_39_AM.png",
+        "image": "shopify://shop_images/Gemini_Generated_Image_ju3p0cju3p0cju3p.png",
         "image_corner_radius": 16,
-        "height": "adapt",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
