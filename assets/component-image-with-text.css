@@ -160,6 +160,14 @@
   .image-with-text.collapse-borders:not(.image-with-text--overlap) .image-with-text__content {
     border-top: 0;
   }
+
+  /* .image-with-text__content's unconditional 4rem side padding stacks on
+     top of .page-width's own mobile gutter, insetting text well past the
+     image next to it. Zero it here so text and image share one edge. */
+  .image-with-text:not(.image-with-text--overlap) .image-with-text__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .image-with-text__content--mobile-right > * {
