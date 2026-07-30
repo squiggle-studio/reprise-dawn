@@ -403,7 +403,7 @@
         "heading_size": "h1",
         "heading_alignment": "left",
         "image_width": "third",
-        "image_ratio": "square",
+        "image_ratio": "circle",
         "button_label": "",
         "button_link": "",
         "show_button_on_desktop": false,
@@ -417,7 +417,7 @@
         "card_corner_radius": 40,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "show_dividers_mobile": false,
+        "show_dividers_mobile": true,
         "banner_image_height": 96,
         "padding_top": 52,
         "padding_bottom": 52
