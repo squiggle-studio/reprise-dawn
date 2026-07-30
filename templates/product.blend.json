@@ -282,6 +282,37 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_Kd4wM4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JmedQn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why it works",
+            "heading_size": "h1"
+          }
+        },
+        "text_aU3zXU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.why_it_works | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JmedQn",
+        "text_aU3zXU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "ingredient_spotlight": {
       "type": "multicolumn",
       "blocks": {
@@ -346,37 +377,6 @@
         "show_dividers_mobile": true,
         "banner_image_height": 96,
         "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_Kd4wM4": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_JmedQn": {
-          "type": "heading",
-          "settings": {
-            "heading": "Why it works",
-            "heading_size": "h1"
-          }
-        },
-        "text_aU3zXU": {
-          "type": "text",
-          "settings": {
-            "text": "<p>{{ product.metafields.custom.why_it_works | metafield_tag }}</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_JmedQn",
-        "text_aU3zXU"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-2",
-        "full_width": false,
-        "padding_top": 40,
         "padding_bottom": 52
       }
     },
@@ -662,8 +662,8 @@
     "main",
     "trust_badge_certifications",
     "image_text_crafted",
-    "ingredient_spotlight",
     "rich_text_Kd4wM4",
+    "ingredient_spotlight",
     "image_banner_AFhXQe",
     "image_text_routine",
     "image_banner_Ywe6Ww",
