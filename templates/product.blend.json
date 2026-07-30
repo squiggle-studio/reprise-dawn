@@ -337,7 +337,7 @@
         "text_hBpXKJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Give customers details about the banner image(s) or content on the template.</p>",
+            "text": "<p>{{ product.metafields.custom.why_it_works | metafield_tag }}</p>",
             "text_style": "body"
           }
         }
@@ -354,9 +354,9 @@
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
-        "show_text_box": true,
+        "show_text_box": false,
         "color_scheme": "",
-        "stack_images_on_mobile": true,
+        "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false
       }
@@ -382,6 +382,7 @@
         "heading_JmedQn",
         "text_aU3zXU"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -704,9 +705,9 @@
     "trust_badge_certifications",
     "image_text_crafted",
     "why_it_works",
-    "image_banner_AFhXQe",
     "rich_text_Kd4wM4",
     "ingredient_spotlight",
+    "image_banner_AFhXQe",
     "image_text_routine",
     "image_banner_Ywe6Ww",
     "rich_text_eiKqaw",
