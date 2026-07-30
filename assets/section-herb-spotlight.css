@@ -8,7 +8,7 @@
     'media';
   gap: 2.4rem;
   border-radius: var(--herb-spotlight-card-radius, 24px);
-  border: 0.1rem solid rgba(var(--color-foreground), 0.3);
+  border: 0.15rem solid var(--herb-spotlight-border-color, rgba(var(--color-foreground), 0.3));
   padding: var(--herb-spotlight-pad);
   overflow: visible;
 }

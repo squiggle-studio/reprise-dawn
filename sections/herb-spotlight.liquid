@@ -1,5 +1,12 @@
 {{ 'section-herb-spotlight.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign spotlight_accent_color = section.settings.accent_color
+  if product.metafields.custom.accent_color != blank
+    assign spotlight_accent_color = product.metafields.custom.accent_color
+  endif
+-%}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -16,7 +23,8 @@
   #HerbSpotlight-{{ section.id }} {
     --herb-spotlight-card-radius: {{ section.settings.card_corner_radius }}px;
     --herb-spotlight-image-radius: {{ section.settings.image_corner_radius }}px;
-    --herb-spotlight-accent-color: {{ section.settings.accent_color }};
+    --herb-spotlight-accent-color: {{ spotlight_accent_color }};
+    --herb-spotlight-border-color: {{ spotlight_accent_color }};
     --herb-spotlight-accent-size: {{ section.settings.accent_icon_size }}%;
   }
 {%- endstyle -%}
@@ -89,7 +97,8 @@
     {
       "type": "color",
       "id": "accent_color",
-      "label": "Accent icon color",
+      "label": "Accent color (icon + border)",
+      "info": "Used as a fallback when the product has no accent_color metafield set. Colors the accent icon and the card border.",
       "default": "#AF412F"
     },
     {
