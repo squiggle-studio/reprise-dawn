@@ -544,8 +544,8 @@
         "button_Rf7kLE": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Try {{ product.title }}",
+            "button_link": "{{ product.url }}",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
