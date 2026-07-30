@@ -436,7 +436,7 @@
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-1",
         "padding_top": 52,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
     "testimonial_banner": {
@@ -455,6 +455,7 @@
         "testimonial_2": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/IMG_2089.jpg",
             "title": "I really like these gummies. They’re easy to chew and thin. They’re so good you would think they’re a snack. I could tell the difference when I was taking them vs not.",
             "text": "",
             "link_label": "",
@@ -486,6 +487,7 @@
         "testimonial_3",
         "testimonial_4"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Join 1000+ customers",
       "settings": {
@@ -494,7 +496,7 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "image_width": "full",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "button_label": "",
         "button_link": "",
         "show_button_on_desktop": false,
@@ -507,11 +509,71 @@
         "card_color_scheme": "scheme-3",
         "card_corner_radius": 28,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "show_dividers_mobile": false,
         "banner_image": "shopify://shop_images/Bamboo-Texture-Transition.png",
         "banner_image_height": 40,
         "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_TFyGC6": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2026-07-30_at_1.58.03_PM.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "rich_text_jiE9HK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kxPd3w": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.subheading.value }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_4yQCiM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Traditionally extracted to preserve potentency – <br/>2 gummies is the equivalent of one strong cup of herbal tea.</p>"
+          }
+        },
+        "button_nBPW8B": {
+          "type": "button",
+          "settings": {
+            "button_label": "Try {{ product.metafields.custom.herb1.value }} gummies",
+            "button_link": "{{ product.url }}",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kxPd3w",
+        "text_4yQCiM",
+        "button_nBPW8B"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-6",
+        "full_width": true,
+        "padding_top": 40,
         "padding_bottom": 52
       }
     },
@@ -655,6 +717,8 @@
     "rich_text_Kd4wM4",
     "image_text_routine",
     "testimonial_banner",
+    "image_banner_TFyGC6",
+    "rich_text_jiE9HK",
     "dietary_info",
     "faq",
     "related-products"
