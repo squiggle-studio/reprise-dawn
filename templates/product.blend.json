@@ -324,6 +324,43 @@
         "padding_bottom": 52
       }
     },
+    "image_banner_AFhXQe": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_fT7gYy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why it works",
+            "heading_size": "h1"
+          }
+        },
+        "text_hBpXKJ": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fT7gYy",
+        "text_hBpXKJ"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/background-reprise-clean.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
     "rich_text_Kd4wM4": {
       "type": "rich-text",
       "blocks": {
@@ -681,6 +718,7 @@
     "trust_badge_certifications",
     "image_text_crafted",
     "why_it_works",
+    "image_banner_AFhXQe",
     "rich_text_Kd4wM4",
     "ingredient_spotlight",
     "image_text_routine",
