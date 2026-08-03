@@ -307,11 +307,11 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "full_width": false,
         "enable_card_style": true,
         "card_corner_radius": 24,
-        "card_border_color": "#AF412F",
+        "card_border_color": "#af412f",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -526,6 +526,9 @@
         "content_alignment": "center",
         "color_scheme": "scheme-3",
         "full_width": true,
+        "enable_card_style": false,
+        "card_corner_radius": 24,
+        "card_border_color": "#af412f",
         "padding_top": 40,
         "padding_bottom": 52
       }

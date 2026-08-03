@@ -391,9 +391,9 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "enable_card_style": true,
-        "card_corner_radius": 24,
-        "card_border_color": "#AF412F",
+        "enable_card_style": false,
+        "card_corner_radius": 0,
+        "card_border_color": "#F1E9CD",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -411,7 +411,7 @@
         "text_routine": {
           "type": "text",
           "settings": {
-            "text": "<p>Because herbs work gently within your body's natural systems, they require consistent daily use. Our delicious daily gummies make your herbs easy to commit to, so results continue to build over time.</p>",
+            "text": "<p>Because herbs work gently within your body's natural systems, they require consistent daily use. </p><p>Our delicious daily gummies make your herbs easy to commit to, so results continue to build over time.</p>",
             "text_style": "body"
           }
         },
@@ -581,6 +581,9 @@
         "content_alignment": "center",
         "color_scheme": "scheme-6",
         "full_width": true,
+        "enable_card_style": false,
+        "card_corner_radius": 24,
+        "card_border_color": "#af412f",
         "padding_top": 40,
         "padding_bottom": 52
       }
