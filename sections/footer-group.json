@@ -14,14 +14,6 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "image_4V4mdD": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Reprise_Logo_White.png",
-            "image_width": 225,
-            "alignment": ""
-          }
-        },
         "brand_info": {
           "type": "brand_information",
           "settings": {
@@ -45,7 +37,6 @@
         }
       },
       "block_order": [
-        "image_4V4mdD",
         "brand_info",
         "learn_menu",
         "shop_menu"
