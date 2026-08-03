@@ -303,6 +303,7 @@
 .card__heading {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: calc(var(--font-heading-scale) * 1.6rem);
 }
 
 .card__heading:last-child {
@@ -600,7 +601,7 @@
 */
 .card__eyebrow {
   margin: 0 0 0.4rem;
-  color: #af412f;
+  color: var(--card-eyebrow-color, #af412f);
 }
 
 .card__quick-add-row--with-details {
