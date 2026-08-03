@@ -309,6 +309,9 @@
         "content_alignment": "center",
         "color_scheme": "scheme-2",
         "full_width": false,
+        "enable_card_style": true,
+        "card_corner_radius": 24,
+        "card_border_color": "#AF412F",
         "padding_top": 40,
         "padding_bottom": 52
       }

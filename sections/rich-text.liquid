@@ -1,5 +1,12 @@
 {{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+  assign rich_text_border_color = section.settings.card_border_color
+  if product.metafields.custom.accent_color != blank
+    assign rich_text_border_color = product.metafields.custom.accent_color
+  endif
+-%}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -12,10 +19,18 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  #RichText-{{ section.id }} {
+    --rich-text-card-radius: {{ section.settings.card_corner_radius }}px;
+    --rich-text-card-border-color: {{ rich_text_border_color }};
+  }
 {%- endstyle -%}
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
-  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div
+    id="RichText-{{ section.id }}"
+    class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %}{% if section.settings.enable_card_style %} rich-text--card{% endif %} section-{{ section.id }}-padding"
+  >
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
@@ -154,6 +169,34 @@
       "id": "full_width",
       "default": true,
       "label": "t:sections.rich-text.settings.full_width.label"
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_card_style",
+      "default": false,
+      "label": "Show a bordered card around the content"
+    },
+    {
+      "type": "range",
+      "id": "card_corner_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card corner radius",
+      "default": 24,
+      "info": "Only applies when card style is enabled."
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card border color",
+      "default": "#AF412F",
+      "info": "Used as a fallback when the product has no accent_color metafield set. Only applies when card style is enabled."
     },
     {
       "type": "header",

@@ -17,6 +17,19 @@
   width: 100%;
 }
 
+.rich-text--card .rich-text__blocks {
+  box-sizing: border-box;
+  border: 0.15rem solid var(--rich-text-card-border-color, rgba(var(--color-foreground), 0.3));
+  border-radius: var(--rich-text-card-radius, 24px);
+  padding: 3rem 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .rich-text--card .rich-text__blocks {
+    padding: 4rem;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .rich-text__wrapper {
     width: 100%;
