@@ -159,6 +159,16 @@
             "link": ""
           }
         },
+        "column_fUzBXN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Turmeric.svg",
+            "title": "Turmeric",
+            "text": "<p>Turmeric is traditionally used to support digestion, joint health, and overall vitality. It's rich in curcumin, which can help the body manage everyday inflammatiory processes.*</p><h5><strong>You can try our </strong><a href=\"/products/turmeric-gummies\" title=\"Turmeric Gummies\"><strong>Turmeric Gummies </strong></a><strong>and find turmeric in our </strong><a href=\"/products/de-stress-gummies\" title=\"De-Stress Gummies\"><strong>Destress gummies.</strong></a><strong>.</strong></h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_kr7YRx": {
           "type": "column",
           "settings": {
@@ -182,6 +192,7 @@
         "peony",
         "privet",
         "reishi",
+        "column_fUzBXN",
         "column_kr7YRx"
       ],
       "custom_css": [
