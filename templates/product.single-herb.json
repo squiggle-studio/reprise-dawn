@@ -411,7 +411,7 @@
         "text_routine": {
           "type": "text",
           "settings": {
-            "text": "<p>Because herbs work gently within your body's natural systems, they require consistent daily use. Our delicious daily gummies make your herbs easy to commit to, so results continue to build over time.</p>",
+            "text": "<p>Because herbs work gently within your body's natural systems, they require consistent daily use. </p><p>Our delicious daily gummies make your herbs easy to commit to, so results continue to build over time.</p>",
             "text_style": "body"
           }
         },
