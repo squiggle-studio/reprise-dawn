@@ -33,14 +33,14 @@
           "type": "link_list",
           "settings": {
             "heading": "Learn",
-            "menu": "footer"
+            "menu": "learn"
           }
         },
         "shop_menu": {
           "type": "link_list",
           "settings": {
             "heading": "Shop",
-            "menu": "footer"
+            "menu": "shop"
           }
         }
       },
