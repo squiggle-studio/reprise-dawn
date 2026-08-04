@@ -335,11 +335,11 @@
 
 .multicolumn-list__item--divided-mobile {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.15);
-  padding-bottom: 1.5rem;
+  padding-bottom: 0;
 }
 
 .multicolumn-list__item--divided-mobile + .multicolumn-list__item--divided-mobile {
-  margin-top: 1.5rem;
+  margin-top: 0;
 }
 
 @media screen and (min-width: 750px) {
