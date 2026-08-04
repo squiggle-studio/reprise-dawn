@@ -1306,6 +1306,16 @@ a.product__text {
   --icon-spacing: calc(var(--font-heading-scale) * 1rem);
 }
 
+.icon-with-text__heading {
+  margin: 0 0 1.6rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.3);
+  font-size: 1.8rem;
+  font-weight: var(--font-heading-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+}
+
 .icon-with-text--horizontal {
   display: flex;
   justify-content: center;

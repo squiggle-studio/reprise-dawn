@@ -43,6 +43,9 @@
     assign text_only_all_items = false
   endif
 -%}
+{%- if block.settings.heading != blank -%}
+  <p class="icon-with-text__heading">{{ block.settings.heading | escape }}</p>
+{%- endif -%}
 <ul
   class="icon-with-text icon-with-text--{{ block.settings.layout }} list-unstyled{% if text_only_all_items %} icon-with-text--text-only{% endif %}"
   {{ block.shopify_attributes }}

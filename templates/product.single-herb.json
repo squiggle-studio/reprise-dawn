@@ -135,6 +135,7 @@
           "type": "icon-with-text",
           "name": "Subscriber benefits (icons)",
           "settings": {
+            "heading": "Subscriber Benefits",
             "layout": "grid",
             "icon_1": "truck",
             "heading_1": "Always free shipping",
