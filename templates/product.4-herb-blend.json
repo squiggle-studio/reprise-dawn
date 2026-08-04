@@ -630,45 +630,45 @@
         "faq_1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How do you source your herbs?",
+            "heading": "How do you ensure only the highest quality herbs?",
             "icon": "none",
-            "row_content": "<p>Answer coming soon.</p>",
+            "row_content": "<p>We partner with a fifth-generation Taiwanese family company who have been sourcing and processing the highest-quality Chinese herbs since 1892.<br/><br/>Every batch of herbs is tested in a 5,000+ sqft laboratory before extraction - including DNA analysis, heavy metal, pesticide, chemical, and microbiological testing.</p>",
             "page": ""
           }
         },
         "faq_2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How strict are your quality thresholds?",
+            "heading": "Do your gummies contain gelatin?",
             "icon": "none",
-            "row_content": "<p>Answer coming soon.</p>",
+            "row_content": "<p>No, all Reprise gummies are vegan and do not contain animal products such as gelatin.</p>",
             "page": ""
           }
         },
         "faq_3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How do you determine dosage?",
+            "heading": "How do you make bitter herbs tasty?",
             "icon": "none",
-            "row_content": "<p>Answer coming soon.</p>",
+            "row_content": "<p>We use natural fruit flavors and paired them with each herb. We experimented and curated each herb-flavor pairing so you don’t have to.</p>",
             "page": ""
           }
         },
         "faq_4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How potent are your extracts?",
+            "heading": "What is Reprise's return policy?",
             "icon": "none",
-            "row_content": "<p>Answer coming soon.</p>",
+            "row_content": "<p>We offer a 30-day risk-free return policy for all new customers. If you are not completely satisfied with your purchase, simply contact our customer support team within 30 days of receiving your order, and we will provide you with a return authorization and instructions.</p>",
             "page": ""
           }
         },
         "faq_5": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do your herbs have clinically studied benefits?",
+            "heading": "How much sugar is in each gummy?",
             "icon": "none",
-            "row_content": "<p>Answer coming soon.</p>",
+            "row_content": "<p>Each gummy contains only 1g of sugar. Reprise gummies do NOT contain any artificial sweeteners.</p>",
             "page": ""
           }
         }
@@ -694,6 +694,24 @@
         "desktop_layout": "image_second",
         "padding_top": 52,
         "padding_bottom": 52
+      }
+    },
+    "17858559047dc9dd5d": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_icdyDK": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_icdyDK"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
       }
     },
     "related-products": {
@@ -728,6 +746,7 @@
     "rich_text_eiKqaw",
     "dietary_info",
     "faq",
+    "17858559047dc9dd5d",
     "related-products"
   ]
 }
