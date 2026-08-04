@@ -54,51 +54,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "info_drawer_QJ6DrL": {
-          "type": "info_drawer",
-          "settings": {
-            "heading": "Subscriber benefits",
-            "article": "",
-            "content": "",
-            "display_style": "row"
-          }
-        },
-        "info_drawer_GWFDcd": {
-          "type": "info_drawer",
-          "settings": {
-            "heading": "Ingredients and allergies",
-            "article": "",
-            "content": "{{ product.metafields.shopify[\"detailed-ingredients\"] | metafield_tag: field: 'label' }}",
-            "display_style": "row"
-          }
-        },
-        "info_drawer_xj8bHG": {
-          "type": "info_drawer",
-          "settings": {
-            "heading": "Ingredients and allergies",
-            "article": "",
-            "content": "<p>Lorum epsum add this</p>",
-            "display_style": "row"
-          }
-        },
-        "info_drawer_B7gmTQ": {
-          "type": "info_drawer",
-          "settings": {
-            "heading": "Ingredients and allergies",
-            "article": "",
-            "content": "<p>Lorum epsum add this</p>",
-            "display_style": "row"
-          }
-        },
-        "info_drawer_XCj6Tk": {
-          "type": "info_drawer",
-          "settings": {
-            "heading": "Ingredients and allergies",
-            "article": "",
-            "content": "<p>Lorum epsum add this</p>",
-            "display_style": "row"
-          }
-        },
         "description": {
           "type": "description",
           "disabled": true,
@@ -120,11 +75,6 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "info_drawer_QJ6DrL",
-        "info_drawer_GWFDcd",
-        "info_drawer_xj8bHG",
-        "info_drawer_B7gmTQ",
-        "info_drawer_XCj6Tk",
         "description",
         "share"
       ],
@@ -158,6 +108,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "card_eyebrow_metafield": "custom.eyebrow",
         "padding_top": 36,
         "padding_bottom": 28
       }
