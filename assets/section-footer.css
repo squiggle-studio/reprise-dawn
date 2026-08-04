@@ -12,14 +12,17 @@
 }
 
 @media screen and (min-width: 750px) {
+  /* 50/25/25 split of the CONTENT width, i.e. after the two column
+     gaps between the three blocks are subtracted - plain percentages
+     summing to 100% ignore the gaps and overflow, forcing Shop to wrap. */
   .footer__blocks-wrapper .footer-block:not(.footer-block--menu) {
-    width: 50%;
-    max-width: 50%;
+    width: calc(50% - var(--grid-desktop-horizontal-spacing));
+    max-width: calc(50% - var(--grid-desktop-horizontal-spacing));
   }
 
   .footer__blocks-wrapper .footer-block.footer-block--menu {
-    width: 25%;
-    max-width: 25%;
+    width: calc(25% - (var(--grid-desktop-horizontal-spacing) / 2));
+    max-width: calc(25% - (var(--grid-desktop-horizontal-spacing) / 2));
   }
 }
 
