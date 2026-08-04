@@ -68,7 +68,8 @@
           "settings": {
             "content": "<p><strong>Subscriber Benefits</strong></p><ul><li>Always free shipping</li><li>Guaranteed during sell-outs </li><li>Pause or cancel at any time </li><li>Enjoy an annual VIP gift</li></ul>",
             "columns": "2"
-          }
+          },
+          "disabled": true
         },
         "info_drawer_QJ6DrL": {
           "type": "info_drawer",
@@ -129,6 +130,21 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "icon_with_text_benefits": {
+          "type": "icon-with-text",
+          "name": "Subscriber benefits (icons)",
+          "settings": {
+            "layout": "grid",
+            "icon_1": "truck",
+            "heading_1": "Always free shipping",
+            "icon_2": "heart",
+            "heading_2": "Pause or cancel at any time",
+            "icon_3": "star",
+            "heading_3": "Guaranteed during sell-outs",
+            "icon_4": "box",
+            "heading_4": "Enjoy an annual VIP gift"
+          }
         }
       },
       "block_order": [
@@ -141,6 +157,7 @@
         "recharge_subscriptions_subscription_widget_v2_JiwHUT",
         "buy_buttons",
         "checkmark_list_wJTPTi",
+        "icon_with_text_benefits",
         "info_drawer_QJ6DrL",
         "info_drawer_GWFDcd",
         "info_drawer_xj8bHG",

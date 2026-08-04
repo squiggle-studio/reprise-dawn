@@ -1317,6 +1317,31 @@ a.product__text {
   --icon-size: calc(var(--font-heading-scale) * 2rem);
 }
 
+.icon-with-text--grid {
+  --icon-size: calc(var(--font-heading-scale) * 2.4rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+
+.icon-with-text--grid .icon-with-text__item {
+  flex-direction: row;
+}
+
+.icon-with-text--grid .svg-wrapper,
+.icon-with-text--grid img {
+  margin-right: var(--icon-spacing);
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 749px) {
+  .icon-with-text--grid {
+    column-gap: 1.5rem;
+  }
+}
+
 .icon-with-text .svg-wrapper {
   fill: rgb(var(--color-foreground));
   height: var(--icon-size);
