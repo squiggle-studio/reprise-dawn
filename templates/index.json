@@ -39,7 +39,7 @@
             "button_1_link": "shopify://collections/all",
             "button_1_style_secondary": false,
             "button_2_label": "Find Reprise Near You →",
-            "button_2_link": "",
+            "button_2_link": "shopify://pages/wholesale-prices-for-retailers",
             "button_2_style_secondary": true
           }
         }
