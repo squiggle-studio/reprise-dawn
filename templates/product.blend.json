@@ -12,6 +12,17 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "rating_rhLwcj": {
+          "type": "rating",
+          "settings": {}
+        },
+        "text_7pBUa4": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>{{ product.metafields.custom.eyebrow.value }}</strong>",
+            "text_style": "uppercase"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -128,6 +139,8 @@
         }
       },
       "block_order": [
+        "rating_rhLwcj",
+        "text_7pBUa4",
         "title",
         "vendor",
         "info_drawer_RRcmFD",
@@ -659,6 +672,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "card_eyebrow_metafield": "custom.eyebrow",
         "padding_top": 36,
         "padding_bottom": 28
       }
