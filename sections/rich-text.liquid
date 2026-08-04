@@ -5,6 +5,11 @@
   if product.metafields.custom.accent_color != blank
     assign rich_text_border_color = product.metafields.custom.accent_color
   endif
+
+  assign rich_text_bg_color = blank
+  if section.settings.background_from_accent_color_dark and product.metafields.custom.accent_color_dark != blank
+    assign rich_text_bg_color = product.metafields.custom.accent_color_dark
+  endif
 -%}
 
 {%- style -%}
@@ -23,6 +28,9 @@
   #RichText-{{ section.id }} {
     --rich-text-card-radius: {{ section.settings.card_corner_radius }}px;
     --rich-text-card-border-color: {{ rich_text_border_color }};
+    {% if rich_text_bg_color != blank %}
+      background-color: {{ rich_text_bg_color }};
+    {% endif %}
   }
 {%- endstyle -%}
 
@@ -163,6 +171,13 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "background_from_accent_color_dark",
+      "default": false,
+      "label": "Use product's dark accent color as background",
+      "info": "On product pages, overrides the color scheme background above with the product's accent_color_dark metafield when set."
     },
     {
       "type": "checkbox",

@@ -1664,8 +1664,8 @@ a.product__text {
 .product__info-drawer--pill_button .product__info-drawer-trigger {
   width: 100%;
   justify-content: center;
-  color: var(--product-accent-color, #000000);
-  border: 0.15rem solid var(--product-accent-color, #000000);
+  color: var(--product-accent-color-dark, var(--product-accent-color, #000000));
+  border: 0.15rem solid var(--product-accent-color-dark, var(--product-accent-color, #000000));
 }
 
 /*
@@ -1691,8 +1691,9 @@ a.product__text {
 */
 .product__info-container .product-form__submit:after {
   --border-opacity: 0;
+  --alpha-button-background: 0;
 }
 
 .product__info-container .product-form__submit:hover {
-  background-color: #000000;
+  background-color: var(--product-accent-color-dark, var(--product-accent-color, rgb(var(--color-button))));
 }
