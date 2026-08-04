@@ -22,7 +22,8 @@
 
 .ingredient-grid__tile {
   position: relative;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   aspect-ratio: 1 / 1;
   border-radius: 1.2rem;
   background: rgba(var(--color-foreground), 0.15);
@@ -76,7 +77,7 @@
 
 .ingredient-grid__label {
   margin: 1rem 0 0;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: var(--font-body-weight-bold);
 }
 
