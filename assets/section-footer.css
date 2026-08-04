@@ -12,17 +12,57 @@
 }
 
 @media screen and (min-width: 750px) {
-  /* 50/25/25 split of the CONTENT width, i.e. after the two column
-     gaps between the three blocks are subtracted - plain percentages
-     summing to 100% ignore the gaps and overflow, forcing Shop to wrap. */
+  .footer .footer__blocks-wrapper {
+    --footer-blocks-gap: 4rem;
+    column-gap: var(--footer-blocks-gap);
+  }
+}
+
+/* Tablet tier: brand column stays put, but Learn/Shop no longer have
+   room to sit side by side comfortably, so Shop stacks under Learn in
+   a shared second column. CSS Grid places by area regardless of DOM
+   order, so no markup changes are needed to pull this off. */
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .footer .footer__blocks-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'brand learn'
+      'brand shop';
+    row-gap: 1.5rem;
+  }
+
   .footer__blocks-wrapper .footer-block:not(.footer-block--menu) {
-    width: calc(50% - var(--grid-desktop-horizontal-spacing));
-    max-width: calc(50% - var(--grid-desktop-horizontal-spacing));
+    grid-area: brand;
+    width: auto;
+    max-width: none;
   }
 
   .footer__blocks-wrapper .footer-block.footer-block--menu {
-    width: calc(25% - (var(--grid-desktop-horizontal-spacing) / 2));
-    max-width: calc(25% - (var(--grid-desktop-horizontal-spacing) / 2));
+    grid-area: learn;
+    width: auto;
+    max-width: none;
+  }
+
+  .footer__blocks-wrapper .footer-block.footer-block--menu ~ .footer-block.footer-block--menu {
+    grid-area: shop;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  /* 50/25/25 split of the CONTENT width, i.e. after the two column
+     gaps between the three blocks are subtracted - plain percentages
+     summing to 100% ignore the gaps and overflow, forcing Shop to wrap.
+     Must subtract the same --footer-blocks-gap used for column-gap
+     above, not the theme's default grid spacing, or the math is wrong. */
+  .footer__blocks-wrapper .footer-block:not(.footer-block--menu) {
+    width: calc(50% - var(--footer-blocks-gap, 4rem));
+    max-width: calc(50% - var(--footer-blocks-gap, 4rem));
+  }
+
+  .footer__blocks-wrapper .footer-block.footer-block--menu {
+    width: calc(25% - (var(--footer-blocks-gap, 4rem) / 2));
+    max-width: calc(25% - (var(--footer-blocks-gap, 4rem) / 2));
   }
 }
 
@@ -309,6 +349,10 @@
 .footer__copyright {
   text-align: center;
   margin-top: 1.5rem;
+}
+
+.footer__content-bottom-wrapper:first-child .footer__copyright {
+  margin-top: 0;
 }
 
 .footer__copyright .footer__copyright-text {
