@@ -322,6 +322,7 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-1",
+        "background_from_accent_color_dark": false,
         "full_width": false,
         "enable_card_style": true,
         "card_corner_radius": 24,
@@ -333,6 +334,16 @@
     "ingredient_spotlight": {
       "type": "multicolumn",
       "blocks": {
+        "ingredient_1": {
+          "type": "column",
+          "settings": {
+            "image": "{{ product.metafields.custom.herb_1_img.value }}",
+            "title": "{{ product.metafields.custom.herb1.value }}",
+            "text": "<p>{{ product.metafields.custom.herb1_descrip | metafield_tag }}</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "ingredient_2": {
           "type": "column",
           "settings": {
@@ -353,16 +364,6 @@
             "link": ""
           }
         },
-        "ingredient_1": {
-          "type": "column",
-          "settings": {
-            "image": "{{ product.metafields.custom.herb_1_img.value }}",
-            "title": "{{ product.metafields.custom.herb1.value }}",
-            "text": "<p>{{ product.metafields.custom.herb1_descrip | metafield_tag }}</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_kNttad": {
           "type": "column",
           "settings": {
@@ -375,9 +376,9 @@
         }
       },
       "block_order": [
+        "ingredient_1",
         "ingredient_2",
         "ingredient_3",
-        "ingredient_1",
         "column_kNttad"
       ],
       "custom_css": [],
@@ -550,6 +551,7 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-3",
+        "background_from_accent_color_dark": false,
         "full_width": true,
         "enable_card_style": false,
         "card_corner_radius": 24,
