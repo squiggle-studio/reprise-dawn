@@ -335,11 +335,20 @@
 
 .multicolumn-list__item--divided-mobile {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.15);
-  padding-bottom: 0;
+  padding-bottom: 1.5rem;
 }
 
 .multicolumn-list__item--divided-mobile + .multicolumn-list__item--divided-mobile {
   margin-top: 0;
+}
+
+/* .grid's own row-gap (a separate mechanism from the divider padding
+   above) was adding extra space above each row's content on top of
+   whatever the divider rules set, instead of only below it. */
+@media screen and (max-width: 749px) {
+  .multicolumn-list:has(.multicolumn-list__item--divided-mobile) {
+    row-gap: 0;
+  }
 }
 
 @media screen and (min-width: 750px) {

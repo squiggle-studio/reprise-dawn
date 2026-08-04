@@ -87,8 +87,17 @@
 
 @media screen and (max-width: 749px) {
   .ingredient-grid__list {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem 1.5rem;
+  }
+
+  /* Fixed (not tile-relative) size so the icon stays the same visual
+     size as before, while the wider 3-column tiles add breathing room
+     around it instead of scaling the icon up too. */
+  .ingredient-grid__image,
+  .ingredient-grid__image-color {
+    width: 3.2rem;
+    height: 3.2rem;
   }
 
   .ingredient-grid.page-width {
