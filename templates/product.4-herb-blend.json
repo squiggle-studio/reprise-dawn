@@ -551,7 +551,7 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-3",
-        "background_from_accent_color_dark": false,
+        "background_from_accent_color_dark": true,
         "full_width": true,
         "enable_card_style": false,
         "card_corner_radius": 24,
