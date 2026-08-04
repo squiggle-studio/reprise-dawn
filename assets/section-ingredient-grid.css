@@ -8,8 +8,8 @@
 
 .ingredient-grid__list {
   display: grid;
-  grid-template-columns: repeat(var(--ingredient-count, 4), minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 2rem 1.5rem;
   margin: 3rem 0 0;
   padding: 0;
   list-style: none;
@@ -21,6 +21,7 @@
 }
 
 .ingredient-grid__tile {
+  position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 1.2rem;
@@ -30,6 +31,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.ingredient-grid__tile:hover {
+  background: rgba(var(--color-foreground), 0.3);
 }
 
 .ingredient-grid__image {
@@ -45,6 +51,27 @@
   mask-position: center;
   -webkit-mask-size: contain;
   mask-size: contain;
+  transition: opacity 0.3s ease;
+}
+
+.ingredient-grid__image-color {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ingredient-grid__tile:hover .ingredient-grid__image {
+  opacity: 0;
+}
+
+.ingredient-grid__tile:hover .ingredient-grid__image-color {
+  opacity: 1;
 }
 
 .ingredient-grid__label {

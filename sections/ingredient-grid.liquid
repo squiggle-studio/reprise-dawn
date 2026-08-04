@@ -42,6 +42,13 @@
                   role="img"
                   aria-label="{{ block.settings.label | escape }}"
                 ></span>
+                <img
+                  class="ingredient-grid__image-color"
+                  src="{{ block.settings.image | image_url: width: 160 }}"
+                  loading="lazy"
+                  alt=""
+                  aria-hidden="true"
+                >
               {%- else -%}
                 {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg ingredient-grid__image' }}
               {%- endif -%}
