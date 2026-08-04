@@ -390,10 +390,11 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
+        "background_color": "",
         "full_width": true,
         "enable_card_style": false,
         "card_corner_radius": 0,
-        "card_border_color": "#F1E9CD",
+        "card_border_color": "#f1e9cd",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -580,6 +581,7 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-6",
+        "background_color": "{{ product.metafields.custom.accent_dark.value }}",
         "full_width": true,
         "enable_card_style": false,
         "card_corner_radius": 24,
@@ -740,6 +742,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "card_eyebrow_metafield": "custom.eyebrow",
         "padding_top": 36,
         "padding_bottom": 28
       }

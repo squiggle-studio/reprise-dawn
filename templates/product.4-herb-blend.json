@@ -322,6 +322,7 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-1",
+        "background_color": "",
         "full_width": false,
         "enable_card_style": true,
         "card_corner_radius": 24,
@@ -381,7 +382,7 @@
         "column_kNttad"
       ],
       "custom_css": [
-        "@media screen and (max-width: 749px) { .multicolumn-card__image-wrapper { margin-left: auto; margin-right: auto; } .multicolumn-card__info { text-align: center; } }"
+        "@media screen and (max-width: 749px) {.multicolumn-card__image-wrapper {margin-left: auto; margin-right: auto; } .multicolumn-card__info {text-align: center; }}"
       ],
       "name": "What's inside",
       "settings": {
@@ -552,7 +553,7 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-3",
-        "background_color": "{{ product.metafields.custom.accent_dark }}",
+        "background_color": "#AF412F",
         "full_width": true,
         "enable_card_style": false,
         "card_corner_radius": 24,
@@ -664,7 +665,7 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
-        "container_color_scheme": "scheme-5",
+        "container_color_scheme": "scheme-4",
         "color_scheme": "scheme-5",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
