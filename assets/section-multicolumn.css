@@ -194,6 +194,14 @@
   padding-top: 2.5rem;
 }
 
+/* The rule above assumes the stacked layout (image above text), where
+   padding-top creates the gap between them. In row layout (image beside
+   text) it has no such purpose - it just pushes the label down inside
+   its own box, throwing off vertical centering against the icon. */
+.background-none.multicolumn--row .multicolumn-card__image-wrapper + .multicolumn-card__info {
+  padding-top: 0;
+}
+
 .background-none .slider .multicolumn-card__info {
   padding-left: 0.5rem;
 }
