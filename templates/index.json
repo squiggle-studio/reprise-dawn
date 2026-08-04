@@ -352,11 +352,11 @@
       "name": "Ingredients",
       "settings": {
         "caption": "Ingredients",
-        "heading": "Sourced and extracted to the highest quality standards",
+        "heading": "Ancient Asian Superfoods. Sourced and extracted to the highest quality standards.",
         "heading_size": "h1",
-        "text": "<p>Perfected over generations, our time-honored process ensures maximum potency and absorption.</p>",
+        "text": "",
         "link_label": "Learn more →",
-        "link": "",
+        "link": "shopify://pages/sourcing-1",
         "color_scheme": "scheme-4",
         "padding_top": 52,
         "padding_bottom": 52
