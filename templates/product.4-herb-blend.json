@@ -18,6 +18,7 @@
         },
         "text_7pBUa4": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<strong>{{ product.metafields.custom.eyebrow.value }}</strong>",
             "text_style": "uppercase"
@@ -361,12 +362,23 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_kNttad": {
+          "type": "column",
+          "settings": {
+            "image": "{{ product.metafields.custom.herb_4_img.value }}",
+            "title": "{{ product.metafields.custom.herb_4.value }}",
+            "text": "<p>{{ product.metafields.custom.herb_4_descrip | metafield_tag }}</p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "ingredient_2",
         "ingredient_3",
-        "ingredient_1"
+        "ingredient_1",
+        "column_kNttad"
       ],
       "custom_css": [],
       "name": "What's inside",
@@ -381,7 +393,7 @@
         "button_link": "",
         "show_button_on_desktop": false,
         "column_layout": "stacked",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "scheme-1",
@@ -538,7 +550,6 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-3",
-        "background_from_accent_color_dark": true,
         "full_width": true,
         "enable_card_style": false,
         "card_corner_radius": 24,
