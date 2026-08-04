@@ -18,6 +18,7 @@
         },
         "text_7pBUa4": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<strong>{{ product.metafields.custom.eyebrow.value }}</strong>",
             "text_style": "uppercase"
@@ -72,11 +73,27 @@
         },
         "checkmark_list_wJTPTi": {
           "type": "checkmark_list",
+          "disabled": true,
           "settings": {
             "content": "<p><strong>Subscriber Benefits</strong></p><ul><li>Always free shipping</li><li>Guaranteed during sell-outs </li><li>Pause or cancel at any time </li><li>Enjoy an annual VIP gift</li></ul>",
             "columns": "2"
-          },
-          "disabled": true
+          }
+        },
+        "icon_with_text_benefits": {
+          "type": "icon-with-text",
+          "name": "Subscriber benefits (icons)",
+          "settings": {
+            "heading": "Subscriber Benefits",
+            "layout": "grid",
+            "icon_1": "truck",
+            "heading_1": "Always free shipping",
+            "icon_2": "heart",
+            "heading_2": "Pause or cancel at any time",
+            "icon_3": "star",
+            "heading_3": "Guaranteed during sell-outs",
+            "icon_4": "box",
+            "heading_4": "Enjoy an annual VIP gift"
+          }
         },
         "info_drawer_QJ6DrL": {
           "type": "info_drawer",
@@ -136,22 +153,6 @@
           "disabled": true,
           "settings": {
             "share_label": "Share"
-          }
-        },
-        "icon_with_text_benefits": {
-          "type": "icon-with-text",
-          "name": "Subscriber benefits (icons)",
-          "settings": {
-            "heading": "Subscriber Benefits",
-            "layout": "grid",
-            "icon_1": "truck",
-            "heading_1": "Always free shipping",
-            "icon_2": "heart",
-            "heading_2": "Pause or cancel at any time",
-            "icon_3": "star",
-            "heading_3": "Guaranteed during sell-outs",
-            "icon_4": "box",
-            "heading_4": "Enjoy an annual VIP gift"
           }
         }
       },
@@ -286,7 +287,8 @@
           "settings": {
             "button_label": "Experience the difference",
             "button_link": "{{ product.url }}",
-            "button_style_secondary": false
+            "button_style_secondary": false,
+            "button_color": ""
           }
         }
       },
@@ -477,7 +479,8 @@
           "settings": {
             "button_label": "Enjoy the benefits",
             "button_link": "{{ product.url }}",
-            "button_style_secondary": true
+            "button_style_secondary": true,
+            "button_color": ""
           }
         }
       },
@@ -543,9 +546,11 @@
             "button_label": "Try {{ product.title }}",
             "button_link": "{{ product.url }}",
             "button_style_secondary": false,
+            "button_color": "",
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "button_color_2": ""
           }
         }
       },
@@ -559,7 +564,7 @@
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-3",
-        "background_color": "#AF422F",
+        "background_color": "#af422f",
         "full_width": true,
         "enable_card_style": false,
         "card_corner_radius": 24,
