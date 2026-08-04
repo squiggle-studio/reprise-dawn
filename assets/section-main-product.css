@@ -249,9 +249,12 @@ product-info {
 }
 
 .product__info-container .product-form,
-.product__info-container .product__description,
-.product__info-container .icon-with-text {
+.product__info-container .product__description {
   margin: 2.5rem 0;
+}
+
+.product__info-container .icon-with-text {
+  margin: 1.5rem 0;
 }
 
 .product__text {
@@ -1307,8 +1310,8 @@ a.product__text {
 }
 
 .icon-with-text__heading {
-  margin: 0 0 1.6rem;
-  padding-bottom: 1.2rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.8rem;
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.3);
   font-size: 1.8rem;
   font-weight: var(--font-heading-weight);
@@ -1331,8 +1334,8 @@ a.product__text {
   --icon-size: calc(var(--font-heading-scale) * 2.4rem);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 3rem;
-  row-gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 1.2rem;
 }
 
 .icon-with-text--grid .icon-with-text__item {
@@ -1346,6 +1349,12 @@ a.product__text {
   flex-shrink: 0;
 }
 
+.icon-with-text--grid .h4 {
+  font-family: var(--font-body-family);
+  font-weight: var(--font-body-weight);
+  font-size: 1.5rem;
+}
+
 @media screen and (max-width: 749px) {
   .icon-with-text--grid {
     column-gap: 1.5rem;
@@ -1353,7 +1362,7 @@ a.product__text {
 }
 
 .icon-with-text .svg-wrapper {
-  fill: rgb(var(--color-foreground));
+  fill: var(--product-accent-color-dark, rgb(var(--color-foreground)));
   height: var(--icon-size);
   width: var(--icon-size);
 }
