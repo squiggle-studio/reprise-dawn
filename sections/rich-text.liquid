@@ -6,9 +6,14 @@
     assign rich_text_border_color = product.metafields.custom.accent_color
   endif
 
+  assign accent_color_dark_raw = product.metafields.custom.accent_color_dark
+  if accent_color_dark_raw.value != blank
+    assign accent_color_dark_raw = accent_color_dark_raw.value
+  endif
+
   assign rich_text_bg_color = blank
-  if section.settings.background_from_accent_color_dark and product.metafields.custom.accent_color_dark != blank
-    assign rich_text_bg_color = product.metafields.custom.accent_color_dark
+  if section.settings.background_from_accent_color_dark and accent_color_dark_raw != blank
+    assign rich_text_bg_color = accent_color_dark_raw
   endif
 -%}
 
@@ -29,7 +34,7 @@
     --rich-text-card-radius: {{ section.settings.card_corner_radius }}px;
     --rich-text-card-border-color: {{ rich_text_border_color }};
     {% if rich_text_bg_color != blank %}
-      background-color: {{ rich_text_bg_color }};
+      background: {{ rich_text_bg_color }} !important;
     {% endif %}
   }
 {%- endstyle -%}

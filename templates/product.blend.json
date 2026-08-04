@@ -368,7 +368,9 @@
         "ingredient_3",
         "ingredient_1"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media screen and (max-width: 749px) { .multicolumn-card__image-wrapper { margin-left: auto; margin-right: auto; } .multicolumn-card__info { text-align: center; } }"
+      ],
       "name": "What's inside",
       "settings": {
         "caption": "",
