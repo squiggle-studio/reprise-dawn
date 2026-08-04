@@ -69,7 +69,8 @@
           "settings": {
             "button_label": "Learn more →",
             "button_link": "",
-            "button_style_secondary": true
+            "button_style_secondary": true,
+            "button_color": ""
           }
         }
       },
@@ -99,22 +100,31 @@
     "not_grandmas_herbs": {
       "type": "image-with-text",
       "blocks": {
+        "caption_bGdLRj": {
+          "type": "caption",
+          "settings": {
+            "caption": "OUR STORY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
         "heading_grandma": {
           "type": "heading",
           "settings": {
-            "heading": "(Not) our grandma's herbs",
+            "heading": "We founded Reprise so that generations to come could experience our ancestors' wisdom in a more convenient and sustainable way.",
             "heading_size": "h2"
           }
         },
         "text_grandma": {
           "type": "text",
           "settings": {
-            "text": "<p>We founded Reprise so that generations to come could experience our ancestors' wisdom in a more convenient and sustainable way.</p><p>Full-spectrum extraction maintains all the natural ratios of bioactive botanicals. Two of our delicious gummies is the equivalent of one potent cup of herbal tea.</p>",
+            "text": "<p>Full-spectrum extraction maintains all the natural ratios of bioactive botanicals. Two of our delicious gummies is the equivalent of one potent cup of herbal tea.</p>",
             "text_style": "body"
           }
         }
       },
       "block_order": [
+        "caption_bGdLRj",
         "heading_grandma",
         "text_grandma"
       ],
