@@ -390,8 +390,13 @@
 }
 
 @media screen and (max-width: 749px) {
-  .multicolumn--row .multicolumn__title,
-  .multicolumn--row .multicolumn__title .caption-with-letter-spacing {
+  /* .multicolumn__title is a flex row (title-wrapper-with-link), so
+     text-align:center only centers text inside each flex item's own
+     box - it doesn't center a short item like the caption within the
+     row. Switch to block so caption and heading both become full-width
+     children and text-align centers them the same way. */
+  .multicolumn--row .multicolumn__title {
+    display: block;
     text-align: center;
   }
 
