@@ -393,7 +393,7 @@
         "button_link": "",
         "show_button_on_desktop": false,
         "column_layout": "stacked",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "none",
         "color_scheme": "scheme-1",
