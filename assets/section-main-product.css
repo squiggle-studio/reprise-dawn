@@ -1313,8 +1313,8 @@ a.product__text {
   margin: 0 0 1rem;
   padding-bottom: 0.8rem;
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.3);
-  font-size: 1.8rem;
-  font-weight: var(--font-heading-weight);
+  font-size: 1.5rem;
+  font-weight: var(--font-body-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.02rem;
 }
