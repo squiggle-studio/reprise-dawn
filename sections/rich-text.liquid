@@ -88,6 +88,17 @@
                       href="{{ block.settings.button_link }}"
                     {% endif %}
                     class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                    {% if block.settings.button_color != blank %}
+                      style="
+                        --border-opacity: 0;
+                        {% if block.settings.button_style_secondary %}
+                          color: {{ block.settings.button_color }} !important;
+                          border: 0.1rem solid {{ block.settings.button_color }} !important;
+                        {% else %}
+                          background-color: {{ block.settings.button_color }} !important;
+                        {% endif %}
+                      "
+                    {% endif %}
                   >
                     {{- block.settings.button_label | escape -}}
                   </a>
@@ -100,6 +111,17 @@
                       href="{{ block.settings.button_link_2 }}"
                     {% endif %}
                     class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                    {% if block.settings.button_color_2 != blank %}
+                      style="
+                        --border-opacity: 0;
+                        {% if block.settings.button_style_secondary_2 %}
+                          color: {{ block.settings.button_color_2 }} !important;
+                          border: 0.1rem solid {{ block.settings.button_color_2 }} !important;
+                        {% else %}
+                          background-color: {{ block.settings.button_color_2 }} !important;
+                        {% endif %}
+                      "
+                    {% endif %}
                   >
                     {{- block.settings.button_label_2 | escape -}}
                   </a>
@@ -364,9 +386,15 @@
           "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_1.label"
         },
         {
+          "type": "color",
+          "id": "button_color",
+          "label": "Button color override",
+          "info": "Optional. Use the dynamic source icon to connect a product metafield (e.g. Accent color), or pick a static color."
+        },
+        {
          "type": "header",
          "content": "t:sections.rich-text.blocks.buttons.settings.header_button2.content"
-        },          
+        },
         {
           "type": "text",
           "id": "button_label_2",
@@ -383,6 +411,12 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
+        },
+        {
+          "type": "color",
+          "id": "button_color_2",
+          "label": "Button color override",
+          "info": "Optional. Use the dynamic source icon to connect a product metafield (e.g. Accent color), or pick a static color."
         }
       ]
     }

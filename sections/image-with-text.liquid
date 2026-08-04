@@ -111,6 +111,17 @@
                         href="{{ block.settings.button_link }}"
                       {% endif %}
                       class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                      {% if block.settings.button_color != blank %}
+                        style="
+                          --border-opacity: 0;
+                          {% if block.settings.button_style_secondary %}
+                            color: {{ block.settings.button_color }} !important;
+                            border: 0.1rem solid {{ block.settings.button_color }} !important;
+                          {% else %}
+                            background-color: {{ block.settings.button_color }} !important;
+                          {% endif %}
+                        "
+                      {% endif %}
                       {{ block.shopify_attributes }}
                     >
                       {{ block.settings.button_label | escape }}
@@ -507,6 +518,12 @@
           "id": "button_style_secondary",
           "default": false,
           "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+        },
+        {
+          "type": "color",
+          "id": "button_color",
+          "label": "Button color override",
+          "info": "Optional. Use the dynamic source icon to connect a product metafield (e.g. Accent color), or pick a static color."
         }
       ]
     }
