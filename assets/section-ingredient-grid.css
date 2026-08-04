@@ -82,12 +82,7 @@
 }
 
 .ingredient-grid__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
   margin: 3rem 0 0;
-  font-weight: var(--font-body-weight-bold);
-  text-decoration: none;
 }
 
 @media screen and (max-width: 749px) {
