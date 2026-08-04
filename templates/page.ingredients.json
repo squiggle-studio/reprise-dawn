@@ -73,8 +73,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Ginseng.svg",
-            "title": "Ginseng",
-            "text": "<p>Both American and Panax ginseng contain ginsenosides, which have been studied for their effects on energy metabolism, stress hormones, and nervous‑system signaling.*</p><h5><strong>Try our </strong><a href=\"/products/panax-ginseng-gummies\" title=\"Korean Ginseng Gummies\"><strong>Ginseng</strong></a><strong> Gummies, or find ginseng in our </strong><a href=\"/products/de-stress-gummies\" title=\"De-Stress Gummies\"><strong>Destress</strong></a><strong> and </strong><a href=\"/products/super-focus-gummies\" title=\"Super Focus Gummies\"><strong>Super Focus </strong></a><strong>gummies</strong></h5>",
+            "title": "American Ginseng",
+            "text": "<p>American ginseng is often chosen for “calm energy,” supporting balanced alertness and cognitive performance—so you can stay mentally present and productive while still feeling grounded.</p><h5><strong>Find American ginseng in our </strong><a href=\"/products/de-stress-gummies\" title=\"De-Stress Gummies\"><strong>Destress</strong></a><strong> and </strong><a href=\"/products/super-focus-gummies\" title=\"Super Focus Gummies\"><strong>Super Focus </strong></a><strong>gummies</strong></h5>",
             "link_label": "",
             "link": ""
           }
@@ -95,6 +95,16 @@
             "image": "shopify://shop_images/Jujube.svg",
             "title": "Jujube Seed",
             "text": "<p>Jujube seed contains saponins, flavonoids, and spinosin. It's traditionallly used to support healthy sleep–wake rhythms and  promote deeper, more restorative sleep.*</p><h5></h5><h5><strong>You can find jujube seed in our</strong> <a href=\"/products/restful-sleep-gummies\" title=\"Restful Sleep Gummies\">Restful Sleep</a> gummies</h5>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_iTFY6H": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Ginseng.svg",
+            "title": "Korean Ginseng",
+            "text": "<p>Also known as Panax ginseng. Traditionally used to support mental clarity and sustained concentration without the jittery spike often associated with strong stimulants.*</p><h5><strong>Try our </strong><a href=\"/products/panax-ginseng-gummies\" title=\"Korean Ginseng Gummies\"><strong>Ginseng</strong></a><strong> Gummies, or find panax ginseng in our </strong><a href=\"/products/super-focus-gummies\" title=\"Super Focus Gummies\"><strong>Super Focus</strong></a><strong> gummies</strong></h5>",
             "link_label": "",
             "link": ""
           }
@@ -186,6 +196,7 @@
         "ginseng",
         "goji",
         "jujube_seed",
+        "column_iTFY6H",
         "licorice_root",
         "column_GAxtWP",
         "column_8WCAMU",
