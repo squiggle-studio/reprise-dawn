@@ -71,13 +71,13 @@
         "badge_2": {
           "type": "badge",
           "settings": {
-            "text": "100% customers rate us 4.7/5 stars"
+            "text": "500+ customers rate us 5/5 stars"
           }
         },
         "badge_3": {
           "type": "badge",
           "settings": {
-            "text": "Free shipping over $50"
+            "text": "草藥"
           }
         },
         "badge_4": {
@@ -86,10 +86,22 @@
             "text": "Doctor developed formulas"
           }
         },
+        "badge_4dLLq3": {
+          "type": "badge",
+          "settings": {
+            "text": "Vegan"
+          }
+        },
         "badge_5": {
           "type": "badge",
           "settings": {
-            "text": "100% Gluten Free"
+            "text": "Gluten Free"
+          }
+        },
+        "badge_nzLRQU": {
+          "type": "badge",
+          "settings": {
+            "text": ""
           }
         }
       },
@@ -98,7 +110,9 @@
         "badge_2",
         "badge_3",
         "badge_4",
-        "badge_5"
+        "badge_4dLLq3",
+        "badge_5",
+        "badge_nzLRQU"
       ],
       "settings": {
         "color_scheme": "scheme-5",
