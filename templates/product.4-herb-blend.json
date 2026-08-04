@@ -639,7 +639,7 @@
         "faq_2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do your gummies contain gelatin?",
+            "heading": "Do {{ product.title }} contain gelatin?",
             "icon": "none",
             "row_content": "<p>No, all Reprise gummies are vegan and do not contain animal products such as gelatin.</p>",
             "page": ""
@@ -671,6 +671,15 @@
             "row_content": "<p>Each gummy contains only 1g of sugar. Reprise gummies do NOT contain any artificial sweeteners.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_Yt7XmQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I take Reprise {{ product.title }} while on prescription medications",
+            "icon": "none",
+            "row_content": "<p>We do not recommend taking Reprise gummies and your prescription medications at the same time. We recommend always speaking with your healthcare provider prior to mixing any dietary supplements.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -678,7 +687,8 @@
         "faq_2",
         "faq_3",
         "faq_4",
-        "faq_5"
+        "faq_5",
+        "collapsible_row_Yt7XmQ"
       ],
       "name": "Any questions?",
       "settings": {
