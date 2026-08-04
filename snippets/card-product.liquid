@@ -155,7 +155,7 @@
               {%- assign eyebrow_parts = card_eyebrow_metafield | split: '.' -%}
               {%- assign eyebrow_value = card_product.metafields[eyebrow_parts[0]][eyebrow_parts[1]] -%}
               {%- if eyebrow_value != blank -%}
-                {%- assign eyebrow_color = card_product.metafields.custom.accent_color_dark | default: card_product.metafields.custom.accent_color -%}
+                {%- assign eyebrow_color = card_product.metafields.custom.accent_dark | default: card_product.metafields.custom.accent_color -%}
                 <p
                   class="card__eyebrow caption-with-letter-spacing"
                   {% if eyebrow_color != blank %}
