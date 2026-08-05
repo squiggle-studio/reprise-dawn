@@ -204,6 +204,16 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+
+  /* Card treatments already get their own outer padding restored via
+     .multicolumn .page-width below - the list's own 1.5rem here would
+     stack on top of that and make cards narrower than sibling
+     sections instead of matching their width. */
+  .multicolumn--card-style .multicolumn-list:not(.slider),
+  .multicolumn--card-outline .multicolumn-list:not(.slider) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
@@ -407,11 +417,12 @@
     row-gap: 0;
   }
 
-  /* The card-outline treatment replaces divider lines with its own
-     2rem row-gap (set above), but the zero-gap rule above still wins
-     on specificity/order since divided-mobile items remain present -
-     restore the gap for outlined cards specifically. */
-  .multicolumn--card-outline .multicolumn-list:has(.multicolumn-list__item--divided-mobile) {
+  /* The card-outline/card-style treatments replace divider lines with
+     their own 2rem row-gap (set above), but the zero-gap rule above
+     still wins on specificity/order since divided-mobile items remain
+     present - restore the gap for both treatments specifically. */
+  .multicolumn--card-outline .multicolumn-list:has(.multicolumn-list__item--divided-mobile),
+  .multicolumn--card-style .multicolumn-list:has(.multicolumn-list__item--divided-mobile) {
     row-gap: 2rem;
   }
 }
