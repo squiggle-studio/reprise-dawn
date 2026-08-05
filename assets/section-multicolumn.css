@@ -491,6 +491,7 @@
     display: table-cell !important;
     vertical-align: middle !important;
     width: 6rem;
+    height: 6rem;
     flex: none;
     outline: 3px solid lime !important;
   }
