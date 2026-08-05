@@ -22,12 +22,20 @@
   if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
     assign show_mobile_slider = true
   endif
+
+  assign card_outline_color = section.settings.card_outline_color
+  if product.metafields.custom.accent_color != blank
+    assign card_outline_color = product.metafields.custom.accent_color
+  endif
 -%}
 
 <div
-  class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.column_layout == 'row' %} multicolumn--row{% endif %}"
-  {% if section.settings.enable_card_style %}
-    style="--multicolumn-card-radius: {{ section.settings.card_corner_radius }}px;"
+  class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.column_layout == 'row' %} multicolumn--row{% endif %}{% if section.settings.enable_card_outline %} multicolumn--card-outline{% endif %}"
+  {% if section.settings.enable_card_style or section.settings.enable_card_outline %}
+    style="
+      --multicolumn-card-radius: {{ section.settings.card_corner_radius }}px;
+      --multicolumn-card-outline-color: {{ card_outline_color }};
+    "
   {% endif %}
 >
   <div
@@ -89,7 +97,7 @@
             {% endif %}
           >
             <div
-              class="multicolumn-card content-container{% if section.settings.enable_card_style %} multicolumn-card--styled color-{{ section.settings.card_color_scheme }} gradient{% endif %}"
+              class="multicolumn-card content-container{% if section.settings.enable_card_style %} multicolumn-card--styled color-{{ section.settings.card_color_scheme }} gradient{% endif %}{% if section.settings.enable_card_outline %} multicolumn-card--outlined{% endif %}"
             >
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
@@ -436,6 +444,20 @@
       "label": "Card corner radius",
       "default": 16,
       "info": "Only applies when card style is enabled."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_card_outline",
+      "default": false,
+      "label": "Show a colored outline around each card",
+      "info": "Uses the product's accent_color metafield when set, otherwise the fallback color below. Applies on both desktop and mobile, and automatically hides the mobile divider lines since the outline replaces them."
+    },
+    {
+      "type": "color",
+      "id": "card_outline_color",
+      "label": "Card outline color (fallback)",
+      "default": "#AF412F",
+      "info": "Used as a fallback when the product has no accent_color metafield set. Only applies when the outline is enabled."
     },
     {
       "type": "header",

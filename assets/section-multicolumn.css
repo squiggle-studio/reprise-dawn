@@ -32,6 +32,44 @@
   padding: 2rem;
 }
 
+/* Optional per-column card outline (border in the product's accent
+   color, or a static fallback). Works alongside --styled or on its
+   own - unlike --styled (image bleeds to the card's top edge, only
+   .info gets padding), the outline treatment pads the whole card
+   uniformly since there's no photo-card aesthetic to preserve. */
+.multicolumn-card--outlined {
+  box-sizing: border-box;
+  border: 0.15rem solid var(--multicolumn-card-outline-color, rgba(var(--color-foreground), 0.3));
+  border-radius: var(--multicolumn-card-radius, 16px);
+  padding: 2rem;
+}
+
+.multicolumn-card--outlined .multicolumn-card__image-wrapper {
+  margin: 0;
+  padding-top: 0;
+}
+
+.multicolumn-card--outlined .multicolumn-card__info {
+  padding: 1.5rem 0 0;
+}
+
+/* The outline gives each card its own visible boundary, making the
+   mobile divider lines (and their own padding/margin) redundant -
+   replace them with even grid spacing instead. */
+.multicolumn--card-outline .multicolumn-list__item--divided-mobile {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.multicolumn--card-outline .multicolumn-list__item--divided-mobile + .multicolumn-list__item--divided-mobile {
+  margin-top: 0;
+}
+
+.multicolumn--card-outline .multicolumn-list {
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
 .multicolumn.no-heading .title {
   display: none;
 }
