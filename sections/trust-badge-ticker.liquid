@@ -40,9 +40,7 @@
             >
               {{- block.settings.text | escape -}}
             </span>
-            {%- unless forloop.last -%}
-              <span class="trust-badge-ticker__divider" aria-hidden="true">{{ section.settings.divider }}</span>
-            {%- endunless -%}
+            <span class="trust-badge-ticker__divider" aria-hidden="true">{{ section.settings.divider }}</span>
           {%- endfor -%}
         </div>
       {%- endfor -%}

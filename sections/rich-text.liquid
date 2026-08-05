@@ -23,9 +23,7 @@
   #RichText-{{ section.id }} {
     --rich-text-card-radius: {{ section.settings.card_corner_radius }}px;
     --rich-text-card-border-color: {{ rich_text_border_color }};
-    {% if section.settings.background_color != blank %}
-      background: {{ section.settings.background_color }} !important;
-    {% endif %}
+    background: {{ section.settings.background_color | default: 'rgb(var(--color-background))' }} !important;
   }
 {%- endstyle -%}
 

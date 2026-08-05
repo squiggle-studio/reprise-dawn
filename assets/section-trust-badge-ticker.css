@@ -28,11 +28,11 @@
   font-size: 1.3rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding-inline: 0.75rem;
+  padding-inline: 1.25rem;
 }
 
 .trust-badge-ticker__divider {
-  padding-inline: 0.5rem;
+  padding-inline: 1rem;
   opacity: 0.6;
 }
 
