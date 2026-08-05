@@ -473,19 +473,17 @@
   }
 
   .multicolumn--row .multicolumn-list__item {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    flex-grow: 0;
-    flex-shrink: 0;
-    text-align: center;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
   }
 
   .multicolumn--row .multicolumn-card {
-    display: inline-flex;
-    width: auto;
-    margin: 0;
-    text-align: left;
+    display: inline-flex !important;
+    width: auto !important;
+    margin: 0 !important;
+    text-align: left !important;
   }
 
   .multicolumn--row .multicolumn-card__image-wrapper {
