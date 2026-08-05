@@ -21,8 +21,8 @@
         "heading_hero": {
           "type": "heading",
           "settings": {
-            "heading": "Herbalism is a Universal Tradition",
-            "heading_size": "h0"
+            "heading": "Rooted in Eastern herbal traditions",
+            "heading_size": "h1"
           }
         },
         "text_hero": {
@@ -181,7 +181,7 @@
         "heading": "A delicious daily ritual",
         "heading_size": "h1",
         "body_text": "<p>We're creating a new standard for traditional remedies: removing the barriers that get in the way of feeling good.</p>",
-        "image": "shopify://shop_images/ChatGPT_Image_Jul_1_2026_11_00_39_AM.png",
+        "image": "shopify://shop_images/Gemini_Generated_Image_ju3p0cju3p0cju3p.png",
         "image_border_radius": 16,
         "layout": "image_right",
         "color_scheme": "scheme-1",
