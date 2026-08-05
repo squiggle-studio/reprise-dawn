@@ -402,7 +402,7 @@
       ],
       "custom_css": [
         "@media screen and (max-width: 749px) {.multicolumn__title {display: block; text-align: center; }}",
-        ".multicolumn-card__image-wrapper { max-width: 8rem; }"
+        ".multicolumn-card__image-wrapper {max-width: 8rem;}"
       ],
       "name": "What's inside",
       "settings": {
@@ -411,7 +411,7 @@
         "heading_size": "h1",
         "heading_alignment": "left",
         "image_width": "half",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
         "show_button_on_desktop": false,
@@ -422,10 +422,13 @@
         "color_scheme": "scheme-1",
         "enable_card_style": true,
         "card_color_scheme": "scheme-2",
+        "card_background_color": "",
         "card_corner_radius": 24,
+        "card_image_style": "icon",
+        "card_image_position": "above_heading",
         "enable_card_outline": false,
         "override_card_outline_color": true,
-        "card_outline_color": "#C68957",
+        "card_outline_color": "#c68957",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "show_dividers_mobile": true,
