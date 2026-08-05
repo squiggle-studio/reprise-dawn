@@ -16,6 +16,13 @@
       padding-left: calc(1.5rem + 8px);
       padding-right: calc(1.5rem + 8px);
     }
+
+    /* The image is always last visually on mobile (column-reverse) and
+       already bleeds to the viewport edge, so the section's own bottom
+       padding just adds an unwanted colored strip underneath it. */
+    .section-{{ section.id }}-padding {
+      padding-bottom: 0;
+    }
   }
 
   .split-accordion__heading {
