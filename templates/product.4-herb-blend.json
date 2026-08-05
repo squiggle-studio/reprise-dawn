@@ -402,7 +402,7 @@
       ],
       "custom_css": [
         "@media screen and (max-width: 749px) {.multicolumn__title {display: block; text-align: center; }}",
-        ".multicolumn-card__image-wrapper {max-width: 4.5rem;}"
+        ".multicolumn-card__image-wrapper { max-width: 8rem; }"
       ],
       "name": "What's inside",
       "settings": {
