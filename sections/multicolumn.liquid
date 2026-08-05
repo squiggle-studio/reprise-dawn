@@ -24,7 +24,7 @@
   endif
 
   assign card_outline_color = section.settings.card_outline_color
-  if product.metafields.custom.accent_color != blank
+  if product.metafields.custom.accent_color != blank and section.settings.override_card_outline_color != true
     assign card_outline_color = product.metafields.custom.accent_color
   endif
 -%}
@@ -453,11 +453,18 @@
       "info": "Uses the product's accent_color metafield when set, otherwise the fallback color below. Applies on both desktop and mobile, and automatically hides the mobile divider lines since the outline replaces them."
     },
     {
+      "type": "checkbox",
+      "id": "override_card_outline_color",
+      "default": false,
+      "label": "Use the custom color below instead of the product's accent color",
+      "info": "By default the outline uses the product's accent_color metafield when set. Enable this to always use the color below."
+    },
+    {
       "type": "color",
       "id": "card_outline_color",
-      "label": "Card outline color (fallback)",
+      "label": "Card outline color",
       "default": "#AF412F",
-      "info": "Used as a fallback when the product has no accent_color metafield set. Only applies when the outline is enabled."
+      "info": "Used when the override above is on, or as a fallback when the product has no accent_color metafield set. Only applies when the outline is enabled."
     },
     {
       "type": "header",

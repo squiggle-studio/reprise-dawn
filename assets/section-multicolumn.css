@@ -387,6 +387,14 @@
   .multicolumn-list:has(.multicolumn-list__item--divided-mobile) {
     row-gap: 0;
   }
+
+  /* The card-outline treatment replaces divider lines with its own
+     2rem row-gap (set above), but the zero-gap rule above still wins
+     on specificity/order since divided-mobile items remain present -
+     restore the gap for outlined cards specifically. */
+  .multicolumn--card-outline .multicolumn-list:has(.multicolumn-list__item--divided-mobile) {
+    row-gap: 2rem;
+  }
 }
 
 @media screen and (min-width: 750px) {
