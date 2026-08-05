@@ -22,7 +22,7 @@
 
 .ingredient-grid__tile {
   position: relative;
-  width: 90%;
+  width: 45%;
   margin: 0 auto;
   aspect-ratio: 1 / 1;
   border-radius: 1.2rem;

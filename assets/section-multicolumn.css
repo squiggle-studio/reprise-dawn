@@ -417,6 +417,19 @@
     text-align: center;
   }
 
+  /* justify-content: space-between (set unconditionally above for the
+     desktop multi-item-per-row layout) was still active here, and with
+     a single shrink-wrapped item per wrapped line it doesn't center -
+     it anchors the item to the start, offsetting the whole group away
+     from true center. */
+  .multicolumn--row .multicolumn-list.grid {
+    justify-content: center;
+  }
+
+  .multicolumn--row .multicolumn-list__item {
+    width: 100%;
+  }
+
   .multicolumn--row .multicolumn-card {
     width: auto;
     margin: 0 auto;
