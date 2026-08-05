@@ -17,7 +17,9 @@
 
 .ingredient-grid__item {
   min-width: 0;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .ingredient-grid__tile {
@@ -83,9 +85,12 @@
 }
 
 .ingredient-grid__label {
+  width: 85%;
   margin: 1rem 0 0;
   font-size: 1.5rem;
   font-weight: var(--font-body-weight-bold);
+  line-height: 1.15;
+  text-align: center;
 }
 
 .ingredient-grid__link {
@@ -109,6 +114,10 @@
   }
 
   .ingredient-grid__tile {
+    width: 70%;
+  }
+
+  .ingredient-grid__label {
     width: 70%;
   }
 }
