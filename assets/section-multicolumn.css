@@ -476,15 +476,13 @@
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
-    text-align: center !important;
     outline: 3px solid red !important;
   }
 
   .multicolumn--row .multicolumn-card {
-    display: inline-flex !important;
-    width: auto !important;
-    margin: 0 !important;
-    text-align: left !important;
+    display: flex !important;
+    width: max-content !important;
+    margin: 0 auto !important;
     background: rgba(0, 100, 255, 0.3) !important;
   }
 
