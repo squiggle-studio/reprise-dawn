@@ -22,7 +22,7 @@
         "text_tBHynm": {
           "type": "text",
           "settings": {
-            "text": "<p>Made for the modern world</p>"
+            "text": "<h2>Made for the modern world</h2>"
           }
         },
         "subheading_hero": {
@@ -65,13 +65,7 @@
         "badge_1": {
           "type": "badge",
           "settings": {
-            "text": "Proudly Asian Owned"
-          }
-        },
-        "badge_2": {
-          "type": "badge",
-          "settings": {
-            "text": "500+ customers rate us 5/5 stars"
+            "text": "Asian Owned"
           }
         },
         "badge_3": {
@@ -83,7 +77,7 @@
         "badge_4": {
           "type": "badge",
           "settings": {
-            "text": "Doctor developed formulas"
+            "text": "Doctor formulated"
           }
         },
         "badge_4dLLq3": {
@@ -107,7 +101,6 @@
       },
       "block_order": [
         "badge_1",
-        "badge_2",
         "badge_3",
         "badge_4",
         "badge_4dLLq3",
@@ -119,7 +112,7 @@
         "speed": 45,
         "direction": "left",
         "pause_on_hover": true,
-        "divider": "•",
+        "divider": "|",
         "padding_top": 16,
         "padding_bottom": 16
       }
@@ -392,7 +385,8 @@
           "settings": {
             "button_label": "Learn more →",
             "button_link": "",
-            "button_style_secondary": true
+            "button_style_secondary": true,
+            "button_color": ""
           }
         }
       },
