@@ -504,24 +504,7 @@
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-1",
         "padding_top": 52,
-        "padding_bottom": 0
-      }
-    },
-    "image_banner_Ywe6Ww": {
-      "type": "image-banner",
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Screenshot_2026-07-30_at_1.58.03_PM.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
+        "padding_bottom": 52
       }
     },
     "rich_text_eiKqaw": {
@@ -723,7 +706,6 @@
     "ingredient_spotlight",
     "image_banner_AFhXQe",
     "image_text_routine",
-    "image_banner_Ywe6Ww",
     "rich_text_eiKqaw",
     "dietary_info",
     "faq",
