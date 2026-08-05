@@ -102,3 +102,13 @@
     padding-right: calc(1.5rem + 8px);
   }
 }
+
+@media screen and (min-width: 750px) {
+  .ingredient-grid__list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .ingredient-grid__tile {
+    width: 70%;
+  }
+}
