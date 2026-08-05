@@ -499,6 +499,10 @@
   }
 
   .multicolumn--row .multicolumn-card__info .link {
+    color: red !important;
+    font-size: 3rem !important;
+    transform: rotate(15deg) !important;
+    display: inline-block !important;
     white-space: nowrap;
   }
 }
