@@ -476,15 +476,18 @@
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
-    outline: 3px solid red !important;
   }
 
+  /* display:table instead of flex - a flex container sized via
+     width:max-content doesn't reliably account for a white-space:nowrap
+     child's true width in WebKit, leaving the text to overflow past
+     the card's own (too-narrow) box and throwing off centering. The
+     table/table-cell shrink-to-fit algorithm doesn't have this bug. */
   .multicolumn--row .multicolumn-card {
     display: table !important;
     width: auto !important;
     margin: 0 auto !important;
     position: static !important;
-    background: rgba(0, 100, 255, 0.3) !important;
   }
 
   .multicolumn--row .multicolumn-card__image-wrapper {
@@ -493,7 +496,6 @@
     width: 6rem;
     height: 6rem;
     flex: none;
-    outline: 3px solid lime !important;
   }
 
   .multicolumn--row .multicolumn-card__info {
@@ -501,11 +503,9 @@
     vertical-align: middle !important;
     padding-left: 1rem;
     flex: none;
-    outline: 3px solid orange !important;
   }
 
   .multicolumn--row .multicolumn-card__info .link {
-    outline: 2px dashed purple !important;
     white-space: nowrap;
   }
 }
