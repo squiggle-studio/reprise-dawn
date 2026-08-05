@@ -466,6 +466,9 @@
 
   .multicolumn--row .multicolumn-list__item {
     width: 100%;
+    max-width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 
   .multicolumn--row .multicolumn-card {
