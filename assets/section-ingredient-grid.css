@@ -17,13 +17,13 @@
 
 .ingredient-grid__item {
   min-width: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .ingredient-grid__tile {
   position: relative;
   width: 85%;
-  margin: 0 auto;
+  margin: 0;
   aspect-ratio: 1 / 1;
   border-radius: 1.2rem;
   background: rgba(var(--color-foreground), 0.15);
