@@ -478,6 +478,7 @@
     max-width: 100% !important;
     position: relative !important;
     min-height: 6rem !important;
+    outline: 3px solid red !important;
   }
 
   .multicolumn--row .multicolumn-card {
@@ -488,21 +489,21 @@
     left: 50% !important;
     top: 50% !important;
     transform: translate(-50%, -50%) !important;
+    background: rgba(0, 100, 255, 0.3) !important;
   }
 
   .multicolumn--row .multicolumn-card__image-wrapper {
     flex: 0 0 6rem;
+    outline: 3px solid lime !important;
   }
 
   .multicolumn--row .multicolumn-card__info {
     flex: 0 0 auto;
+    outline: 3px solid orange !important;
   }
 
   .multicolumn--row .multicolumn-card__info .link {
-    color: red !important;
-    font-size: 3rem !important;
-    transform: rotate(15deg) !important;
-    display: inline-block !important;
+    outline: 2px dashed purple !important;
     white-space: nowrap;
   }
 }
