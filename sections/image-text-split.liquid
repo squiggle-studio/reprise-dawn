@@ -54,6 +54,7 @@
 
   .split__heading {
     margin: 0;
+    line-height: 1.05;
   }
 
   .split__subheading {
@@ -62,6 +63,16 @@
   }
 
   .split__text {
+    margin: 0;
+  }
+
+  /* Some hero "text" block content uses an <h2> tag for the subtitle
+     (via the rich text editor) rather than a plain paragraph, which
+     picks up the theme's bold heading font by default. */
+  .split__text h2 {
+    font-family: var(--font-body-family);
+    font-weight: var(--font-body-weight);
+    font-size: 2rem;
     margin: 0;
   }
 

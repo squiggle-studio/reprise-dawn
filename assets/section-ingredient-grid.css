@@ -8,7 +8,7 @@
 
 .ingredient-grid__list {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem 1.5rem;
   margin: 3rem 0 0;
   padding: 0;
@@ -22,7 +22,7 @@
 
 .ingredient-grid__tile {
   position: relative;
-  width: 45%;
+  width: 85%;
   margin: 0 auto;
   aspect-ratio: 1 / 1;
   border-radius: 1.2rem;
@@ -35,8 +35,13 @@
   transition: background-color 0.3s ease;
 }
 
-.ingredient-grid__tile:hover {
-  background: rgba(var(--color-foreground), 0.3);
+/* (hover: hover) excludes touch devices, where :hover triggers on tap
+   and gets "stuck" until tapping elsewhere instead of behaving like a
+   real hover - so the color-reveal effect only runs on mouse input. */
+@media (hover: hover) {
+  .ingredient-grid__tile:hover {
+    background: rgba(var(--color-foreground), 0.3);
+  }
 }
 
 .ingredient-grid__image {
@@ -67,12 +72,14 @@
   transition: opacity 0.3s ease;
 }
 
-.ingredient-grid__tile:hover .ingredient-grid__image {
-  opacity: 0;
-}
+@media (hover: hover) {
+  .ingredient-grid__tile:hover .ingredient-grid__image {
+    opacity: 0;
+  }
 
-.ingredient-grid__tile:hover .ingredient-grid__image-color {
-  opacity: 1;
+  .ingredient-grid__tile:hover .ingredient-grid__image-color {
+    opacity: 1;
+  }
 }
 
 .ingredient-grid__label {
@@ -87,17 +94,7 @@
 
 @media screen and (max-width: 749px) {
   .ingredient-grid__list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.4rem 1.5rem;
-  }
-
-  /* Fixed (not tile-relative) size so the icon stays the same visual
-     size as before, while the wider 3-column tiles add breathing room
-     around it instead of scaling the icon up too. */
-  .ingredient-grid__image,
-  .ingredient-grid__image-color {
-    width: 3.2rem;
-    height: 3.2rem;
+    gap: 1.5rem 1rem;
   }
 
   .ingredient-grid.page-width {
