@@ -27,14 +27,27 @@
   if product.metafields.custom.accent_color != blank and section.settings.override_card_outline_color != true
     assign card_outline_color = product.metafields.custom.accent_color
   endif
+
+  assign card_full_bleed = false
+  if section.settings.card_image_style == 'full_bleed'
+    assign card_full_bleed = true
+  endif
+
+  assign card_image_between = false
+  if section.settings.card_image_position == 'between_heading_and_text'
+    assign card_image_between = true
+  endif
 -%}
 
 <div
-  class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.column_layout == 'row' %} multicolumn--row{% endif %}{% if section.settings.enable_card_outline %} multicolumn--card-outline{% endif %}"
+  class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.column_layout == 'row' %} multicolumn--row{% endif %}{% if section.settings.enable_card_outline %} multicolumn--card-outline{% endif %}{% if section.settings.enable_card_style %} multicolumn--card-style{% endif %}"
   {% if section.settings.enable_card_style or section.settings.enable_card_outline %}
     style="
       --multicolumn-card-radius: {{ section.settings.card_corner_radius }}px;
       --multicolumn-card-outline-color: {{ card_outline_color }};
+      {% if section.settings.card_background_color != blank %}
+        --multicolumn-card-background: {{ section.settings.card_background_color }};
+      {% endif %}
     "
   {% endif %}
 >
@@ -96,9 +109,7 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div
-              class="multicolumn-card content-container{% if section.settings.enable_card_style %} multicolumn-card--styled color-{{ section.settings.card_color_scheme }} gradient{% endif %}{% if section.settings.enable_card_outline %} multicolumn-card--outlined{% endif %}"
-            >
+            {%- capture card_image -%}
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -141,10 +152,16 @@
                   </div>
                 </div>
               {%- endif -%}
+            {%- endcapture -%}
+            <div
+              class="multicolumn-card content-container{% if section.settings.enable_card_style %} multicolumn-card--styled color-{{ section.settings.card_color_scheme }} gradient{% endif %}{% if section.settings.enable_card_outline %} multicolumn-card--outlined{% endif %}{% if card_full_bleed %} multicolumn-card--full-bleed{% endif %}{% if card_image_between %} multicolumn-card--image-between{% endif %}"
+            >
+              {%- unless card_image_between -%}{{ card_image }}{%- endunless -%}
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
                   <h3 class="inline-richtext">{{ block.settings.title }}</h3>
                 {%- endif -%}
+                {%- if card_image_between -%}{{ card_image }}{%- endif -%}
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
                 {%- endif -%}
@@ -435,6 +452,12 @@
       "info": "Only applies when card style is enabled."
     },
     {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background color (optional)",
+      "info": "Overrides just the background of the card color scheme above, without needing a separate scheme. Leave blank to use the scheme's own background. Only applies when card style is enabled."
+    },
+    {
       "type": "range",
       "id": "card_corner_radius",
       "min": 0,
@@ -443,7 +466,28 @@
       "unit": "px",
       "label": "Card corner radius",
       "default": 16,
-      "info": "Only applies when card style is enabled."
+      "info": "Applies when card style or the card outline is enabled."
+    },
+    {
+      "type": "select",
+      "id": "card_image_style",
+      "label": "Card image style",
+      "options": [
+        { "value": "icon", "label": "Icon (inset with padding)" },
+        { "value": "full_bleed", "label": "Full bleed (image fills card edge-to-edge)" }
+      ],
+      "default": "icon",
+      "info": "Applies when card style or the card outline is enabled. Independent of background/outline - works with either, both, or neither."
+    },
+    {
+      "type": "select",
+      "id": "card_image_position",
+      "label": "Image position",
+      "options": [
+        { "value": "above_heading", "label": "Above heading" },
+        { "value": "between_heading_and_text", "label": "Between heading and text" }
+      ],
+      "default": "above_heading"
     },
     {
       "type": "checkbox",

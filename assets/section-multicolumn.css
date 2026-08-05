@@ -6,66 +6,85 @@
   text-align: center;
 }
 
-/* Optional per-column card style (background, rounded corners, shadow) */
-.multicolumn-card--styled {
-  background: rgb(var(--color-background));
+/* Optional per-column card treatment: background and outline can be
+   combined independently, and both share the same padding/radius
+   model so corner rounding and spacing stay consistent regardless of
+   which combination is enabled. The image style (icon vs full-bleed)
+   and position (above heading vs between heading/text) are separate,
+   independent settings layered on top of either treatment. */
+.multicolumn-card--styled,
+.multicolumn-card--outlined {
   border-radius: var(--multicolumn-card-radius, 0);
+  box-sizing: border-box;
   overflow: hidden;
 }
 
-.multicolumn-card--styled .multicolumn-card__image-wrapper {
+.multicolumn-card--styled {
+  background: var(--multicolumn-card-background, rgb(var(--color-background)));
+}
+
+.multicolumn-card--outlined {
+  border: 0.15rem solid var(--multicolumn-card-outline-color, rgba(var(--color-foreground), 0.3));
+}
+
+/* Icon image style (default): the image sits inset with the same
+   padding as the rest of the card's content, whether it's positioned
+   above the heading or between the heading and text. */
+.multicolumn-card--styled:not(.multicolumn-card--full-bleed),
+.multicolumn-card--outlined:not(.multicolumn-card--full-bleed) {
+  padding: 2rem;
+}
+
+.multicolumn-card--styled:not(.multicolumn-card--full-bleed) .multicolumn-card__image-wrapper,
+.multicolumn-card--outlined:not(.multicolumn-card--full-bleed) .multicolumn-card__image-wrapper {
+  margin: 0 0 1.5rem;
+  padding-top: 0;
+}
+
+.multicolumn-card--styled:not(.multicolumn-card--full-bleed) .multicolumn-card__info,
+.multicolumn-card--outlined:not(.multicolumn-card--full-bleed) .multicolumn-card__info {
+  padding: 0;
+}
+
+.multicolumn-card--image-between .multicolumn-card__image-wrapper {
+  margin: 1rem 0 1.5rem;
+}
+
+/* Full-bleed image style: the image fills the card edge-to-edge with
+   rounded top corners matching the card, only the text content below
+   it is padded. */
+.multicolumn-card--full-bleed.multicolumn-card--styled .multicolumn-card__info,
+.multicolumn-card--full-bleed.multicolumn-card--outlined .multicolumn-card__info {
+  padding: 2rem;
+}
+
+.multicolumn-card--full-bleed .multicolumn-card__image-wrapper {
+  margin: 0;
+  padding-top: 0;
   border-radius: var(--multicolumn-card-radius, 0) var(--multicolumn-card-radius, 0) 0 0;
   overflow: hidden;
-  margin: 0;
-  padding-top: 0;
 }
 
-.multicolumn-card--styled .multicolumn-card__image-wrapper .media {
-  border-radius: 0;
+.multicolumn-card--full-bleed .multicolumn-card__image-wrapper .media img {
+  object-fit: cover;
 }
 
-.multicolumn-card--styled .multicolumn-card__image-wrapper .media img {
-  object-fit: contain;
-}
-
-.multicolumn-card--styled .multicolumn-card__info {
-  padding: 2rem;
-}
-
-/* Optional per-column card outline (border in the product's accent
-   color, or a static fallback). Works alongside --styled or on its
-   own - unlike --styled (image bleeds to the card's top edge, only
-   .info gets padding), the outline treatment pads the whole card
-   uniformly since there's no photo-card aesthetic to preserve. */
-.multicolumn-card--outlined {
-  box-sizing: border-box;
-  border: 0.15rem solid var(--multicolumn-card-outline-color, rgba(var(--color-foreground), 0.3));
-  border-radius: var(--multicolumn-card-radius, 16px);
-  padding: 2rem;
-}
-
-.multicolumn-card--outlined .multicolumn-card__image-wrapper {
-  margin: 0;
-  padding-top: 0;
-}
-
-.multicolumn-card--outlined .multicolumn-card__info {
-  padding: 1.5rem 0 0;
-}
-
-/* The outline gives each card its own visible boundary, making the
-   mobile divider lines (and their own padding/margin) redundant -
-   replace them with even grid spacing instead. */
-.multicolumn--card-outline .multicolumn-list__item--divided-mobile {
+/* A card treatment (outline or background) gives each card its own
+   visible boundary, making the mobile divider lines (and their own
+   padding/margin) redundant - replace them with even grid spacing. */
+.multicolumn--card-outline .multicolumn-list__item--divided-mobile,
+.multicolumn--card-style .multicolumn-list__item--divided-mobile {
   border-bottom: none;
   padding-bottom: 0;
 }
 
-.multicolumn--card-outline .multicolumn-list__item--divided-mobile + .multicolumn-list__item--divided-mobile {
+.multicolumn--card-outline .multicolumn-list__item--divided-mobile + .multicolumn-list__item--divided-mobile,
+.multicolumn--card-style .multicolumn-list__item--divided-mobile + .multicolumn-list__item--divided-mobile {
   margin-top: 0;
 }
 
-.multicolumn--card-outline .multicolumn-list {
+.multicolumn--card-outline .multicolumn-list,
+.multicolumn--card-style .multicolumn-list {
   row-gap: 2rem;
   column-gap: 2rem;
 }
