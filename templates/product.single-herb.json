@@ -251,7 +251,7 @@
         "speed": 30,
         "direction": "left",
         "pause_on_hover": true,
-        "divider": "•",
+        "divider": "·",
         "padding_top": 16,
         "padding_bottom": 16
       }
