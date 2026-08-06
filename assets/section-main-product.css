@@ -1739,3 +1739,24 @@ a.product__text {
 .product__info-container .product-form__submit:hover {
   background-color: var(--product-accent-color-dark, var(--product-accent-color, rgb(var(--color-button))));
 }
+
+/*
+  Recharge's subscription widget re-declares --rc-active-bg/--rc-active-color
+  on its own component tree with broken zero-alpha values on this theme
+  (it renders fine on the currently-live theme, so this is likely tied to
+  Recharge's per-theme widget config never having been set up for this
+  still-unpublished draft). Override the final properties directly instead
+  of the CSS variables, so this works regardless of what Recharge's script
+  computes - and without touching any Recharge account settings, which
+  would risk affecting the live site.
+*/
+.rc-widget .rc-option--active {
+  background-color: #f5f3ea !important;
+  color: #02040b !important;
+}
+
+.rc-widget .rc-option--active .rc-option__text,
+.rc-widget .rc-option--active .rc-option__discount,
+.rc-widget .rc-option--active .rc-option__price {
+  color: #02040b !important;
+}
