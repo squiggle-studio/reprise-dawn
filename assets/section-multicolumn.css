@@ -472,9 +472,12 @@
 }
 
 @media screen and (max-width: 749px) {
+  /* Match the base .page-width padding exactly (1.5rem) so this
+     section's content aligns with sibling sections that don't
+     override page-width at all, like rich-text. */
   .multicolumn .page-width {
-    padding-left: calc(1.5rem + 8px);
-    padding-right: calc(1.5rem + 8px);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
