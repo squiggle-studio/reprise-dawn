@@ -1755,7 +1755,8 @@ a.product__text {
   color: #02040b !important;
 }
 
-.rc-widget .rc-option--active .rc-option__text {
+.rc-widget .rc-option--active .rc-option__text,
+.rc-widget .rc-option--active .rc-option__discount {
   font-weight: 700 !important;
 }
 
@@ -1770,4 +1771,8 @@ a.product__text {
    in the DOM (not removed) since the sync script still reads its text. */
 .rc-widget .rc-option__price {
   display: none;
+}
+
+.rc-widget input.rc-radio-input {
+  accent-color: var(--product-accent-color, rgb(var(--color-button))) !important;
 }

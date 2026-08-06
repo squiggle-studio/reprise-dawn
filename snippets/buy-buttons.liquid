@@ -75,6 +75,8 @@
             type="submit"
             name="add"
             class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            data-add-to-cart-text="{{ 'products.product.add_to_cart' | t }}"
+            data-base-price="{{ product.selected_or_first_available_variant.price | money }}"
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
               or product.selected_or_first_available_variant == null
@@ -160,28 +162,40 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.product-form').forEach(function (form) {
-        var widget = form.querySelector('.rc-widget');
         var button = form.querySelector('.product-form__submit');
-        if (!widget || !button) return;
+        if (!button) return;
 
         var buttonLabel = button.querySelector('span');
         if (!buttonLabel) return;
 
-        var addToCartText = buttonLabel.textContent.split(' - ')[0].trim();
+        var addToCartText = button.dataset.addToCartText;
+        var basePrice = button.dataset.basePrice;
+        if (!addToCartText || !basePrice) return;
 
         function updateButtonPrice() {
-          var activePrice = widget.querySelector('.rc-option--active .rc-option__price');
+          // Re-query on every call instead of caching a reference to
+          // .rc-widget - Recharge is a Vue app that may fully replace
+          // its DOM subtree on hydration/interaction rather than
+          // mutating it in place, which would leave a cached reference
+          // pointing at a detached node.
+          var activePrice = form.querySelector('.rc-option--active .rc-option__price');
           if (!activePrice) return;
           var priceText = activePrice.textContent.trim();
-          if (priceText) {
+          if (!priceText) return;
+
+          if (priceText === basePrice) {
             buttonLabel.textContent = addToCartText + ' - ' + priceText;
+          } else {
+            buttonLabel.innerHTML =
+              addToCartText + ' - <s>' + basePrice + '</s> ' + priceText;
           }
         }
 
-        // Recharge is a Vue app - its "active" class and price text can
-        // change after hydration or user interaction, neither of which
-        // fire a predictable native change/input event we can rely on.
-        new MutationObserver(updateButtonPrice).observe(widget, {
+        // Recharge's active option/price can change after hydration or
+        // user interaction, neither of which fire a predictable native
+        // change/input event we can rely on - observe the stable form
+        // itself (never replaced) rather than the widget's own subtree.
+        new MutationObserver(updateButtonPrice).observe(form, {
           attributes: true,
           subtree: true,
           attributeFilter: ['class'],
