@@ -415,7 +415,7 @@
         "card_corner_radius": 0,
         "card_border_color": "#f1e9cd",
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 40
       }
     },
     "image_text_routine": {
@@ -536,7 +536,13 @@
         "color_scheme": "scheme-3",
         "enable_card_style": true,
         "card_color_scheme": "scheme-3",
+        "card_background_color": "",
         "card_corner_radius": 28,
+        "card_image_style": "icon",
+        "card_image_position": "above_heading",
+        "enable_card_outline": false,
+        "override_card_outline_color": false,
+        "card_outline_color": "#af412f",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "show_dividers_mobile": false,
