@@ -1760,7 +1760,14 @@ a.product__text {
 }
 
 .rc-widget .rc-option__text,
-.rc-widget .rc-option__discount,
-.rc-widget .rc-option__price {
+.rc-widget .rc-option__discount {
   color: #02040b !important;
+}
+
+/* The Add to cart button is the single source of truth for price
+   (synced via JS in buy-buttons.liquid) - hide the widget's own price
+   text so the two don't show inconsistent or redundant figures. Kept
+   in the DOM (not removed) since the sync script still reads its text. */
+.rc-widget .rc-option__price {
+  display: none;
 }
