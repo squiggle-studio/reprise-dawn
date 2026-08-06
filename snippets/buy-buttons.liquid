@@ -183,11 +183,16 @@
           var priceText = activePrice.textContent.trim();
           if (!priceText) return;
 
-          if (priceText === basePrice) {
-            buttonLabel.textContent = addToCartText + ' - ' + priceText;
-          } else {
-            buttonLabel.innerHTML =
-              addToCartText + ' - <s>' + basePrice + '</s> ' + priceText;
+          var newHTML =
+            priceText === basePrice
+              ? addToCartText + ' - ' + priceText
+              : addToCartText + ' - <s>' + basePrice + '</s> ' + priceText;
+
+          // The button is inside the observed form, so writing to it
+          // unconditionally would re-trigger this same observer on every
+          // call, looping forever - only write when it actually changes.
+          if (buttonLabel.innerHTML !== newHTML) {
+            buttonLabel.innerHTML = newHTML;
           }
         }
 
