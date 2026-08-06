@@ -24,8 +24,8 @@
   box-sizing: border-box;
   border: 0.15rem solid var(--rich-text-card-border-color, rgba(var(--color-foreground), 0.3));
   border-radius: var(--rich-text-card-radius, 24px);
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .rich-text--full-width.rich-text--card {
