@@ -168,6 +168,14 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  /* Same stacking problem vertically - the content column's own 5rem
+     bottom padding piles on top of the section's own padding_bottom
+     setting, roughly doubling the gap before the next section. The
+     section padding already covers this on mobile. */
+  .image-with-text:not(.image-with-text--overlap) .image-with-text__content {
+    padding-bottom: 0;
+  }
 }
 
 .image-with-text__content--mobile-right > * {
