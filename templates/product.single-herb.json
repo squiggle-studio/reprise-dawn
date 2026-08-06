@@ -79,12 +79,12 @@
             "layout": "grid",
             "icon_1": "truck",
             "heading_1": "Always free shipping",
-            "icon_2": "heart",
-            "heading_2": "Pause or cancel at any time",
+            "icon_2": "price_tag",
+            "heading_2": "Savings on every order",
             "icon_3": "star",
             "heading_3": "Guaranteed during sell-outs",
-            "icon_4": "box",
-            "heading_4": "Enjoy an annual VIP gift"
+            "icon_4": "heart",
+            "heading_4": "Pause or cancel at any time"
           }
         },
         "info_drawer_QJ6DrL": {
