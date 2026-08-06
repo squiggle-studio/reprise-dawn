@@ -1,3 +1,11 @@
+/* iOS Safari auto-boosts text size when the viewport's available
+   height changes (e.g. the browser's own preview/address bar
+   collapsing), inflating font sizes unpredictably. Disable it. */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 product-component,
 collection-component {
   display: block;
