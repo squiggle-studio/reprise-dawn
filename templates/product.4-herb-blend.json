@@ -345,7 +345,7 @@
         "full_width": false,
         "enable_card_style": true,
         "card_corner_radius": 24,
-        "card_border_color": "#af412f",
+        "card_border_color": "{{ product.metafields.custom.accent_color.value }}",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -425,10 +425,10 @@
         "card_background_color": "",
         "card_corner_radius": 24,
         "card_image_style": "icon",
-        "card_image_position": "above_heading",
-        "enable_card_outline": false,
+        "card_image_position": "between_heading_and_text",
+        "enable_card_outline": true,
         "override_card_outline_color": true,
-        "card_outline_color": "#c68957",
+        "card_outline_color": "#4B210F",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "show_dividers_mobile": true,
