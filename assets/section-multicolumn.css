@@ -86,7 +86,6 @@
 .multicolumn--card-outline .multicolumn-list,
 .multicolumn--card-style .multicolumn-list {
   row-gap: 2rem;
-  column-gap: 2rem;
 }
 
 .multicolumn.no-heading .title {
