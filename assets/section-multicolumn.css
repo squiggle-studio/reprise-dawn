@@ -47,7 +47,7 @@
 }
 
 .multicolumn-card--image-between .multicolumn-card__image-wrapper {
-  margin: 12px 0;
+  margin: 24px 0 12px;
 }
 
 /* Full-bleed image style: the image fills the card edge-to-edge with
