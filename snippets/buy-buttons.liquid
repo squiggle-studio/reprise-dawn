@@ -148,4 +148,49 @@
 
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
+
+  {%- comment -%}
+    The Add to cart button's price is server-rendered from the variant's
+    base price and only updates via Dawn's native selling-plan-selector
+    JS - but Recharge's subscription widget replaces that UI entirely
+    with its own Vue component, so that JS never fires. Sync the button
+    text to whatever price Recharge is already displaying for the
+    currently active option instead of duplicating its price logic.
+  {%- endcomment -%}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.product-form').forEach(function (form) {
+        var widget = form.querySelector('.rc-widget');
+        var button = form.querySelector('.product-form__submit');
+        if (!widget || !button) return;
+
+        var buttonLabel = button.querySelector('span');
+        if (!buttonLabel) return;
+
+        var addToCartText = buttonLabel.textContent.split(' - ')[0].trim();
+
+        function updateButtonPrice() {
+          var activePrice = widget.querySelector('.rc-option--active .rc-option__price');
+          if (!activePrice) return;
+          var priceText = activePrice.textContent.trim();
+          if (priceText) {
+            buttonLabel.textContent = addToCartText + ' - ' + priceText;
+          }
+        }
+
+        // Recharge is a Vue app - its "active" class and price text can
+        // change after hydration or user interaction, neither of which
+        // fire a predictable native change/input event we can rely on.
+        new MutationObserver(updateButtonPrice).observe(widget, {
+          attributes: true,
+          subtree: true,
+          attributeFilter: ['class'],
+          characterData: true,
+          childList: true,
+        });
+
+        updateButtonPrice();
+      });
+    });
+  </script>
 </div>

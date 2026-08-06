@@ -1755,6 +1755,10 @@ a.product__text {
   color: #02040b !important;
 }
 
+.rc-widget .rc-option--active .rc-option__text {
+  font-weight: 700 !important;
+}
+
 .rc-widget .rc-option__text,
 .rc-widget .rc-option__discount,
 .rc-widget .rc-option__price {
