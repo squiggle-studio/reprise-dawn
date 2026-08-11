@@ -170,6 +170,13 @@
             "answer": "<p>Full-spectrum extracts maintain all the natural ratios of bioactive botanicals. Two of our delicious gummies is the equivalent of one potent cup of herbal tea.</p>"
           }
         },
+        "accordion_item_XfRhjV": {
+          "type": "accordion_item",
+          "settings": {
+            "question": "Doctor-developed blends",
+            "answer": "<p>Formulated by doctors and herbalists, our herbs work <em>with</em> your body’s natural systems for simple holistic health.</p>"
+          }
+        },
         "accordion_3": {
           "type": "accordion_item",
           "settings": {
@@ -182,6 +189,7 @@
         "accordion_1",
         "accordion_item_rrQ6bn",
         "accordion_2",
+        "accordion_item_XfRhjV",
         "accordion_3"
       ],
       "name": "A delicious daily ritual",
