@@ -153,14 +153,21 @@
           "type": "accordion_item",
           "settings": {
             "question": "Authentic Ingredients",
-            "answer": "<p>Whole herbs sourced directly from a 5th generation family supplier, never isolated or synthetic compounds.</p>"
+            "answer": "<p>Whole herbs sourced directly from a 5th generation family supplier, never isolated or synthetic compounds.<strong> </strong></p>"
+          }
+        },
+        "accordion_item_rrQ6bn": {
+          "type": "accordion_item",
+          "settings": {
+            "question": "The highest standard",
+            "answer": "<p>As much as 70% of raw herbs are rejected <em>before</em> we begin the extraction process.</p>"
           }
         },
         "accordion_2": {
           "type": "accordion_item",
           "settings": {
-            "question": "Full potency",
-            "answer": "<p>Full-spectrum extraction maintains all the natural ratios of bioactive botanicals. Two of our delicious gummies is the equivalent of one potent cup of herbal tea.</p>"
+            "question": "Whole herb extraction",
+            "answer": "<p>Full-spectrum extracts maintain all the natural ratios of bioactive botanicals. Two of our delicious gummies is the equivalent of one potent cup of herbal tea.</p>"
           }
         },
         "accordion_3": {
@@ -173,6 +180,7 @@
       },
       "block_order": [
         "accordion_1",
+        "accordion_item_rrQ6bn",
         "accordion_2",
         "accordion_3"
       ],
