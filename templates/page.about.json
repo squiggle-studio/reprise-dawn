@@ -21,14 +21,14 @@
         "heading_hero": {
           "type": "heading",
           "settings": {
-            "heading": "Rooted in Eastern herbal traditions",
+            "heading": "<strong>Crafted with centuries of herbal wisdom</strong>",
             "heading_size": "h1"
           }
         },
         "text_hero": {
           "type": "text",
           "settings": {
-            "text": "<p>Holistic remedies are grounded in nature and have been passed down through generations, yet they're often inaccessible in modern times. We're here to change that.</p>"
+            "text": "<p>Passed from generation to generation, Eastern herbal remedies have been used to nurture healthy and happy families for over 3,000 years.</p>"
           }
         }
       },
@@ -111,14 +111,14 @@
         "heading_grandma": {
           "type": "heading",
           "settings": {
-            "heading": "We founded Reprise so that generations to come could experience our ancestors' wisdom in a more convenient and sustainable way.",
+            "heading": "Our ancestors' wisdom in a delicious daily gummy",
             "heading_size": "h2"
           }
         },
         "text_grandma": {
           "type": "text",
           "settings": {
-            "text": "<p>Full-spectrum extraction maintains all the natural ratios of bioactive botanicals. Two of our delicious gummies is the equivalent of one potent cup of herbal tea.</p>",
+            "text": "<p>Holistic remedies are grounded in nature and have been passed down through generations, yet they’re often inaccessible in modern times. We changed that. </p><p>We developed these gummies to make ancient herbal wisdom not just convenient but delightful – for ourselves, and for generations to come. </p>",
             "text_style": "body"
           }
         }
@@ -159,8 +159,8 @@
         "accordion_2": {
           "type": "accordion_item",
           "settings": {
-            "question": "Holistic Herb Blends",
-            "answer": "<p>Formulas developed with doctors and herbalists to work with your body's natural systems.</p>"
+            "question": "Full potency",
+            "answer": "<p>Full-spectrum extraction maintains all the natural ratios of bioactive botanicals. Two of our delicious gummies is the equivalent of one potent cup of herbal tea.</p>"
           }
         },
         "accordion_3": {
