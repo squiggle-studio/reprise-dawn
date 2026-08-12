@@ -39,7 +39,7 @@
       ],
       "name": "Hero",
       "settings": {
-        "image": "shopify://shop_images/dried-goji-berries-on-woven-mat-and-wooden-bowls-2026-01-09-06-25-29-utc.jpg",
+        "image": "shopify://shop_images/chinese-herbs.png",
         "layout": "image_left",
         "color_scheme": "scheme-3",
         "padding_top": 60,
@@ -228,7 +228,7 @@
         "color_scheme": "scheme-5",
         "enable_card_style": true,
         "card_color_scheme": "scheme-1",
-        "card_background_color": "#FFFBEB",
+        "card_background_color": "#fffbeb",
         "card_corner_radius": 16,
         "card_image_style": "full_bleed",
         "card_image_position": "between_heading_and_text",
