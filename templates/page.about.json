@@ -21,14 +21,14 @@
         "heading_hero": {
           "type": "heading",
           "settings": {
-            "heading": "Rooted in Eastern herbal traditions",
+            "heading": "<strong>Crafted with centuries of herbal wisdom</strong>",
             "heading_size": "h1"
           }
         },
         "text_hero": {
           "type": "text",
           "settings": {
-            "text": "<p>Holistic remedies are grounded in nature and have been passed down through generations, yet they're often inaccessible in modern times. We're here to change that.</p>"
+            "text": "<p>Passed from generation to generation, Eastern herbal remedies have been used to nurture healthy and happy families for over 3,000 years.</p>"
           }
         }
       },
@@ -67,7 +67,7 @@
         "button_source": {
           "type": "button",
           "settings": {
-            "button_label": "Learn more →",
+            "button_label": "Explore ingredients →",
             "button_link": "",
             "button_style_secondary": true,
             "button_color": ""
@@ -111,14 +111,14 @@
         "heading_grandma": {
           "type": "heading",
           "settings": {
-            "heading": "We founded Reprise so that generations to come could experience our ancestors' wisdom in a more convenient and sustainable way.",
+            "heading": "Our ancestors' wisdom in a delicious daily gummy",
             "heading_size": "h2"
           }
         },
         "text_grandma": {
           "type": "text",
           "settings": {
-            "text": "<p>Full-spectrum extraction maintains all the natural ratios of bioactive botanicals. Two of our delicious gummies is the equivalent of one potent cup of herbal tea.</p>",
+            "text": "<p>Holistic remedies are grounded in nature and have been passed down through generations, yet they’re often inaccessible in modern times. Reprise is here to change that. </p><p>We developed these gummies to make ancient herbal wisdom not just convenient but delightful. For ourselves, and for generations to come. </p>",
             "text_style": "body"
           }
         }
@@ -153,34 +153,50 @@
           "type": "accordion_item",
           "settings": {
             "question": "Authentic Ingredients",
-            "answer": "<p>Whole herbs sourced directly from a 5th generation family supplier, never isolated or synthetic compounds.</p>"
+            "answer": "<p>Whole herbs sourced directly from a 5th generation family supplier, never isolated or synthetic compounds.<strong> </strong></p>"
+          }
+        },
+        "accordion_item_rrQ6bn": {
+          "type": "accordion_item",
+          "settings": {
+            "question": "The highest quality standard",
+            "answer": "<p>As much as 70% of raw herbs are rejected <em>before</em> we begin the extraction process.</p>"
           }
         },
         "accordion_2": {
           "type": "accordion_item",
           "settings": {
-            "question": "Holistic Herb Blends",
-            "answer": "<p>Formulas developed with doctors and herbalists to work with your body's natural systems.</p>"
+            "question": "Whole herb extraction",
+            "answer": "<p>Full-spectrum extracts maintain all the natural ratios of bioactive botanicals. Two of our delicious gummies is the equivalent of one potent cup of herbal tea.</p>"
+          }
+        },
+        "accordion_item_XfRhjV": {
+          "type": "accordion_item",
+          "settings": {
+            "question": "Doctor-developed blends",
+            "answer": "<p>Formulated by doctors and herbalists, our herbs work <em>with</em> your body’s natural systems for simple holistic health.</p>"
           }
         },
         "accordion_3": {
           "type": "accordion_item",
           "settings": {
             "question": "Delicious Vegan Gummies",
-            "answer": "<p>A daily ritual without compromise on taste, only natural ingredients with no added colors or dyes.</p>"
+            "answer": "<p>A daily ritual without compromise on taste, sweetened naturally with cane sugar and fruit extracts. No gluten, gelatin, added colors, or artificial sweeteners.</p>"
           }
         }
       },
       "block_order": [
         "accordion_1",
+        "accordion_item_rrQ6bn",
         "accordion_2",
+        "accordion_item_XfRhjV",
         "accordion_3"
       ],
       "name": "A delicious daily ritual",
       "settings": {
         "heading": "A delicious daily ritual",
         "heading_size": "h1",
-        "body_text": "<p>We're creating a new standard for traditional remedies: removing the barriers that get in the way of feeling good.</p>",
+        "body_text": "<p>Reprise offers  a new standard for traditional remedies: removing the barriers that get in the way of feeling good.</p>",
         "image": "shopify://shop_images/Gemini_Generated_Image_ju3p0cju3p0cju3p.png",
         "image_border_radius": 16,
         "layout": "image_right",
